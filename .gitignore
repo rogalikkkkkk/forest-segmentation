@@ -1,0 +1,7 @@
+data/raw/
+data/processed/
+*.zip
+*.tar
+*.pth
+*.pt
+*.ckpt

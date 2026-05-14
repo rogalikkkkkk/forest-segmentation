@@ -1,0 +1,4 @@
+model,run_id,run_dir,loss,best_epoch,val_mean_iou,val_pixel_accuracy,test_mean_iou,test_pixel_accuracy
+unet_resnet34,weighted_ce_ep10_2026-05-13_02-51-05_unet_resnet34,D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\weighted_ce_ep10_2026-05-13_02-51-05_unet_resnet34,weighted_ce,9,0.543447,0.905578,0.550952,0.903917
+deeplabv3plus_resnet50,weighted_ce_ep10_2026-05-13_02-51-05_deeplabv3plus_resnet50,D:\Studying\Diplom maga\code\outputs\deeplabv3plus_resnet50\runs\weighted_ce_ep10_2026-05-13_02-51-05_deeplabv3plus_resnet50,weighted_ce,7,0.553880,0.905987,0.554712,0.903670
+segformer_b0,weighted_ce_ep10_2026-05-13_02-51-05_segformer_b0,D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\weighted_ce_ep10_2026-05-13_02-51-05_segformer_b0,weighted_ce,10,0.568392,0.898876,0.554899,0.896784

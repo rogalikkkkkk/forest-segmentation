@@ -1,0 +1,13 @@
+model: unet_resnet34
+batch_size: 16
+image_height: 256
+image_width: 320
+num_classes: 25
+encoder_weights: imagenet
+num_epochs: 10
+learning_rate: 9.763190534227069e-05
+optimizer: adamw
+weight_decay: 9.818226878189116e-05
+scheduler: plateau
+train_split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+val_split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt

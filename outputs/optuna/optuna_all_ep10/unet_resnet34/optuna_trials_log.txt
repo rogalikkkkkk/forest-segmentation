@@ -1,0 +1,4466 @@
+================================================================================
+Trial 0
+Run ID: optuna_all_ep10_unet_resnet34_trial000_ep10_lr2p36886em05_adam_wd0_none
+Params: {'lr': 2.368863950364079e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'none'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --run-id optuna_all_ep10_unet_resnet34_trial000_ep10_lr2p36886em05_adam_wd0_none --epochs 10 --lr 2.368863950364079e-05 --optimizer adam --weight-decay 0.0 --scheduler none
+Training U-Net ResNet34
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 2.368863950364079e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: none
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial000_ep10_lr2p36886em05_adam_wd0_none
+
+Epoch 1/10
+  train batch 0050/0372 loss: 2.5631
+  train batch 0100/0372 loss: 2.3398
+  train batch 0150/0372 loss: 2.2061
+  train batch 0200/0372 loss: 2.0656
+  train batch 0250/0372 loss: 2.0121
+  train batch 0300/0372 loss: 1.9730
+  train batch 0350/0372 loss: 1.9523
+Train loss: 2.2302
+Val loss:   1.8703
+Val pixel accuracy: 0.8673
+Val mIoU: 0.2737
+Best val mIoU: 0.2737 at epoch 1
+Current learning rate: 0.00002369
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 1.8702
+  train batch 0100/0372 loss: 1.8392
+  train batch 0150/0372 loss: 1.7718
+  train batch 0200/0372 loss: 1.7093
+  train batch 0250/0372 loss: 1.7640
+  train batch 0300/0372 loss: 1.6757
+  train batch 0350/0372 loss: 1.6833
+Train loss: 1.8051
+Val loss:   1.6545
+Val pixel accuracy: 0.8863
+Val mIoU: 0.2961
+Best val mIoU: 0.2961 at epoch 2
+Current learning rate: 0.00002369
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 1.6265
+  train batch 0100/0372 loss: 1.6273
+  train batch 0150/0372 loss: 1.5441
+  train batch 0200/0372 loss: 1.6228
+  train batch 0250/0372 loss: 1.6523
+  train batch 0300/0372 loss: 1.5438
+  train batch 0350/0372 loss: 1.5853
+Train loss: 1.5986
+Val loss:   1.4657
+Val pixel accuracy: 0.8932
+Val mIoU: 0.3057
+Best val mIoU: 0.3057 at epoch 3
+Current learning rate: 0.00002369
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 1.4992
+  train batch 0100/0372 loss: 1.4063
+  train batch 0150/0372 loss: 1.4644
+  train batch 0200/0372 loss: 1.4451
+  train batch 0250/0372 loss: 1.3761
+  train batch 0300/0372 loss: 1.4114
+  train batch 0350/0372 loss: 1.3124
+Train loss: 1.4101
+Val loss:   1.2983
+Val pixel accuracy: 0.8987
+Val mIoU: 0.3127
+Best val mIoU: 0.3127 at epoch 4
+Current learning rate: 0.00002369
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 1.2977
+  train batch 0100/0372 loss: 1.3548
+  train batch 0150/0372 loss: 1.3043
+  train batch 0200/0372 loss: 1.2190
+  train batch 0250/0372 loss: 1.3597
+  train batch 0300/0372 loss: 1.1651
+  train batch 0350/0372 loss: 1.1621
+Train loss: 1.2460
+Val loss:   1.1506
+Val pixel accuracy: 0.8998
+Val mIoU: 0.3110
+Best val mIoU: 0.3127 at epoch 4
+Current learning rate: 0.00002369
+
+Epoch 6/10
+  train batch 0050/0372 loss: 1.1171
+  train batch 0100/0372 loss: 1.0794
+  train batch 0150/0372 loss: 1.1490
+  train batch 0200/0372 loss: 1.0866
+  train batch 0250/0372 loss: 1.2111
+  train batch 0300/0372 loss: 1.0439
+  train batch 0350/0372 loss: 1.0157
+Train loss: 1.0995
+Val loss:   1.0294
+Val pixel accuracy: 0.9036
+Val mIoU: 0.3148
+Best val mIoU: 0.3148 at epoch 6
+Current learning rate: 0.00002369
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.9935
+  train batch 0100/0372 loss: 1.0511
+  train batch 0150/0372 loss: 0.9730
+  train batch 0200/0372 loss: 0.9467
+  train batch 0250/0372 loss: 0.9664
+  train batch 0300/0372 loss: 0.9011
+  train batch 0350/0372 loss: 0.8994
+Train loss: 0.9643
+Val loss:   0.8878
+Val pixel accuracy: 0.9042
+Val mIoU: 0.3167
+Best val mIoU: 0.3167 at epoch 7
+Current learning rate: 0.00002369
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.9378
+  train batch 0100/0372 loss: 0.9588
+  train batch 0150/0372 loss: 0.8298
+  train batch 0200/0372 loss: 0.8478
+  train batch 0250/0372 loss: 0.8281
+  train batch 0300/0372 loss: 0.7637
+  train batch 0350/0372 loss: 0.7544
+Train loss: 0.8399
+Val loss:   0.7971
+Val pixel accuracy: 0.9075
+Val mIoU: 0.3204
+Best val mIoU: 0.3204 at epoch 8
+Current learning rate: 0.00002369
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.7139
+  train batch 0100/0372 loss: 0.7385
+  train batch 0150/0372 loss: 0.7459
+  train batch 0200/0372 loss: 0.7495
+  train batch 0250/0372 loss: 0.7360
+  train batch 0300/0372 loss: 0.7911
+  train batch 0350/0372 loss: 0.6589
+Train loss: 0.7438
+Val loss:   0.7083
+Val pixel accuracy: 0.9076
+Val mIoU: 0.3209
+Best val mIoU: 0.3209 at epoch 9
+Current learning rate: 0.00002369
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.7395
+  train batch 0100/0372 loss: 0.5984
+  train batch 0150/0372 loss: 0.6472
+  train batch 0200/0372 loss: 0.8582
+  train batch 0250/0372 loss: 0.6519
+  train batch 0300/0372 loss: 0.6113
+  train batch 0350/0372 loss: 0.6411
+Train loss: 0.6592
+Val loss:   0.6454
+Val pixel accuracy: 0.9120
+Val mIoU: 0.3454
+Best val mIoU: 0.3454 at epoch 10
+Current learning rate: 0.00002369
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial000_ep10_lr2p36886em05_adam_wd0_none
+Selected pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial000_ep10_lr2p36886em05_adam_wd0_none
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_unet_resnet34.py
+================================================================================
+
+================================================================================
+Pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\unet_resnet34\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial000_ep10_lr2p36886em05_adam_wd0_none
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 1
+Run ID: optuna_all_ep10_unet_resnet34_trial001_ep10_lr1p43217em05_adamw_wd1p09943em06_plateau
+Params: {'lr': 1.4321698289111523e-05, 'optimizer': 'adamw', 'weight_decay': 1.0994335574766194e-06, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --run-id optuna_all_ep10_unet_resnet34_trial001_ep10_lr1p43217em05_adamw_wd1p09943em06_plateau --epochs 10 --lr 1.4321698289111523e-05 --optimizer adamw --weight-decay 1.0994335574766194e-06 --scheduler plateau
+Training U-Net ResNet34
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 1.4321698289111523e-05
+Optimizer: adamw
+Weight decay: 1.0994335574766194e-06
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial001_ep10_lr1p43217em05_adamw_wd1p09943em06_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 2.7328
+  train batch 0100/0372 loss: 2.4938
+  train batch 0150/0372 loss: 2.3432
+  train batch 0200/0372 loss: 2.2036
+  train batch 0250/0372 loss: 2.1387
+  train batch 0300/0372 loss: 2.0901
+  train batch 0350/0372 loss: 2.0683
+Train loss: 2.3644
+Val loss:   1.9777
+Val pixel accuracy: 0.8481
+Val mIoU: 0.2509
+Best val mIoU: 0.2509 at epoch 1
+Current learning rate: 0.00001432
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 2.0102
+  train batch 0100/0372 loss: 1.9613
+  train batch 0150/0372 loss: 1.9086
+  train batch 0200/0372 loss: 1.8501
+  train batch 0250/0372 loss: 1.9155
+  train batch 0300/0372 loss: 1.8262
+  train batch 0350/0372 loss: 1.8426
+Train loss: 1.9447
+Val loss:   1.8130
+Val pixel accuracy: 0.8769
+Val mIoU: 0.2851
+Best val mIoU: 0.2851 at epoch 2
+Current learning rate: 0.00001432
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 1.7914
+  train batch 0100/0372 loss: 1.7995
+  train batch 0150/0372 loss: 1.7277
+  train batch 0200/0372 loss: 1.8154
+  train batch 0250/0372 loss: 1.8451
+  train batch 0300/0372 loss: 1.7534
+  train batch 0350/0372 loss: 1.8075
+Train loss: 1.7898
+Val loss:   1.6824
+Val pixel accuracy: 0.8836
+Val mIoU: 0.2963
+Best val mIoU: 0.2963 at epoch 3
+Current learning rate: 0.00001432
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 1.7453
+  train batch 0100/0372 loss: 1.6387
+  train batch 0150/0372 loss: 1.6994
+  train batch 0200/0372 loss: 1.7050
+  train batch 0250/0372 loss: 1.6447
+  train batch 0300/0372 loss: 1.6864
+  train batch 0350/0372 loss: 1.6047
+Train loss: 1.6594
+Val loss:   1.5646
+Val pixel accuracy: 0.8922
+Val mIoU: 0.3079
+Best val mIoU: 0.3079 at epoch 4
+Current learning rate: 0.00001432
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 1.5738
+  train batch 0100/0372 loss: 1.6276
+  train batch 0150/0372 loss: 1.6160
+  train batch 0200/0372 loss: 1.5066
+  train batch 0250/0372 loss: 1.6454
+  train batch 0300/0372 loss: 1.4612
+  train batch 0350/0372 loss: 1.4580
+Train loss: 1.5433
+Val loss:   1.4536
+Val pixel accuracy: 0.8958
+Val mIoU: 0.3110
+Best val mIoU: 0.3110 at epoch 5
+Current learning rate: 0.00001432
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 1.4313
+  train batch 0100/0372 loss: 1.4280
+  train batch 0150/0372 loss: 1.4786
+  train batch 0200/0372 loss: 1.4158
+  train batch 0250/0372 loss: 1.5364
+  train batch 0300/0372 loss: 1.3711
+  train batch 0350/0372 loss: 1.3521
+Train loss: 1.4262
+Val loss:   1.3620
+Val pixel accuracy: 0.8982
+Val mIoU: 0.3135
+Best val mIoU: 0.3135 at epoch 6
+Current learning rate: 0.00001432
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 1.3342
+  train batch 0100/0372 loss: 1.3900
+  train batch 0150/0372 loss: 1.3346
+  train batch 0200/0372 loss: 1.2950
+  train batch 0250/0372 loss: 1.3266
+  train batch 0300/0372 loss: 1.2641
+  train batch 0350/0372 loss: 1.2606
+Train loss: 1.3222
+Val loss:   1.2573
+Val pixel accuracy: 0.8998
+Val mIoU: 0.3140
+Best val mIoU: 0.3140 at epoch 7
+Current learning rate: 0.00001432
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 1.3300
+  train batch 0100/0372 loss: 1.3027
+  train batch 0150/0372 loss: 1.2172
+  train batch 0200/0372 loss: 1.2239
+  train batch 0250/0372 loss: 1.2308
+  train batch 0300/0372 loss: 1.1535
+  train batch 0350/0372 loss: 1.1296
+Train loss: 1.2247
+Val loss:   1.1759
+Val pixel accuracy: 0.9012
+Val mIoU: 0.3128
+Best val mIoU: 0.3140 at epoch 7
+Current learning rate: 0.00001432
+
+Epoch 9/10
+  train batch 0050/0372 loss: 1.1080
+  train batch 0100/0372 loss: 1.1546
+  train batch 0150/0372 loss: 1.1658
+  train batch 0200/0372 loss: 1.1566
+  train batch 0250/0372 loss: 1.1079
+  train batch 0300/0372 loss: 1.1714
+  train batch 0350/0372 loss: 1.0729
+Train loss: 1.1354
+Val loss:   1.0909
+Val pixel accuracy: 0.9008
+Val mIoU: 0.3137
+Best val mIoU: 0.3140 at epoch 7
+Current learning rate: 0.00001432
+
+Epoch 10/10
+  train batch 0050/0372 loss: 1.1366
+  train batch 0100/0372 loss: 0.9992
+  train batch 0150/0372 loss: 1.0486
+  train batch 0200/0372 loss: 1.2306
+  train batch 0250/0372 loss: 1.0356
+  train batch 0300/0372 loss: 1.0205
+  train batch 0350/0372 loss: 1.0148
+Train loss: 1.0506
+Val loss:   1.0217
+Val pixel accuracy: 0.9028
+Val mIoU: 0.3157
+Best val mIoU: 0.3157 at epoch 10
+Current learning rate: 0.00001432
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial001_ep10_lr1p43217em05_adamw_wd1p09943em06_plateau
+Selected pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial001_ep10_lr1p43217em05_adamw_wd1p09943em06_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_unet_resnet34.py
+================================================================================
+
+================================================================================
+Pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\unet_resnet34\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial001_ep10_lr1p43217em05_adamw_wd1p09943em06_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 2
+Run ID: optuna_all_ep10_unet_resnet34_trial002_ep10_lr9p33061em05_adam_wd0_plateau
+Params: {'lr': 9.330606024425662e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --run-id optuna_all_ep10_unet_resnet34_trial002_ep10_lr9p33061em05_adam_wd0_plateau --epochs 10 --lr 9.330606024425662e-05 --optimizer adam --weight-decay 0.0 --scheduler plateau
+Training U-Net ResNet34
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 9.330606024425662e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial002_ep10_lr9p33061em05_adam_wd0_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 2.1810
+  train batch 0100/0372 loss: 1.9702
+  train batch 0150/0372 loss: 1.8443
+  train batch 0200/0372 loss: 1.7058
+  train batch 0250/0372 loss: 1.6096
+  train batch 0300/0372 loss: 1.5470
+  train batch 0350/0372 loss: 1.4159
+Train loss: 1.8388
+Val loss:   1.3605
+Val pixel accuracy: 0.8852
+Val mIoU: 0.2895
+Best val mIoU: 0.2895 at epoch 1
+Current learning rate: 0.00009331
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 1.3128
+  train batch 0100/0372 loss: 1.2043
+  train batch 0150/0372 loss: 1.1243
+  train batch 0200/0372 loss: 1.0543
+  train batch 0250/0372 loss: 1.0021
+  train batch 0300/0372 loss: 0.8989
+  train batch 0350/0372 loss: 0.8838
+Train loss: 1.1182
+Val loss:   0.8573
+Val pixel accuracy: 0.9007
+Val mIoU: 0.3284
+Best val mIoU: 0.3284 at epoch 2
+Current learning rate: 0.00009331
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.8344
+  train batch 0100/0372 loss: 0.8056
+  train batch 0150/0372 loss: 0.6497
+  train batch 0200/0372 loss: 0.7436
+  train batch 0250/0372 loss: 0.7901
+  train batch 0300/0372 loss: 0.6213
+  train batch 0350/0372 loss: 0.6650
+Train loss: 0.7307
+Val loss:   0.5689
+Val pixel accuracy: 0.9086
+Val mIoU: 0.3414
+Best val mIoU: 0.3414 at epoch 3
+Current learning rate: 0.00009331
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.5194
+  train batch 0100/0372 loss: 0.4861
+  train batch 0150/0372 loss: 0.5833
+  train batch 0200/0372 loss: 0.5563
+  train batch 0250/0372 loss: 0.5609
+  train batch 0300/0372 loss: 0.5166
+  train batch 0350/0372 loss: 0.4491
+Train loss: 0.5276
+Val loss:   0.4540
+Val pixel accuracy: 0.9107
+Val mIoU: 0.3712
+Best val mIoU: 0.3712 at epoch 4
+Current learning rate: 0.00009331
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.4317
+  train batch 0100/0372 loss: 0.5217
+  train batch 0150/0372 loss: 0.4234
+  train batch 0200/0372 loss: 0.5144
+  train batch 0250/0372 loss: 0.6363
+  train batch 0300/0372 loss: 0.3907
+  train batch 0350/0372 loss: 0.4286
+Train loss: 0.4245
+Val loss:   0.3788
+Val pixel accuracy: 0.9170
+Val mIoU: 0.3912
+Best val mIoU: 0.3912 at epoch 5
+Current learning rate: 0.00009331
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.3552
+  train batch 0100/0372 loss: 0.2974
+  train batch 0150/0372 loss: 0.3518
+  train batch 0200/0372 loss: 0.3227
+  train batch 0250/0372 loss: 0.6285
+  train batch 0300/0372 loss: 0.3858
+  train batch 0350/0372 loss: 0.3285
+Train loss: 0.3599
+Val loss:   0.3426
+Val pixel accuracy: 0.9172
+Val mIoU: 0.3938
+Best val mIoU: 0.3938 at epoch 6
+Current learning rate: 0.00009331
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.3043
+  train batch 0100/0372 loss: 0.3346
+  train batch 0150/0372 loss: 0.2717
+  train batch 0200/0372 loss: 0.3250
+  train batch 0250/0372 loss: 0.2979
+  train batch 0300/0372 loss: 0.2872
+  train batch 0350/0372 loss: 0.3165
+Train loss: 0.3087
+Val loss:   0.3065
+Val pixel accuracy: 0.9193
+Val mIoU: 0.4048
+Best val mIoU: 0.4048 at epoch 7
+Current learning rate: 0.00009331
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.3379
+  train batch 0100/0372 loss: 0.3331
+  train batch 0150/0372 loss: 0.2410
+  train batch 0200/0372 loss: 0.3234
+  train batch 0250/0372 loss: 0.2777
+  train batch 0300/0372 loss: 0.2194
+  train batch 0350/0372 loss: 0.2297
+Train loss: 0.2752
+Val loss:   0.2873
+Val pixel accuracy: 0.9224
+Val mIoU: 0.4354
+Best val mIoU: 0.4354 at epoch 8
+Current learning rate: 0.00009331
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.2334
+  train batch 0100/0372 loss: 0.2082
+  train batch 0150/0372 loss: 0.2130
+  train batch 0200/0372 loss: 0.2228
+  train batch 0250/0372 loss: 0.2284
+  train batch 0300/0372 loss: 0.2481
+  train batch 0350/0372 loss: 0.1882
+Train loss: 0.2505
+Val loss:   0.2730
+Val pixel accuracy: 0.9251
+Val mIoU: 0.4758
+Best val mIoU: 0.4758 at epoch 9
+Current learning rate: 0.00009331
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2990
+  train batch 0100/0372 loss: 0.1864
+  train batch 0150/0372 loss: 0.2106
+  train batch 0200/0372 loss: 0.4924
+  train batch 0250/0372 loss: 0.2019
+  train batch 0300/0372 loss: 0.2150
+  train batch 0350/0372 loss: 0.2352
+Train loss: 0.2355
+Val loss:   0.2686
+Val pixel accuracy: 0.9234
+Val mIoU: 0.4795
+Best val mIoU: 0.4795 at epoch 10
+Current learning rate: 0.00009331
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial002_ep10_lr9p33061em05_adam_wd0_plateau
+Selected pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial002_ep10_lr9p33061em05_adam_wd0_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_unet_resnet34.py
+================================================================================
+
+================================================================================
+Pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\unet_resnet34\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial002_ep10_lr9p33061em05_adam_wd0_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 3
+Run ID: optuna_all_ep10_unet_resnet34_trial003_ep10_lr2p01485em05_adam_wd0_plateau
+Params: {'lr': 2.0148477884158675e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --run-id optuna_all_ep10_unet_resnet34_trial003_ep10_lr2p01485em05_adam_wd0_plateau --epochs 10 --lr 2.0148477884158675e-05 --optimizer adam --weight-decay 0.0 --scheduler plateau
+Training U-Net ResNet34
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 2.0148477884158675e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial003_ep10_lr2p01485em05_adam_wd0_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 2.6200
+  train batch 0100/0372 loss: 2.3892
+  train batch 0150/0372 loss: 2.2467
+  train batch 0200/0372 loss: 2.1003
+  train batch 0250/0372 loss: 2.0459
+  train batch 0300/0372 loss: 2.0062
+  train batch 0350/0372 loss: 1.9913
+Train loss: 2.2715
+Val loss:   1.9068
+Val pixel accuracy: 0.8627
+Val mIoU: 0.2671
+Best val mIoU: 0.2671 at epoch 1
+Current learning rate: 0.00002015
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 1.9188
+  train batch 0100/0372 loss: 1.8809
+  train batch 0150/0372 loss: 1.8163
+  train batch 0200/0372 loss: 1.7561
+  train batch 0250/0372 loss: 1.8108
+  train batch 0300/0372 loss: 1.7346
+  train batch 0350/0372 loss: 1.7425
+Train loss: 1.8535
+Val loss:   1.7109
+Val pixel accuracy: 0.8844
+Val mIoU: 0.2927
+Best val mIoU: 0.2927 at epoch 2
+Current learning rate: 0.00002015
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 1.6867
+  train batch 0100/0372 loss: 1.6867
+  train batch 0150/0372 loss: 1.6148
+  train batch 0200/0372 loss: 1.6957
+  train batch 0250/0372 loss: 1.7258
+  train batch 0300/0372 loss: 1.6218
+  train batch 0350/0372 loss: 1.6658
+Train loss: 1.6686
+Val loss:   1.5459
+Val pixel accuracy: 0.8902
+Val mIoU: 0.3030
+Best val mIoU: 0.3030 at epoch 3
+Current learning rate: 0.00002015
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 1.5937
+  train batch 0100/0372 loss: 1.4922
+  train batch 0150/0372 loss: 1.5581
+  train batch 0200/0372 loss: 1.5404
+  train batch 0250/0372 loss: 1.4754
+  train batch 0300/0372 loss: 1.5089
+  train batch 0350/0372 loss: 1.4169
+Train loss: 1.5013
+Val loss:   1.3937
+Val pixel accuracy: 0.8973
+Val mIoU: 0.3113
+Best val mIoU: 0.3113 at epoch 4
+Current learning rate: 0.00002015
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 1.3988
+  train batch 0100/0372 loss: 1.4525
+  train batch 0150/0372 loss: 1.4132
+  train batch 0200/0372 loss: 1.3137
+  train batch 0250/0372 loss: 1.4543
+  train batch 0300/0372 loss: 1.2728
+  train batch 0350/0372 loss: 1.2656
+Train loss: 1.3495
+Val loss:   1.2576
+Val pixel accuracy: 0.8988
+Val mIoU: 0.3118
+Best val mIoU: 0.3118 at epoch 5
+Current learning rate: 0.00002015
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 1.2264
+  train batch 0100/0372 loss: 1.2005
+  train batch 0150/0372 loss: 1.2635
+  train batch 0200/0372 loss: 1.2004
+  train batch 0250/0372 loss: 1.3324
+  train batch 0300/0372 loss: 1.1542
+  train batch 0350/0372 loss: 1.1304
+Train loss: 1.2127
+Val loss:   1.1461
+Val pixel accuracy: 0.9016
+Val mIoU: 0.3134
+Best val mIoU: 0.3134 at epoch 6
+Current learning rate: 0.00002015
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 1.1154
+  train batch 0100/0372 loss: 1.1655
+  train batch 0150/0372 loss: 1.0998
+  train batch 0200/0372 loss: 1.0634
+  train batch 0250/0372 loss: 1.0898
+  train batch 0300/0372 loss: 1.0271
+  train batch 0350/0372 loss: 1.0268
+Train loss: 1.0886
+Val loss:   1.0187
+Val pixel accuracy: 0.9031
+Val mIoU: 0.3144
+Best val mIoU: 0.3144 at epoch 7
+Current learning rate: 0.00002015
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 1.0962
+  train batch 0100/0372 loss: 1.0797
+  train batch 0150/0372 loss: 0.9685
+  train batch 0200/0372 loss: 0.9858
+  train batch 0250/0372 loss: 0.9653
+  train batch 0300/0372 loss: 0.8919
+  train batch 0350/0372 loss: 0.8714
+Train loss: 0.9711
+Val loss:   0.9166
+Val pixel accuracy: 0.9058
+Val mIoU: 0.3207
+Best val mIoU: 0.3207 at epoch 8
+Current learning rate: 0.00002015
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.8383
+  train batch 0100/0372 loss: 0.8682
+  train batch 0150/0372 loss: 0.8762
+  train batch 0200/0372 loss: 0.8690
+  train batch 0250/0372 loss: 0.8413
+  train batch 0300/0372 loss: 0.9023
+  train batch 0350/0372 loss: 0.7821
+Train loss: 0.8625
+Val loss:   0.8252
+Val pixel accuracy: 0.9058
+Val mIoU: 0.3208
+Best val mIoU: 0.3208 at epoch 9
+Current learning rate: 0.00002015
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.8453
+  train batch 0100/0372 loss: 0.7202
+  train batch 0150/0372 loss: 0.7666
+  train batch 0200/0372 loss: 0.9651
+  train batch 0250/0372 loss: 0.7616
+  train batch 0300/0372 loss: 0.7287
+  train batch 0350/0372 loss: 0.7499
+Train loss: 0.7737
+Val loss:   0.7511
+Val pixel accuracy: 0.9082
+Val mIoU: 0.3260
+Best val mIoU: 0.3260 at epoch 10
+Current learning rate: 0.00002015
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial003_ep10_lr2p01485em05_adam_wd0_plateau
+Selected pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial003_ep10_lr2p01485em05_adam_wd0_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_unet_resnet34.py
+================================================================================
+
+================================================================================
+Pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\unet_resnet34\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial003_ep10_lr2p01485em05_adam_wd0_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 4
+Run ID: optuna_all_ep10_unet_resnet34_trial004_ep10_lr1p37878em05_adamw_wd2p50812em06_plateau
+Params: {'lr': 1.378776461935377e-05, 'optimizer': 'adamw', 'weight_decay': 2.5081156860452325e-06, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --run-id optuna_all_ep10_unet_resnet34_trial004_ep10_lr1p37878em05_adamw_wd2p50812em06_plateau --epochs 10 --lr 1.378776461935377e-05 --optimizer adamw --weight-decay 2.5081156860452325e-06 --scheduler plateau
+Training U-Net ResNet34
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 1.378776461935377e-05
+Optimizer: adamw
+Weight decay: 2.5081156860452325e-06
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial004_ep10_lr1p37878em05_adamw_wd2p50812em06_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 2.7453
+  train batch 0100/0372 loss: 2.5069
+  train batch 0150/0372 loss: 2.3544
+  train batch 0200/0372 loss: 2.2156
+  train batch 0250/0372 loss: 2.1515
+  train batch 0300/0372 loss: 2.1022
+  train batch 0350/0372 loss: 2.0786
+Train loss: 2.3751
+Val loss:   1.9851
+Val pixel accuracy: 0.8462
+Val mIoU: 0.2491
+Best val mIoU: 0.2491 at epoch 1
+Current learning rate: 0.00001379
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 2.0189
+  train batch 0100/0372 loss: 1.9705
+  train batch 0150/0372 loss: 1.9171
+  train batch 0200/0372 loss: 1.8590
+  train batch 0250/0372 loss: 1.9267
+  train batch 0300/0372 loss: 1.8348
+  train batch 0350/0372 loss: 1.8520
+Train loss: 1.9540
+Val loss:   1.8231
+Val pixel accuracy: 0.8758
+Val mIoU: 0.2840
+Best val mIoU: 0.2840 at epoch 2
+Current learning rate: 0.00001379
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 1.8018
+  train batch 0100/0372 loss: 1.8098
+  train batch 0150/0372 loss: 1.7392
+  train batch 0200/0372 loss: 1.8268
+  train batch 0250/0372 loss: 1.8577
+  train batch 0300/0372 loss: 1.7695
+  train batch 0350/0372 loss: 1.8238
+Train loss: 1.8018
+Val loss:   1.6970
+Val pixel accuracy: 0.8831
+Val mIoU: 0.2948
+Best val mIoU: 0.2948 at epoch 3
+Current learning rate: 0.00001379
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 1.7649
+  train batch 0100/0372 loss: 1.6528
+  train batch 0150/0372 loss: 1.7158
+  train batch 0200/0372 loss: 1.7218
+  train batch 0250/0372 loss: 1.6599
+  train batch 0300/0372 loss: 1.7038
+  train batch 0350/0372 loss: 1.6230
+Train loss: 1.6752
+Val loss:   1.5808
+Val pixel accuracy: 0.8915
+Val mIoU: 0.3074
+Best val mIoU: 0.3074 at epoch 4
+Current learning rate: 0.00001379
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 1.5912
+  train batch 0100/0372 loss: 1.6425
+  train batch 0150/0372 loss: 1.6360
+  train batch 0200/0372 loss: 1.5242
+  train batch 0250/0372 loss: 1.6640
+  train batch 0300/0372 loss: 1.4798
+  train batch 0350/0372 loss: 1.4796
+Train loss: 1.5621
+Val loss:   1.4796
+Val pixel accuracy: 0.8948
+Val mIoU: 0.3113
+Best val mIoU: 0.3113 at epoch 5
+Current learning rate: 0.00001379
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 1.4543
+  train batch 0100/0372 loss: 1.4486
+  train batch 0150/0372 loss: 1.4995
+  train batch 0200/0372 loss: 1.4357
+  train batch 0250/0372 loss: 1.5551
+  train batch 0300/0372 loss: 1.3933
+  train batch 0350/0372 loss: 1.3749
+Train loss: 1.4483
+Val loss:   1.3828
+Val pixel accuracy: 0.8981
+Val mIoU: 0.3132
+Best val mIoU: 0.3132 at epoch 6
+Current learning rate: 0.00001379
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 1.3554
+  train batch 0100/0372 loss: 1.4129
+  train batch 0150/0372 loss: 1.3588
+  train batch 0200/0372 loss: 1.3179
+  train batch 0250/0372 loss: 1.3507
+  train batch 0300/0372 loss: 1.2899
+  train batch 0350/0372 loss: 1.2851
+Train loss: 1.3456
+Val loss:   1.2803
+Val pixel accuracy: 0.8998
+Val mIoU: 0.3144
+Best val mIoU: 0.3144 at epoch 7
+Current learning rate: 0.00001379
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 1.3526
+  train batch 0100/0372 loss: 1.3259
+  train batch 0150/0372 loss: 1.2426
+  train batch 0200/0372 loss: 1.2496
+  train batch 0250/0372 loss: 1.2596
+  train batch 0300/0372 loss: 1.1788
+  train batch 0350/0372 loss: 1.1560
+Train loss: 1.2500
+Val loss:   1.1995
+Val pixel accuracy: 0.9008
+Val mIoU: 0.3123
+Best val mIoU: 0.3144 at epoch 7
+Current learning rate: 0.00001379
+
+Epoch 9/10
+  train batch 0050/0372 loss: 1.1357
+  train batch 0100/0372 loss: 1.1833
+  train batch 0150/0372 loss: 1.1937
+  train batch 0200/0372 loss: 1.1892
+  train batch 0250/0372 loss: 1.1338
+  train batch 0300/0372 loss: 1.2009
+  train batch 0350/0372 loss: 1.1016
+Train loss: 1.1622
+Val loss:   1.1176
+Val pixel accuracy: 0.9007
+Val mIoU: 0.3139
+Best val mIoU: 0.3144 at epoch 7
+Current learning rate: 0.00001379
+
+Epoch 10/10
+  train batch 0050/0372 loss: 1.1616
+  train batch 0100/0372 loss: 1.0275
+  train batch 0150/0372 loss: 1.0768
+  train batch 0200/0372 loss: 1.2600
+  train batch 0250/0372 loss: 1.0656
+  train batch 0300/0372 loss: 1.0516
+  train batch 0350/0372 loss: 1.0410
+Train loss: 1.0790
+Val loss:   1.0460
+Val pixel accuracy: 0.9033
+Val mIoU: 0.3152
+Best val mIoU: 0.3152 at epoch 10
+Current learning rate: 0.00001379
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial004_ep10_lr1p37878em05_adamw_wd2p50812em06_plateau
+Selected pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial004_ep10_lr1p37878em05_adamw_wd2p50812em06_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_unet_resnet34.py
+================================================================================
+
+================================================================================
+Pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\unet_resnet34\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial004_ep10_lr1p37878em05_adamw_wd2p50812em06_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 5
+Run ID: optuna_all_ep10_unet_resnet34_trial005_ep10_lr3p26764em05_adam_wd0_none
+Params: {'lr': 3.267641765781762e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'none'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --run-id optuna_all_ep10_unet_resnet34_trial005_ep10_lr3p26764em05_adam_wd0_none --epochs 10 --lr 3.267641765781762e-05 --optimizer adam --weight-decay 0.0 --scheduler none
+Training U-Net ResNet34
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 3.267641765781762e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: none
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial005_ep10_lr3p26764em05_adam_wd0_none
+
+Epoch 1/10
+  train batch 0050/0372 loss: 2.4549
+  train batch 0100/0372 loss: 2.2543
+  train batch 0150/0372 loss: 2.1369
+  train batch 0200/0372 loss: 1.9955
+  train batch 0250/0372 loss: 1.9407
+  train batch 0300/0372 loss: 1.9016
+  train batch 0350/0372 loss: 1.8578
+Train loss: 2.1493
+Val loss:   1.7849
+Val pixel accuracy: 0.8734
+Val mIoU: 0.2828
+Best val mIoU: 0.2828 at epoch 1
+Current learning rate: 0.00003268
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 1.7686
+  train batch 0100/0372 loss: 1.7418
+  train batch 0150/0372 loss: 1.6736
+  train batch 0200/0372 loss: 1.5983
+  train batch 0250/0372 loss: 1.6294
+  train batch 0300/0372 loss: 1.5532
+  train batch 0350/0372 loss: 1.5622
+Train loss: 1.6928
+Val loss:   1.5224
+Val pixel accuracy: 0.8918
+Val mIoU: 0.3100
+Best val mIoU: 0.3100 at epoch 2
+Current learning rate: 0.00003268
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 1.4791
+  train batch 0100/0372 loss: 1.4743
+  train batch 0150/0372 loss: 1.3763
+  train batch 0200/0372 loss: 1.4503
+  train batch 0250/0372 loss: 1.4637
+  train batch 0300/0372 loss: 1.3560
+  train batch 0350/0372 loss: 1.3843
+Train loss: 1.4301
+Val loss:   1.2861
+Val pixel accuracy: 0.8982
+Val mIoU: 0.3335
+Best val mIoU: 0.3335 at epoch 3
+Current learning rate: 0.00003268
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 1.2872
+  train batch 0100/0372 loss: 1.2022
+  train batch 0150/0372 loss: 1.2724
+  train batch 0200/0372 loss: 1.2383
+  train batch 0250/0372 loss: 1.1746
+  train batch 0300/0372 loss: 1.1964
+  train batch 0350/0372 loss: 1.0956
+Train loss: 1.2050
+Val loss:   1.0887
+Val pixel accuracy: 0.9015
+Val mIoU: 0.3338
+Best val mIoU: 0.3338 at epoch 4
+Current learning rate: 0.00003268
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 1.0736
+  train batch 0100/0372 loss: 1.1472
+  train batch 0150/0372 loss: 1.0698
+  train batch 0200/0372 loss: 1.0052
+  train batch 0250/0372 loss: 1.1452
+  train batch 0300/0372 loss: 0.9319
+  train batch 0350/0372 loss: 0.9246
+Train loss: 1.0176
+Val loss:   0.9174
+Val pixel accuracy: 0.9057
+Val mIoU: 0.3358
+Best val mIoU: 0.3358 at epoch 5
+Current learning rate: 0.00003268
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.8855
+  train batch 0100/0372 loss: 0.8261
+  train batch 0150/0372 loss: 0.8873
+  train batch 0200/0372 loss: 0.8392
+  train batch 0250/0372 loss: 0.9866
+  train batch 0300/0372 loss: 0.8011
+  train batch 0350/0372 loss: 0.7660
+Train loss: 0.8487
+Val loss:   0.7842
+Val pixel accuracy: 0.9083
+Val mIoU: 0.3358
+Best val mIoU: 0.3358 at epoch 5
+Current learning rate: 0.00003268
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.7341
+  train batch 0100/0372 loss: 0.7974
+  train batch 0150/0372 loss: 0.7066
+  train batch 0200/0372 loss: 0.7142
+  train batch 0250/0372 loss: 0.7076
+  train batch 0300/0372 loss: 0.6743
+  train batch 0350/0372 loss: 0.6809
+Train loss: 0.7162
+Val loss:   0.6610
+Val pixel accuracy: 0.9064
+Val mIoU: 0.3262
+Best val mIoU: 0.3358 at epoch 5
+Current learning rate: 0.00003268
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.7180
+  train batch 0100/0372 loss: 0.7314
+  train batch 0150/0372 loss: 0.6050
+  train batch 0200/0372 loss: 0.6174
+  train batch 0250/0372 loss: 0.5937
+  train batch 0300/0372 loss: 0.5441
+  train batch 0350/0372 loss: 0.5396
+Train loss: 0.6127
+Val loss:   0.5820
+Val pixel accuracy: 0.9118
+Val mIoU: 0.3525
+Best val mIoU: 0.3525 at epoch 8
+Current learning rate: 0.00003268
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.5081
+  train batch 0100/0372 loss: 0.5196
+  train batch 0150/0372 loss: 0.5179
+  train batch 0200/0372 loss: 0.5160
+  train batch 0250/0372 loss: 0.5246
+  train batch 0300/0372 loss: 0.5700
+  train batch 0350/0372 loss: 0.4473
+Train loss: 0.5326
+Val loss:   0.5220
+Val pixel accuracy: 0.9143
+Val mIoU: 0.3590
+Best val mIoU: 0.3590 at epoch 9
+Current learning rate: 0.00003268
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.5321
+  train batch 0100/0372 loss: 0.3989
+  train batch 0150/0372 loss: 0.4451
+  train batch 0200/0372 loss: 0.6906
+  train batch 0250/0372 loss: 0.4523
+  train batch 0300/0372 loss: 0.4254
+  train batch 0350/0372 loss: 0.4630
+Train loss: 0.4663
+Val loss:   0.4764
+Val pixel accuracy: 0.9145
+Val mIoU: 0.3632
+Best val mIoU: 0.3632 at epoch 10
+Current learning rate: 0.00003268
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial005_ep10_lr3p26764em05_adam_wd0_none
+Selected pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial005_ep10_lr3p26764em05_adam_wd0_none
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_unet_resnet34.py
+================================================================================
+
+================================================================================
+Pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\unet_resnet34\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial005_ep10_lr3p26764em05_adam_wd0_none
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 6
+Run ID: optuna_all_ep10_unet_resnet34_trial006_ep10_lr1p16159em05_adamw_wd1p56799em06_none
+Params: {'lr': 1.1615865989246456e-05, 'optimizer': 'adamw', 'weight_decay': 1.5679933916723006e-06, 'scheduler': 'none'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --run-id optuna_all_ep10_unet_resnet34_trial006_ep10_lr1p16159em05_adamw_wd1p56799em06_none --epochs 10 --lr 1.1615865989246456e-05 --optimizer adamw --weight-decay 1.5679933916723006e-06 --scheduler none
+Training U-Net ResNet34
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 1.1615865989246456e-05
+Optimizer: adamw
+Weight decay: 1.5679933916723006e-06
+Scheduler: none
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial006_ep10_lr1p16159em05_adamw_wd1p56799em06_none
+
+Epoch 1/10
+  train batch 0050/0372 loss: 2.7973
+  train batch 0100/0372 loss: 2.5658
+  train batch 0150/0372 loss: 2.4036
+  train batch 0200/0372 loss: 2.2700
+  train batch 0250/0372 loss: 2.2140
+  train batch 0300/0372 loss: 2.1535
+  train batch 0350/0372 loss: 2.1328
+Train loss: 2.4239
+Val loss:   2.0236
+Val pixel accuracy: 0.8329
+Val mIoU: 0.2412
+Best val mIoU: 0.2412 at epoch 1
+Current learning rate: 0.00001162
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 2.0617
+  train batch 0100/0372 loss: 2.0069
+  train batch 0150/0372 loss: 1.9506
+  train batch 0200/0372 loss: 1.8997
+  train batch 0250/0372 loss: 1.9690
+  train batch 0300/0372 loss: 1.8751
+  train batch 0350/0372 loss: 1.8901
+Train loss: 1.9948
+Val loss:   1.8681
+Val pixel accuracy: 0.8709
+Val mIoU: 0.2784
+Best val mIoU: 0.2784 at epoch 2
+Current learning rate: 0.00001162
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 1.8448
+  train batch 0100/0372 loss: 1.8559
+  train batch 0150/0372 loss: 1.7876
+  train batch 0200/0372 loss: 1.8775
+  train batch 0250/0372 loss: 1.9089
+  train batch 0300/0372 loss: 1.8251
+  train batch 0350/0372 loss: 1.8810
+Train loss: 1.8523
+Val loss:   1.7524
+Val pixel accuracy: 0.8794
+Val mIoU: 0.2890
+Best val mIoU: 0.2890 at epoch 3
+Current learning rate: 0.00001162
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 1.8249
+  train batch 0100/0372 loss: 1.7155
+  train batch 0150/0372 loss: 1.7759
+  train batch 0200/0372 loss: 1.7898
+  train batch 0250/0372 loss: 1.7229
+  train batch 0300/0372 loss: 1.7769
+  train batch 0350/0372 loss: 1.6990
+Train loss: 1.7383
+Val loss:   1.6519
+Val pixel accuracy: 0.8876
+Val mIoU: 0.3015
+Best val mIoU: 0.3015 at epoch 4
+Current learning rate: 0.00001162
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 1.6622
+  train batch 0100/0372 loss: 1.7111
+  train batch 0150/0372 loss: 1.7131
+  train batch 0200/0372 loss: 1.5987
+  train batch 0250/0372 loss: 1.7399
+  train batch 0300/0372 loss: 1.5591
+  train batch 0350/0372 loss: 1.5593
+Train loss: 1.6394
+Val loss:   1.5602
+Val pixel accuracy: 0.8940
+Val mIoU: 0.3287
+Best val mIoU: 0.3287 at epoch 5
+Current learning rate: 0.00001162
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 1.5459
+  train batch 0100/0372 loss: 1.5412
+  train batch 0150/0372 loss: 1.5945
+  train batch 0200/0372 loss: 1.5279
+  train batch 0250/0372 loss: 1.6524
+  train batch 0300/0372 loss: 1.4927
+  train batch 0350/0372 loss: 1.4760
+Train loss: 1.5427
+Val loss:   1.4792
+Val pixel accuracy: 0.8991
+Val mIoU: 0.3362
+Best val mIoU: 0.3362 at epoch 6
+Current learning rate: 0.00001162
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 1.4481
+  train batch 0100/0372 loss: 1.5070
+  train batch 0150/0372 loss: 1.4648
+  train batch 0200/0372 loss: 1.4173
+  train batch 0250/0372 loss: 1.4531
+  train batch 0300/0372 loss: 1.3935
+  train batch 0350/0372 loss: 1.3851
+Train loss: 1.4468
+Val loss:   1.3836
+Val pixel accuracy: 0.9010
+Val mIoU: 0.3386
+Best val mIoU: 0.3386 at epoch 7
+Current learning rate: 0.00001162
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 1.4525
+  train batch 0100/0372 loss: 1.4256
+  train batch 0150/0372 loss: 1.3518
+  train batch 0200/0372 loss: 1.3588
+  train batch 0250/0372 loss: 1.3773
+  train batch 0300/0372 loss: 1.2897
+  train batch 0350/0372 loss: 1.2658
+Train loss: 1.3591
+Val loss:   1.3088
+Val pixel accuracy: 0.9028
+Val mIoU: 0.3410
+Best val mIoU: 0.3410 at epoch 8
+Current learning rate: 0.00001162
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 1.2502
+  train batch 0100/0372 loss: 1.3055
+  train batch 0150/0372 loss: 1.3177
+  train batch 0200/0372 loss: 1.3110
+  train batch 0250/0372 loss: 1.2458
+  train batch 0300/0372 loss: 1.3105
+  train batch 0350/0372 loss: 1.2297
+Train loss: 1.2790
+Val loss:   1.2342
+Val pixel accuracy: 0.9015
+Val mIoU: 0.3410
+Best val mIoU: 0.3410 at epoch 9
+Current learning rate: 0.00001162
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 1.2751
+  train batch 0100/0372 loss: 1.1518
+  train batch 0150/0372 loss: 1.2048
+  train batch 0200/0372 loss: 1.3831
+  train batch 0250/0372 loss: 1.1866
+  train batch 0300/0372 loss: 1.1828
+  train batch 0350/0372 loss: 1.1655
+Train loss: 1.2026
+Val loss:   1.1681
+Val pixel accuracy: 0.9044
+Val mIoU: 0.3426
+Best val mIoU: 0.3426 at epoch 10
+Current learning rate: 0.00001162
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial006_ep10_lr1p16159em05_adamw_wd1p56799em06_none
+Selected pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial006_ep10_lr1p16159em05_adamw_wd1p56799em06_none
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_unet_resnet34.py
+================================================================================
+
+================================================================================
+Pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\unet_resnet34\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial006_ep10_lr1p16159em05_adamw_wd1p56799em06_none
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 7
+Run ID: optuna_all_ep10_unet_resnet34_trial007_ep10_lr4p83318em05_adam_wd0_none
+Params: {'lr': 4.833180632488465e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'none'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --run-id optuna_all_ep10_unet_resnet34_trial007_ep10_lr4p83318em05_adam_wd0_none --epochs 10 --lr 4.833180632488465e-05 --optimizer adam --weight-decay 0.0 --scheduler none
+Training U-Net ResNet34
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 4.833180632488465e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: none
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial007_ep10_lr4p83318em05_adam_wd0_none
+
+Epoch 1/10
+  train batch 0050/0372 loss: 2.3531
+  train batch 0100/0372 loss: 2.1354
+  train batch 0150/0372 loss: 2.0310
+  train batch 0200/0372 loss: 1.9061
+  train batch 0250/0372 loss: 1.8362
+  train batch 0300/0372 loss: 1.7841
+  train batch 0350/0372 loss: 1.7209
+Train loss: 2.0443
+Val loss:   1.6596
+Val pixel accuracy: 0.8772
+Val mIoU: 0.2881
+Best val mIoU: 0.2881 at epoch 1
+Current learning rate: 0.00004833
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 1.6335
+  train batch 0100/0372 loss: 1.5830
+  train batch 0150/0372 loss: 1.5033
+  train batch 0200/0372 loss: 1.4254
+  train batch 0250/0372 loss: 1.4308
+  train batch 0300/0372 loss: 1.3449
+  train batch 0350/0372 loss: 1.3397
+Train loss: 1.5156
+Val loss:   1.3170
+Val pixel accuracy: 0.8933
+Val mIoU: 0.3057
+Best val mIoU: 0.3057 at epoch 2
+Current learning rate: 0.00004833
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 1.2609
+  train batch 0100/0372 loss: 1.2546
+  train batch 0150/0372 loss: 1.1285
+  train batch 0200/0372 loss: 1.1985
+  train batch 0250/0372 loss: 1.2157
+  train batch 0300/0372 loss: 1.0936
+  train batch 0350/0372 loss: 1.1154
+Train loss: 1.1866
+Val loss:   1.0237
+Val pixel accuracy: 0.9006
+Val mIoU: 0.3108
+Best val mIoU: 0.3108 at epoch 3
+Current learning rate: 0.00004833
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.9920
+  train batch 0100/0372 loss: 0.9022
+  train batch 0150/0372 loss: 0.9849
+  train batch 0200/0372 loss: 0.9389
+  train batch 0250/0372 loss: 0.8840
+  train batch 0300/0372 loss: 0.8972
+  train batch 0350/0372 loss: 0.7946
+Train loss: 0.9176
+Val loss:   0.7999
+Val pixel accuracy: 0.9045
+Val mIoU: 0.3334
+Best val mIoU: 0.3334 at epoch 4
+Current learning rate: 0.00004833
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.7777
+  train batch 0100/0372 loss: 0.8576
+  train batch 0150/0372 loss: 0.7581
+  train batch 0200/0372 loss: 0.7409
+  train batch 0250/0372 loss: 0.8691
+  train batch 0300/0372 loss: 0.6671
+  train batch 0350/0372 loss: 0.6764
+Train loss: 0.7279
+Val loss:   0.6468
+Val pixel accuracy: 0.9069
+Val mIoU: 0.3376
+Best val mIoU: 0.3376 at epoch 5
+Current learning rate: 0.00004833
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.6061
+  train batch 0100/0372 loss: 0.5691
+  train batch 0150/0372 loss: 0.6283
+  train batch 0200/0372 loss: 0.5705
+  train batch 0250/0372 loss: 0.7591
+  train batch 0300/0372 loss: 0.5688
+  train batch 0350/0372 loss: 0.5231
+Train loss: 0.5893
+Val loss:   0.5509
+Val pixel accuracy: 0.9129
+Val mIoU: 0.3720
+Best val mIoU: 0.3720 at epoch 6
+Current learning rate: 0.00004833
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.4975
+  train batch 0100/0372 loss: 0.5591
+  train batch 0150/0372 loss: 0.4579
+  train batch 0200/0372 loss: 0.5220
+  train batch 0250/0372 loss: 0.4802
+  train batch 0300/0372 loss: 0.4726
+  train batch 0350/0372 loss: 0.4872
+Train loss: 0.4914
+Val loss:   0.4675
+Val pixel accuracy: 0.9128
+Val mIoU: 0.3617
+Best val mIoU: 0.3720 at epoch 6
+Current learning rate: 0.00004833
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.5056
+  train batch 0100/0372 loss: 0.5282
+  train batch 0150/0372 loss: 0.4000
+  train batch 0200/0372 loss: 0.4336
+  train batch 0250/0372 loss: 0.4022
+  train batch 0300/0372 loss: 0.3497
+  train batch 0350/0372 loss: 0.3661
+Train loss: 0.4183
+Val loss:   0.4079
+Val pixel accuracy: 0.9188
+Val mIoU: 0.4063
+Best val mIoU: 0.4063 at epoch 8
+Current learning rate: 0.00004833
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.3364
+  train batch 0100/0372 loss: 0.3260
+  train batch 0150/0372 loss: 0.3307
+  train batch 0200/0372 loss: 0.3335
+  train batch 0250/0372 loss: 0.3537
+  train batch 0300/0372 loss: 0.4015
+  train batch 0350/0372 loss: 0.2874
+Train loss: 0.3636
+Val loss:   0.3751
+Val pixel accuracy: 0.9206
+Val mIoU: 0.4187
+Best val mIoU: 0.4187 at epoch 9
+Current learning rate: 0.00004833
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.3713
+  train batch 0100/0372 loss: 0.2659
+  train batch 0150/0372 loss: 0.2956
+  train batch 0200/0372 loss: 0.5841
+  train batch 0250/0372 loss: 0.3070
+  train batch 0300/0372 loss: 0.2894
+  train batch 0350/0372 loss: 0.3223
+Train loss: 0.3214
+Val loss:   0.3588
+Val pixel accuracy: 0.9203
+Val mIoU: 0.4279
+Best val mIoU: 0.4279 at epoch 10
+Current learning rate: 0.00004833
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial007_ep10_lr4p83318em05_adam_wd0_none
+Selected pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial007_ep10_lr4p83318em05_adam_wd0_none
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_unet_resnet34.py
+================================================================================
+
+================================================================================
+Pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\unet_resnet34\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial007_ep10_lr4p83318em05_adam_wd0_none
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 8
+Run ID: optuna_all_ep10_unet_resnet34_trial008_ep10_lr8p1156em05_adamw_wd1p24em05_plateau
+Params: {'lr': 8.115595675970508e-05, 'optimizer': 'adamw', 'weight_decay': 1.2399967836846103e-05, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --run-id optuna_all_ep10_unet_resnet34_trial008_ep10_lr8p1156em05_adamw_wd1p24em05_plateau --epochs 10 --lr 8.115595675970508e-05 --optimizer adamw --weight-decay 1.2399967836846103e-05 --scheduler plateau
+Training U-Net ResNet34
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 8.115595675970508e-05
+Optimizer: adamw
+Weight decay: 1.2399967836846103e-05
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial008_ep10_lr8p1156em05_adamw_wd1p24em05_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 2.2111
+  train batch 0100/0372 loss: 2.0284
+  train batch 0150/0372 loss: 1.8831
+  train batch 0200/0372 loss: 1.7600
+  train batch 0250/0372 loss: 1.6480
+  train batch 0300/0372 loss: 1.6060
+  train batch 0350/0372 loss: 1.5055
+Train loss: 1.8859
+Val loss:   1.4369
+Val pixel accuracy: 0.8841
+Val mIoU: 0.2917
+Best val mIoU: 0.2917 at epoch 1
+Current learning rate: 0.00008116
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 1.3824
+  train batch 0100/0372 loss: 1.2963
+  train batch 0150/0372 loss: 1.2021
+  train batch 0200/0372 loss: 1.1261
+  train batch 0250/0372 loss: 1.1155
+  train batch 0300/0372 loss: 0.9956
+  train batch 0350/0372 loss: 0.9957
+Train loss: 1.2090
+Val loss:   0.9505
+Val pixel accuracy: 0.9022
+Val mIoU: 0.3306
+Best val mIoU: 0.3306 at epoch 2
+Current learning rate: 0.00008116
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.9112
+  train batch 0100/0372 loss: 0.9044
+  train batch 0150/0372 loss: 0.7459
+  train batch 0200/0372 loss: 0.8243
+  train batch 0250/0372 loss: 0.8481
+  train batch 0300/0372 loss: 0.7004
+  train batch 0350/0372 loss: 0.7441
+Train loss: 0.8117
+Val loss:   0.6500
+Val pixel accuracy: 0.9083
+Val mIoU: 0.3467
+Best val mIoU: 0.3467 at epoch 3
+Current learning rate: 0.00008116
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.5902
+  train batch 0100/0372 loss: 0.5566
+  train batch 0150/0372 loss: 0.6532
+  train batch 0200/0372 loss: 0.6129
+  train batch 0250/0372 loss: 0.6081
+  train batch 0300/0372 loss: 0.5707
+  train batch 0350/0372 loss: 0.4833
+Train loss: 0.5890
+Val loss:   0.5000
+Val pixel accuracy: 0.9102
+Val mIoU: 0.3567
+Best val mIoU: 0.3567 at epoch 4
+Current learning rate: 0.00008116
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.4733
+  train batch 0100/0372 loss: 0.5846
+  train batch 0150/0372 loss: 0.4745
+  train batch 0200/0372 loss: 0.5086
+  train batch 0250/0372 loss: 0.6579
+  train batch 0300/0372 loss: 0.4295
+  train batch 0350/0372 loss: 0.4573
+Train loss: 0.4652
+Val loss:   0.4260
+Val pixel accuracy: 0.9132
+Val mIoU: 0.3846
+Best val mIoU: 0.3846 at epoch 5
+Current learning rate: 0.00008116
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.3962
+  train batch 0100/0372 loss: 0.3434
+  train batch 0150/0372 loss: 0.3890
+  train batch 0200/0372 loss: 0.3592
+  train batch 0250/0372 loss: 0.6330
+  train batch 0300/0372 loss: 0.3750
+  train batch 0350/0372 loss: 0.3411
+Train loss: 0.3848
+Val loss:   0.3696
+Val pixel accuracy: 0.9181
+Val mIoU: 0.3895
+Best val mIoU: 0.3895 at epoch 6
+Current learning rate: 0.00008116
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.3272
+  train batch 0100/0372 loss: 0.3529
+  train batch 0150/0372 loss: 0.2961
+  train batch 0200/0372 loss: 0.3622
+  train batch 0250/0372 loss: 0.3222
+  train batch 0300/0372 loss: 0.3360
+  train batch 0350/0372 loss: 0.3359
+Train loss: 0.3338
+Val loss:   0.3374
+Val pixel accuracy: 0.9168
+Val mIoU: 0.3942
+Best val mIoU: 0.3942 at epoch 7
+Current learning rate: 0.00008116
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.3688
+  train batch 0100/0372 loss: 0.3588
+  train batch 0150/0372 loss: 0.2535
+  train batch 0200/0372 loss: 0.3431
+  train batch 0250/0372 loss: 0.2920
+  train batch 0300/0372 loss: 0.2336
+  train batch 0350/0372 loss: 0.2427
+Train loss: 0.2886
+Val loss:   0.3030
+Val pixel accuracy: 0.9209
+Val mIoU: 0.4132
+Best val mIoU: 0.4132 at epoch 8
+Current learning rate: 0.00008116
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.2423
+  train batch 0100/0372 loss: 0.2182
+  train batch 0150/0372 loss: 0.2258
+  train batch 0200/0372 loss: 0.2338
+  train batch 0250/0372 loss: 0.2346
+  train batch 0300/0372 loss: 0.2563
+  train batch 0350/0372 loss: 0.1974
+Train loss: 0.2587
+Val loss:   0.2809
+Val pixel accuracy: 0.9250
+Val mIoU: 0.4669
+Best val mIoU: 0.4669 at epoch 9
+Current learning rate: 0.00008116
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2576
+  train batch 0100/0372 loss: 0.1782
+  train batch 0150/0372 loss: 0.2034
+  train batch 0200/0372 loss: 0.5028
+  train batch 0250/0372 loss: 0.2059
+  train batch 0300/0372 loss: 0.2129
+  train batch 0350/0372 loss: 0.2444
+Train loss: 0.2312
+Val loss:   0.2916
+Val pixel accuracy: 0.9198
+Val mIoU: 0.4772
+Best val mIoU: 0.4772 at epoch 10
+Current learning rate: 0.00008116
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial008_ep10_lr8p1156em05_adamw_wd1p24em05_plateau
+Selected pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial008_ep10_lr8p1156em05_adamw_wd1p24em05_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_unet_resnet34.py
+================================================================================
+
+================================================================================
+Pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\unet_resnet34\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial008_ep10_lr8p1156em05_adamw_wd1p24em05_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 9
+Run ID: optuna_all_ep10_unet_resnet34_trial009_ep10_lr1p53057em05_adam_wd0_none
+Params: {'lr': 1.5305744365500174e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'none'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --run-id optuna_all_ep10_unet_resnet34_trial009_ep10_lr1p53057em05_adam_wd0_none --epochs 10 --lr 1.5305744365500174e-05 --optimizer adam --weight-decay 0.0 --scheduler none
+Training U-Net ResNet34
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 1.5305744365500174e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: none
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial009_ep10_lr1p53057em05_adam_wd0_none
+
+Epoch 1/10
+  train batch 0050/0372 loss: 2.7112
+  train batch 0100/0372 loss: 2.4728
+  train batch 0150/0372 loss: 2.3231
+  train batch 0200/0372 loss: 2.1834
+  train batch 0250/0372 loss: 2.1163
+  train batch 0300/0372 loss: 2.0694
+  train batch 0350/0372 loss: 2.0518
+Train loss: 2.3458
+Val loss:   1.9653
+Val pixel accuracy: 0.8510
+Val mIoU: 0.2540
+Best val mIoU: 0.2540 at epoch 1
+Current learning rate: 0.00001531
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 1.9944
+  train batch 0100/0372 loss: 1.9462
+  train batch 0150/0372 loss: 1.8908
+  train batch 0200/0372 loss: 1.8315
+  train batch 0250/0372 loss: 1.8950
+  train batch 0300/0372 loss: 1.8091
+  train batch 0350/0372 loss: 1.8258
+Train loss: 1.9281
+Val loss:   1.7939
+Val pixel accuracy: 0.8790
+Val mIoU: 0.2867
+Best val mIoU: 0.2867 at epoch 2
+Current learning rate: 0.00001531
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 1.7745
+  train batch 0100/0372 loss: 1.7795
+  train batch 0150/0372 loss: 1.7086
+  train batch 0200/0372 loss: 1.7923
+  train batch 0250/0372 loss: 1.8241
+  train batch 0300/0372 loss: 1.7286
+  train batch 0350/0372 loss: 1.7832
+Train loss: 1.7678
+Val loss:   1.6576
+Val pixel accuracy: 0.8846
+Val mIoU: 0.2972
+Best val mIoU: 0.2972 at epoch 3
+Current learning rate: 0.00001531
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 1.7184
+  train batch 0100/0372 loss: 1.6117
+  train batch 0150/0372 loss: 1.6755
+  train batch 0200/0372 loss: 1.6775
+  train batch 0250/0372 loss: 1.6155
+  train batch 0300/0372 loss: 1.6546
+  train batch 0350/0372 loss: 1.5735
+Train loss: 1.6322
+Val loss:   1.5346
+Val pixel accuracy: 0.8935
+Val mIoU: 0.3086
+Best val mIoU: 0.3086 at epoch 4
+Current learning rate: 0.00001531
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 1.5468
+  train batch 0100/0372 loss: 1.5954
+  train batch 0150/0372 loss: 1.5812
+  train batch 0200/0372 loss: 1.4661
+  train batch 0250/0372 loss: 1.6051
+  train batch 0300/0372 loss: 1.4268
+  train batch 0350/0372 loss: 1.4214
+Train loss: 1.5080
+Val loss:   1.4193
+Val pixel accuracy: 0.8966
+Val mIoU: 0.3113
+Best val mIoU: 0.3113 at epoch 5
+Current learning rate: 0.00001531
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 1.3939
+  train batch 0100/0372 loss: 1.3866
+  train batch 0150/0372 loss: 1.4370
+  train batch 0200/0372 loss: 1.3774
+  train batch 0250/0372 loss: 1.5002
+  train batch 0300/0372 loss: 1.3311
+  train batch 0350/0372 loss: 1.3128
+Train loss: 1.3877
+Val loss:   1.3223
+Val pixel accuracy: 0.8990
+Val mIoU: 0.3140
+Best val mIoU: 0.3140 at epoch 6
+Current learning rate: 0.00001531
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 1.2944
+  train batch 0100/0372 loss: 1.3503
+  train batch 0150/0372 loss: 1.2915
+  train batch 0200/0372 loss: 1.2525
+  train batch 0250/0372 loss: 1.2841
+  train batch 0300/0372 loss: 1.2215
+  train batch 0350/0372 loss: 1.2184
+Train loss: 1.2798
+Val loss:   1.2127
+Val pixel accuracy: 0.9004
+Val mIoU: 0.3133
+Best val mIoU: 0.3140 at epoch 6
+Current learning rate: 0.00001531
+
+Epoch 8/10
+  train batch 0050/0372 loss: 1.2876
+  train batch 0100/0372 loss: 1.2612
+  train batch 0150/0372 loss: 1.1755
+  train batch 0200/0372 loss: 1.1764
+  train batch 0250/0372 loss: 1.1817
+  train batch 0300/0372 loss: 1.1075
+  train batch 0350/0372 loss: 1.0826
+Train loss: 1.1788
+Val loss:   1.1296
+Val pixel accuracy: 0.9019
+Val mIoU: 0.3131
+Best val mIoU: 0.3140 at epoch 6
+Current learning rate: 0.00001531
+
+Epoch 9/10
+  train batch 0050/0372 loss: 1.0604
+  train batch 0100/0372 loss: 1.1050
+  train batch 0150/0372 loss: 1.1132
+  train batch 0200/0372 loss: 1.1061
+  train batch 0250/0372 loss: 1.0599
+  train batch 0300/0372 loss: 1.1205
+  train batch 0350/0372 loss: 1.0200
+Train loss: 1.0866
+Val loss:   1.0429
+Val pixel accuracy: 0.9017
+Val mIoU: 0.3148
+Best val mIoU: 0.3148 at epoch 9
+Current learning rate: 0.00001531
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 1.0855
+  train batch 0100/0372 loss: 0.9463
+  train batch 0150/0372 loss: 0.9972
+  train batch 0200/0372 loss: 1.1804
+  train batch 0250/0372 loss: 0.9834
+  train batch 0300/0372 loss: 0.9675
+  train batch 0350/0372 loss: 0.9651
+Train loss: 0.9999
+Val loss:   0.9717
+Val pixel accuracy: 0.9040
+Val mIoU: 0.3166
+Best val mIoU: 0.3166 at epoch 10
+Current learning rate: 0.00001531
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial009_ep10_lr1p53057em05_adam_wd0_none
+Selected pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial009_ep10_lr1p53057em05_adam_wd0_none
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_unet_resnet34.py
+================================================================================
+
+================================================================================
+Pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\unet_resnet34\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial009_ep10_lr1p53057em05_adam_wd0_none
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 10
+Run ID: optuna_all_ep10_unet_resnet34_trial010_ep10_lr9p53884em05_adam_wd0_plateau
+Params: {'lr': 9.538839436462497e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --run-id optuna_all_ep10_unet_resnet34_trial010_ep10_lr9p53884em05_adam_wd0_plateau --epochs 10 --lr 9.538839436462497e-05 --optimizer adam --weight-decay 0.0 --scheduler plateau
+Training U-Net ResNet34
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 9.538839436462497e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial010_ep10_lr9p53884em05_adam_wd0_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 2.1711
+  train batch 0100/0372 loss: 1.9669
+  train batch 0150/0372 loss: 1.8521
+  train batch 0200/0372 loss: 1.7171
+  train batch 0250/0372 loss: 1.5938
+  train batch 0300/0372 loss: 1.5287
+  train batch 0350/0372 loss: 1.4365
+Train loss: 1.8316
+Val loss:   1.3538
+Val pixel accuracy: 0.8827
+Val mIoU: 0.2870
+Best val mIoU: 0.2870 at epoch 1
+Current learning rate: 0.00009539
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 1.2959
+  train batch 0100/0372 loss: 1.1957
+  train batch 0150/0372 loss: 1.1096
+  train batch 0200/0372 loss: 1.0361
+  train batch 0250/0372 loss: 0.9844
+  train batch 0300/0372 loss: 0.8753
+  train batch 0350/0372 loss: 0.8732
+Train loss: 1.1011
+Val loss:   0.8337
+Val pixel accuracy: 0.9003
+Val mIoU: 0.3046
+Best val mIoU: 0.3046 at epoch 2
+Current learning rate: 0.00009539
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.8354
+  train batch 0100/0372 loss: 0.7984
+  train batch 0150/0372 loss: 0.6430
+  train batch 0200/0372 loss: 0.7308
+  train batch 0250/0372 loss: 0.7760
+  train batch 0300/0372 loss: 0.5975
+  train batch 0350/0372 loss: 0.6516
+Train loss: 0.7158
+Val loss:   0.5601
+Val pixel accuracy: 0.9081
+Val mIoU: 0.3282
+Best val mIoU: 0.3282 at epoch 3
+Current learning rate: 0.00009539
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.4985
+  train batch 0100/0372 loss: 0.4778
+  train batch 0150/0372 loss: 0.5972
+  train batch 0200/0372 loss: 0.5533
+  train batch 0250/0372 loss: 0.5388
+  train batch 0300/0372 loss: 0.5339
+  train batch 0350/0372 loss: 0.4431
+Train loss: 0.5251
+Val loss:   0.4530
+Val pixel accuracy: 0.9075
+Val mIoU: 0.3370
+Best val mIoU: 0.3370 at epoch 4
+Current learning rate: 0.00009539
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.4217
+  train batch 0100/0372 loss: 0.5535
+  train batch 0150/0372 loss: 0.4009
+  train batch 0200/0372 loss: 0.5224
+  train batch 0250/0372 loss: 0.6413
+  train batch 0300/0372 loss: 0.3805
+  train batch 0350/0372 loss: 0.4417
+Train loss: 0.4237
+Val loss:   0.3834
+Val pixel accuracy: 0.9113
+Val mIoU: 0.3523
+Best val mIoU: 0.3523 at epoch 5
+Current learning rate: 0.00009539
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.3579
+  train batch 0100/0372 loss: 0.3102
+  train batch 0150/0372 loss: 0.3679
+  train batch 0200/0372 loss: 0.3225
+  train batch 0250/0372 loss: 0.6070
+  train batch 0300/0372 loss: 0.3678
+  train batch 0350/0372 loss: 0.3067
+Train loss: 0.3522
+Val loss:   0.3386
+Val pixel accuracy: 0.9160
+Val mIoU: 0.3657
+Best val mIoU: 0.3657 at epoch 6
+Current learning rate: 0.00009539
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.2907
+  train batch 0100/0372 loss: 0.3431
+  train batch 0150/0372 loss: 0.2644
+  train batch 0200/0372 loss: 0.3344
+  train batch 0250/0372 loss: 0.2813
+  train batch 0300/0372 loss: 0.2873
+  train batch 0350/0372 loss: 0.3113
+Train loss: 0.3045
+Val loss:   0.3106
+Val pixel accuracy: 0.9166
+Val mIoU: 0.3879
+Best val mIoU: 0.3879 at epoch 7
+Current learning rate: 0.00009539
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.3640
+  train batch 0100/0372 loss: 0.3664
+  train batch 0150/0372 loss: 0.2480
+  train batch 0200/0372 loss: 0.3298
+  train batch 0250/0372 loss: 0.2707
+  train batch 0300/0372 loss: 0.2145
+  train batch 0350/0372 loss: 0.2285
+Train loss: 0.2724
+Val loss:   0.2898
+Val pixel accuracy: 0.9219
+Val mIoU: 0.4399
+Best val mIoU: 0.4399 at epoch 8
+Current learning rate: 0.00009539
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.2303
+  train batch 0100/0372 loss: 0.1943
+  train batch 0150/0372 loss: 0.2074
+  train batch 0200/0372 loss: 0.2155
+  train batch 0250/0372 loss: 0.2272
+  train batch 0300/0372 loss: 0.2550
+  train batch 0350/0372 loss: 0.1801
+Train loss: 0.2441
+Val loss:   0.2724
+Val pixel accuracy: 0.9252
+Val mIoU: 0.4794
+Best val mIoU: 0.4794 at epoch 9
+Current learning rate: 0.00009539
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2624
+  train batch 0100/0372 loss: 0.1677
+  train batch 0150/0372 loss: 0.1932
+  train batch 0200/0372 loss: 0.5302
+  train batch 0250/0372 loss: 0.1970
+  train batch 0300/0372 loss: 0.2008
+  train batch 0350/0372 loss: 0.2249
+Train loss: 0.2249
+Val loss:   0.2773
+Val pixel accuracy: 0.9220
+Val mIoU: 0.4900
+Best val mIoU: 0.4900 at epoch 10
+Current learning rate: 0.00009539
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial010_ep10_lr9p53884em05_adam_wd0_plateau
+Selected pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial010_ep10_lr9p53884em05_adam_wd0_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_unet_resnet34.py
+================================================================================
+
+================================================================================
+Pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\unet_resnet34\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial010_ep10_lr9p53884em05_adam_wd0_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 11
+Run ID: optuna_all_ep10_unet_resnet34_trial011_ep10_lr9p01761em05_adam_wd0_plateau
+Params: {'lr': 9.017613421524532e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --run-id optuna_all_ep10_unet_resnet34_trial011_ep10_lr9p01761em05_adam_wd0_plateau --epochs 10 --lr 9.017613421524532e-05 --optimizer adam --weight-decay 0.0 --scheduler plateau
+Training U-Net ResNet34
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 9.017613421524532e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial011_ep10_lr9p01761em05_adam_wd0_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 2.1874
+  train batch 0100/0372 loss: 1.9857
+  train batch 0150/0372 loss: 1.8597
+  train batch 0200/0372 loss: 1.7237
+  train batch 0250/0372 loss: 1.6142
+  train batch 0300/0372 loss: 1.5464
+  train batch 0350/0372 loss: 1.4277
+Train loss: 1.8501
+Val loss:   1.3778
+Val pixel accuracy: 0.8860
+Val mIoU: 0.2904
+Best val mIoU: 0.2904 at epoch 1
+Current learning rate: 0.00009018
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 1.3173
+  train batch 0100/0372 loss: 1.2334
+  train batch 0150/0372 loss: 1.1487
+  train batch 0200/0372 loss: 1.0613
+  train batch 0250/0372 loss: 1.0232
+  train batch 0300/0372 loss: 0.9147
+  train batch 0350/0372 loss: 0.9182
+Train loss: 1.1409
+Val loss:   0.8820
+Val pixel accuracy: 0.9012
+Val mIoU: 0.3248
+Best val mIoU: 0.3248 at epoch 2
+Current learning rate: 0.00009018
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.8394
+  train batch 0100/0372 loss: 0.8342
+  train batch 0150/0372 loss: 0.6771
+  train batch 0200/0372 loss: 0.7636
+  train batch 0250/0372 loss: 0.8061
+  train batch 0300/0372 loss: 0.6512
+  train batch 0350/0372 loss: 0.6813
+Train loss: 0.7506
+Val loss:   0.5937
+Val pixel accuracy: 0.9072
+Val mIoU: 0.3419
+Best val mIoU: 0.3419 at epoch 3
+Current learning rate: 0.00009018
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.5344
+  train batch 0100/0372 loss: 0.5033
+  train batch 0150/0372 loss: 0.6075
+  train batch 0200/0372 loss: 0.5755
+  train batch 0250/0372 loss: 0.5679
+  train batch 0300/0372 loss: 0.5483
+  train batch 0350/0372 loss: 0.4787
+Train loss: 0.5432
+Val loss:   0.4663
+Val pixel accuracy: 0.9100
+Val mIoU: 0.3705
+Best val mIoU: 0.3705 at epoch 4
+Current learning rate: 0.00009018
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.4410
+  train batch 0100/0372 loss: 0.5380
+  train batch 0150/0372 loss: 0.4346
+  train batch 0200/0372 loss: 0.4828
+  train batch 0250/0372 loss: 0.6567
+  train batch 0300/0372 loss: 0.4194
+  train batch 0350/0372 loss: 0.4259
+Train loss: 0.4367
+Val loss:   0.3921
+Val pixel accuracy: 0.9153
+Val mIoU: 0.3830
+Best val mIoU: 0.3830 at epoch 5
+Current learning rate: 0.00009018
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.3666
+  train batch 0100/0372 loss: 0.3272
+  train batch 0150/0372 loss: 0.3608
+  train batch 0200/0372 loss: 0.3296
+  train batch 0250/0372 loss: 0.6117
+  train batch 0300/0372 loss: 0.4031
+  train batch 0350/0372 loss: 0.3118
+Train loss: 0.3654
+Val loss:   0.3463
+Val pixel accuracy: 0.9185
+Val mIoU: 0.3999
+Best val mIoU: 0.3999 at epoch 6
+Current learning rate: 0.00009018
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.2944
+  train batch 0100/0372 loss: 0.3264
+  train batch 0150/0372 loss: 0.2684
+  train batch 0200/0372 loss: 0.3275
+  train batch 0250/0372 loss: 0.2881
+  train batch 0300/0372 loss: 0.2938
+  train batch 0350/0372 loss: 0.3178
+Train loss: 0.3076
+Val loss:   0.3127
+Val pixel accuracy: 0.9198
+Val mIoU: 0.4028
+Best val mIoU: 0.4028 at epoch 7
+Current learning rate: 0.00009018
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.3444
+  train batch 0100/0372 loss: 0.3477
+  train batch 0150/0372 loss: 0.2442
+  train batch 0200/0372 loss: 0.3192
+  train batch 0250/0372 loss: 0.2824
+  train batch 0300/0372 loss: 0.2200
+  train batch 0350/0372 loss: 0.2272
+Train loss: 0.2741
+Val loss:   0.2923
+Val pixel accuracy: 0.9218
+Val mIoU: 0.4433
+Best val mIoU: 0.4433 at epoch 8
+Current learning rate: 0.00009018
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.2231
+  train batch 0100/0372 loss: 0.2085
+  train batch 0150/0372 loss: 0.2081
+  train batch 0200/0372 loss: 0.2247
+  train batch 0250/0372 loss: 0.2269
+  train batch 0300/0372 loss: 0.2474
+  train batch 0350/0372 loss: 0.1953
+Train loss: 0.2477
+Val loss:   0.2762
+Val pixel accuracy: 0.9238
+Val mIoU: 0.4708
+Best val mIoU: 0.4708 at epoch 9
+Current learning rate: 0.00009018
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2475
+  train batch 0100/0372 loss: 0.1757
+  train batch 0150/0372 loss: 0.2041
+  train batch 0200/0372 loss: 0.5213
+  train batch 0250/0372 loss: 0.1854
+  train batch 0300/0372 loss: 0.2031
+  train batch 0350/0372 loss: 0.2307
+Train loss: 0.2288
+Val loss:   0.2717
+Val pixel accuracy: 0.9233
+Val mIoU: 0.4849
+Best val mIoU: 0.4849 at epoch 10
+Current learning rate: 0.00009018
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial011_ep10_lr9p01761em05_adam_wd0_plateau
+Selected pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial011_ep10_lr9p01761em05_adam_wd0_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_unet_resnet34.py
+================================================================================
+
+================================================================================
+Pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\unet_resnet34\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial011_ep10_lr9p01761em05_adam_wd0_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 12
+Run ID: optuna_all_ep10_unet_resnet34_trial012_ep10_lr6p23099em05_adam_wd0_plateau
+Params: {'lr': 6.230989238482034e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --run-id optuna_all_ep10_unet_resnet34_trial012_ep10_lr6p23099em05_adam_wd0_plateau --epochs 10 --lr 6.230989238482034e-05 --optimizer adam --weight-decay 0.0 --scheduler plateau
+Training U-Net ResNet34
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 6.230989238482034e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial012_ep10_lr6p23099em05_adam_wd0_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 2.2963
+  train batch 0100/0372 loss: 2.1016
+  train batch 0150/0372 loss: 1.9572
+  train batch 0200/0372 loss: 1.8361
+  train batch 0250/0372 loss: 1.7602
+  train batch 0300/0372 loss: 1.7094
+  train batch 0350/0372 loss: 1.6391
+Train loss: 1.9720
+Val loss:   1.5718
+Val pixel accuracy: 0.8806
+Val mIoU: 0.2917
+Best val mIoU: 0.2917 at epoch 1
+Current learning rate: 0.00006231
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 1.5096
+  train batch 0100/0372 loss: 1.4489
+  train batch 0150/0372 loss: 1.3768
+  train batch 0200/0372 loss: 1.2895
+  train batch 0250/0372 loss: 1.2782
+  train batch 0300/0372 loss: 1.1853
+  train batch 0350/0372 loss: 1.1819
+Train loss: 1.3740
+Val loss:   1.1487
+Val pixel accuracy: 0.8968
+Val mIoU: 0.3075
+Best val mIoU: 0.3075 at epoch 2
+Current learning rate: 0.00006231
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 1.0905
+  train batch 0100/0372 loss: 1.0877
+  train batch 0150/0372 loss: 0.9490
+  train batch 0200/0372 loss: 1.0145
+  train batch 0250/0372 loss: 1.0370
+  train batch 0300/0372 loss: 0.8844
+  train batch 0350/0372 loss: 0.9176
+Train loss: 1.0009
+Val loss:   0.8212
+Val pixel accuracy: 0.9038
+Val mIoU: 0.3101
+Best val mIoU: 0.3101 at epoch 3
+Current learning rate: 0.00006231
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.7744
+  train batch 0100/0372 loss: 0.7118
+  train batch 0150/0372 loss: 0.8061
+  train batch 0200/0372 loss: 0.7663
+  train batch 0250/0372 loss: 0.7452
+  train batch 0300/0372 loss: 0.7273
+  train batch 0350/0372 loss: 0.6212
+Train loss: 0.7414
+Val loss:   0.6362
+Val pixel accuracy: 0.9055
+Val mIoU: 0.3136
+Best val mIoU: 0.3136 at epoch 4
+Current learning rate: 0.00006231
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.6027
+  train batch 0100/0372 loss: 0.7038
+  train batch 0150/0372 loss: 0.5870
+  train batch 0200/0372 loss: 0.6272
+  train batch 0250/0372 loss: 0.7612
+  train batch 0300/0372 loss: 0.5268
+  train batch 0350/0372 loss: 0.5536
+Train loss: 0.5809
+Val loss:   0.5200
+Val pixel accuracy: 0.9094
+Val mIoU: 0.3372
+Best val mIoU: 0.3372 at epoch 5
+Current learning rate: 0.00006231
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.4804
+  train batch 0100/0372 loss: 0.4203
+  train batch 0150/0372 loss: 0.4949
+  train batch 0200/0372 loss: 0.4620
+  train batch 0250/0372 loss: 0.6970
+  train batch 0300/0372 loss: 0.4773
+  train batch 0350/0372 loss: 0.4192
+Train loss: 0.4751
+Val loss:   0.4461
+Val pixel accuracy: 0.9131
+Val mIoU: 0.3517
+Best val mIoU: 0.3517 at epoch 6
+Current learning rate: 0.00006231
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.3944
+  train batch 0100/0372 loss: 0.4489
+  train batch 0150/0372 loss: 0.3558
+  train batch 0200/0372 loss: 0.4549
+  train batch 0250/0372 loss: 0.3841
+  train batch 0300/0372 loss: 0.3808
+  train batch 0350/0372 loss: 0.3973
+Train loss: 0.3953
+Val loss:   0.3889
+Val pixel accuracy: 0.9172
+Val mIoU: 0.3884
+Best val mIoU: 0.3884 at epoch 7
+Current learning rate: 0.00006231
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.4231
+  train batch 0100/0372 loss: 0.4462
+  train batch 0150/0372 loss: 0.3141
+  train batch 0200/0372 loss: 0.3795
+  train batch 0250/0372 loss: 0.3259
+  train batch 0300/0372 loss: 0.2830
+  train batch 0350/0372 loss: 0.2953
+Train loss: 0.3433
+Val loss:   0.3457
+Val pixel accuracy: 0.9194
+Val mIoU: 0.4003
+Best val mIoU: 0.4003 at epoch 8
+Current learning rate: 0.00006231
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.2758
+  train batch 0100/0372 loss: 0.2580
+  train batch 0150/0372 loss: 0.2592
+  train batch 0200/0372 loss: 0.2722
+  train batch 0250/0372 loss: 0.2780
+  train batch 0300/0372 loss: 0.3082
+  train batch 0350/0372 loss: 0.2261
+Train loss: 0.3020
+Val loss:   0.3221
+Val pixel accuracy: 0.9207
+Val mIoU: 0.4193
+Best val mIoU: 0.4193 at epoch 9
+Current learning rate: 0.00006231
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.3059
+  train batch 0100/0372 loss: 0.2033
+  train batch 0150/0372 loss: 0.2410
+  train batch 0200/0372 loss: 0.5746
+  train batch 0250/0372 loss: 0.2440
+  train batch 0300/0372 loss: 0.2338
+  train batch 0350/0372 loss: 0.2698
+Train loss: 0.2668
+Val loss:   0.3051
+Val pixel accuracy: 0.9225
+Val mIoU: 0.4533
+Best val mIoU: 0.4533 at epoch 10
+Current learning rate: 0.00006231
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial012_ep10_lr6p23099em05_adam_wd0_plateau
+Selected pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial012_ep10_lr6p23099em05_adam_wd0_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_unet_resnet34.py
+================================================================================
+
+================================================================================
+Pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\unet_resnet34\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial012_ep10_lr6p23099em05_adam_wd0_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 13
+Run ID: optuna_all_ep10_unet_resnet34_trial013_ep10_lr5p05967em05_adam_wd0_plateau
+Params: {'lr': 5.059673516443075e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --run-id optuna_all_ep10_unet_resnet34_trial013_ep10_lr5p05967em05_adam_wd0_plateau --epochs 10 --lr 5.059673516443075e-05 --optimizer adam --weight-decay 0.0 --scheduler plateau
+Training U-Net ResNet34
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 5.059673516443075e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial013_ep10_lr5p05967em05_adam_wd0_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 2.3422
+  train batch 0100/0372 loss: 2.1489
+  train batch 0150/0372 loss: 2.0172
+  train batch 0200/0372 loss: 1.8919
+  train batch 0250/0372 loss: 1.8269
+  train batch 0300/0372 loss: 1.7674
+  train batch 0350/0372 loss: 1.7090
+Train loss: 2.0324
+Val loss:   1.6524
+Val pixel accuracy: 0.8771
+Val mIoU: 0.2879
+Best val mIoU: 0.2879 at epoch 1
+Current learning rate: 0.00005060
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 1.6142
+  train batch 0100/0372 loss: 1.5657
+  train batch 0150/0372 loss: 1.4790
+  train batch 0200/0372 loss: 1.4091
+  train batch 0250/0372 loss: 1.4043
+  train batch 0300/0372 loss: 1.3189
+  train batch 0350/0372 loss: 1.3157
+Train loss: 1.4912
+Val loss:   1.2875
+Val pixel accuracy: 0.8947
+Val mIoU: 0.3076
+Best val mIoU: 0.3076 at epoch 2
+Current learning rate: 0.00005060
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 1.2459
+  train batch 0100/0372 loss: 1.2226
+  train batch 0150/0372 loss: 1.0962
+  train batch 0200/0372 loss: 1.1699
+  train batch 0250/0372 loss: 1.1928
+  train batch 0300/0372 loss: 1.0518
+  train batch 0350/0372 loss: 1.0823
+Train loss: 1.1544
+Val loss:   0.9727
+Val pixel accuracy: 0.9021
+Val mIoU: 0.3111
+Best val mIoU: 0.3111 at epoch 3
+Current learning rate: 0.00005060
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.9370
+  train batch 0100/0372 loss: 0.8704
+  train batch 0150/0372 loss: 0.9573
+  train batch 0200/0372 loss: 0.9267
+  train batch 0250/0372 loss: 0.8689
+  train batch 0300/0372 loss: 0.8560
+  train batch 0350/0372 loss: 0.7616
+Train loss: 0.8832
+Val loss:   0.7745
+Val pixel accuracy: 0.9034
+Val mIoU: 0.3177
+Best val mIoU: 0.3177 at epoch 4
+Current learning rate: 0.00005060
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.7380
+  train batch 0100/0372 loss: 0.8174
+  train batch 0150/0372 loss: 0.7330
+  train batch 0200/0372 loss: 0.7258
+  train batch 0250/0372 loss: 0.8520
+  train batch 0300/0372 loss: 0.6313
+  train batch 0350/0372 loss: 0.6557
+Train loss: 0.7016
+Val loss:   0.6203
+Val pixel accuracy: 0.9071
+Val mIoU: 0.3354
+Best val mIoU: 0.3354 at epoch 5
+Current learning rate: 0.00005060
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.5852
+  train batch 0100/0372 loss: 0.5253
+  train batch 0150/0372 loss: 0.5926
+  train batch 0200/0372 loss: 0.5470
+  train batch 0250/0372 loss: 0.7425
+  train batch 0300/0372 loss: 0.5897
+  train batch 0350/0372 loss: 0.4992
+Train loss: 0.5674
+Val loss:   0.5215
+Val pixel accuracy: 0.9123
+Val mIoU: 0.3619
+Best val mIoU: 0.3619 at epoch 6
+Current learning rate: 0.00005060
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.4716
+  train batch 0100/0372 loss: 0.5324
+  train batch 0150/0372 loss: 0.4340
+  train batch 0200/0372 loss: 0.4924
+  train batch 0250/0372 loss: 0.4623
+  train batch 0300/0372 loss: 0.4557
+  train batch 0350/0372 loss: 0.4781
+Train loss: 0.4701
+Val loss:   0.4506
+Val pixel accuracy: 0.9144
+Val mIoU: 0.3760
+Best val mIoU: 0.3760 at epoch 7
+Current learning rate: 0.00005060
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.4902
+  train batch 0100/0372 loss: 0.5157
+  train batch 0150/0372 loss: 0.3875
+  train batch 0200/0372 loss: 0.4222
+  train batch 0250/0372 loss: 0.4018
+  train batch 0300/0372 loss: 0.3410
+  train batch 0350/0372 loss: 0.3491
+Train loss: 0.4034
+Val loss:   0.3970
+Val pixel accuracy: 0.9196
+Val mIoU: 0.4142
+Best val mIoU: 0.4142 at epoch 8
+Current learning rate: 0.00005060
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.3289
+  train batch 0100/0372 loss: 0.3121
+  train batch 0150/0372 loss: 0.3129
+  train batch 0200/0372 loss: 0.3185
+  train batch 0250/0372 loss: 0.3469
+  train batch 0300/0372 loss: 0.3876
+  train batch 0350/0372 loss: 0.2802
+Train loss: 0.3515
+Val loss:   0.3674
+Val pixel accuracy: 0.9201
+Val mIoU: 0.4206
+Best val mIoU: 0.4206 at epoch 9
+Current learning rate: 0.00005060
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.3584
+  train batch 0100/0372 loss: 0.2478
+  train batch 0150/0372 loss: 0.2872
+  train batch 0200/0372 loss: 0.5883
+  train batch 0250/0372 loss: 0.2964
+  train batch 0300/0372 loss: 0.2743
+  train batch 0350/0372 loss: 0.3056
+Train loss: 0.3100
+Val loss:   0.3460
+Val pixel accuracy: 0.9214
+Val mIoU: 0.4288
+Best val mIoU: 0.4288 at epoch 10
+Current learning rate: 0.00005060
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial013_ep10_lr5p05967em05_adam_wd0_plateau
+Selected pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial013_ep10_lr5p05967em05_adam_wd0_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_unet_resnet34.py
+================================================================================
+
+================================================================================
+Pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\unet_resnet34\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial013_ep10_lr5p05967em05_adam_wd0_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 14
+Run ID: optuna_all_ep10_unet_resnet34_trial014_ep10_lr7p06732em05_adam_wd0_plateau
+Params: {'lr': 7.067323931843216e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --run-id optuna_all_ep10_unet_resnet34_trial014_ep10_lr7p06732em05_adam_wd0_plateau --epochs 10 --lr 7.067323931843216e-05 --optimizer adam --weight-decay 0.0 --scheduler plateau
+Training U-Net ResNet34
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 7.067323931843216e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial014_ep10_lr7p06732em05_adam_wd0_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 2.2570
+  train batch 0100/0372 loss: 2.0389
+  train batch 0150/0372 loss: 1.9275
+  train batch 0200/0372 loss: 1.7953
+  train batch 0250/0372 loss: 1.7046
+  train batch 0300/0372 loss: 1.6631
+  train batch 0350/0372 loss: 1.5574
+Train loss: 1.9320
+Val loss:   1.5107
+Val pixel accuracy: 0.8850
+Val mIoU: 0.2923
+Best val mIoU: 0.2923 at epoch 1
+Current learning rate: 0.00007067
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 1.4553
+  train batch 0100/0372 loss: 1.3799
+  train batch 0150/0372 loss: 1.2857
+  train batch 0200/0372 loss: 1.2161
+  train batch 0250/0372 loss: 1.1925
+  train batch 0300/0372 loss: 1.0971
+  train batch 0350/0372 loss: 1.1002
+Train loss: 1.2970
+Val loss:   1.0535
+Val pixel accuracy: 0.9003
+Val mIoU: 0.3345
+Best val mIoU: 0.3345 at epoch 2
+Current learning rate: 0.00007067
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 1.0106
+  train batch 0100/0372 loss: 1.0017
+  train batch 0150/0372 loss: 0.8518
+  train batch 0200/0372 loss: 0.9124
+  train batch 0250/0372 loss: 0.9452
+  train batch 0300/0372 loss: 0.8076
+  train batch 0350/0372 loss: 0.8293
+Train loss: 0.9126
+Val loss:   0.7317
+Val pixel accuracy: 0.9070
+Val mIoU: 0.3397
+Best val mIoU: 0.3397 at epoch 3
+Current learning rate: 0.00007067
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.6804
+  train batch 0100/0372 loss: 0.6342
+  train batch 0150/0372 loss: 0.7310
+  train batch 0200/0372 loss: 0.6852
+  train batch 0250/0372 loss: 0.6757
+  train batch 0300/0372 loss: 0.6537
+  train batch 0350/0372 loss: 0.5803
+Train loss: 0.6640
+Val loss:   0.5732
+Val pixel accuracy: 0.9062
+Val mIoU: 0.3617
+Best val mIoU: 0.3617 at epoch 4
+Current learning rate: 0.00007067
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.5519
+  train batch 0100/0372 loss: 0.6292
+  train batch 0150/0372 loss: 0.5294
+  train batch 0200/0372 loss: 0.5664
+  train batch 0250/0372 loss: 0.7026
+  train batch 0300/0372 loss: 0.5116
+  train batch 0350/0372 loss: 0.4912
+Train loss: 0.5250
+Val loss:   0.4649
+Val pixel accuracy: 0.9141
+Val mIoU: 0.3733
+Best val mIoU: 0.3733 at epoch 5
+Current learning rate: 0.00007067
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.4405
+  train batch 0100/0372 loss: 0.3763
+  train batch 0150/0372 loss: 0.4349
+  train batch 0200/0372 loss: 0.4072
+  train batch 0250/0372 loss: 0.6532
+  train batch 0300/0372 loss: 0.4580
+  train batch 0350/0372 loss: 0.3825
+Train loss: 0.4246
+Val loss:   0.4024
+Val pixel accuracy: 0.9178
+Val mIoU: 0.3927
+Best val mIoU: 0.3927 at epoch 6
+Current learning rate: 0.00007067
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.3595
+  train batch 0100/0372 loss: 0.3916
+  train batch 0150/0372 loss: 0.3193
+  train batch 0200/0372 loss: 0.3815
+  train batch 0250/0372 loss: 0.3467
+  train batch 0300/0372 loss: 0.3449
+  train batch 0350/0372 loss: 0.3678
+Train loss: 0.3591
+Val loss:   0.3570
+Val pixel accuracy: 0.9177
+Val mIoU: 0.3958
+Best val mIoU: 0.3958 at epoch 7
+Current learning rate: 0.00007067
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.3847
+  train batch 0100/0372 loss: 0.4065
+  train batch 0150/0372 loss: 0.2849
+  train batch 0200/0372 loss: 0.3521
+  train batch 0250/0372 loss: 0.3152
+  train batch 0300/0372 loss: 0.2543
+  train batch 0350/0372 loss: 0.2645
+Train loss: 0.3130
+Val loss:   0.3243
+Val pixel accuracy: 0.9199
+Val mIoU: 0.4085
+Best val mIoU: 0.4085 at epoch 8
+Current learning rate: 0.00007067
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.2548
+  train batch 0100/0372 loss: 0.2410
+  train batch 0150/0372 loss: 0.2331
+  train batch 0200/0372 loss: 0.2520
+  train batch 0250/0372 loss: 0.2598
+  train batch 0300/0372 loss: 0.2875
+  train batch 0350/0372 loss: 0.2066
+Train loss: 0.2771
+Val loss:   0.3029
+Val pixel accuracy: 0.9212
+Val mIoU: 0.4315
+Best val mIoU: 0.4315 at epoch 9
+Current learning rate: 0.00007067
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.3036
+  train batch 0100/0372 loss: 0.1912
+  train batch 0150/0372 loss: 0.2212
+  train batch 0200/0372 loss: 0.5179
+  train batch 0250/0372 loss: 0.2254
+  train batch 0300/0372 loss: 0.2287
+  train batch 0350/0372 loss: 0.2458
+Train loss: 0.2495
+Val loss:   0.2928
+Val pixel accuracy: 0.9235
+Val mIoU: 0.4715
+Best val mIoU: 0.4715 at epoch 10
+Current learning rate: 0.00007067
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial014_ep10_lr7p06732em05_adam_wd0_plateau
+Selected pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial014_ep10_lr7p06732em05_adam_wd0_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_unet_resnet34.py
+================================================================================
+
+================================================================================
+Pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\unet_resnet34\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial014_ep10_lr7p06732em05_adam_wd0_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 15
+Run ID: optuna_all_ep10_unet_resnet34_trial015_ep10_lr3p94073em05_adam_wd0_plateau
+Params: {'lr': 3.940732059725347e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --run-id optuna_all_ep10_unet_resnet34_trial015_ep10_lr3p94073em05_adam_wd0_plateau --epochs 10 --lr 3.940732059725347e-05 --optimizer adam --weight-decay 0.0 --scheduler plateau
+Training U-Net ResNet34
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 3.940732059725347e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial015_ep10_lr3p94073em05_adam_wd0_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 2.4041
+  train batch 0100/0372 loss: 2.2051
+  train batch 0150/0372 loss: 2.0856
+  train batch 0200/0372 loss: 1.9515
+  train batch 0250/0372 loss: 1.8990
+  train batch 0300/0372 loss: 1.8545
+  train batch 0350/0372 loss: 1.7975
+Train loss: 2.0992
+Val loss:   1.7351
+Val pixel accuracy: 0.8763
+Val mIoU: 0.2868
+Best val mIoU: 0.2868 at epoch 1
+Current learning rate: 0.00003941
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 1.7106
+  train batch 0100/0372 loss: 1.6706
+  train batch 0150/0372 loss: 1.5922
+  train batch 0200/0372 loss: 1.5232
+  train batch 0250/0372 loss: 1.5435
+  train batch 0300/0372 loss: 1.4651
+  train batch 0350/0372 loss: 1.4611
+Train loss: 1.6139
+Val loss:   1.4207
+Val pixel accuracy: 0.8949
+Val mIoU: 0.3162
+Best val mIoU: 0.3162 at epoch 2
+Current learning rate: 0.00003941
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 1.3890
+  train batch 0100/0372 loss: 1.3753
+  train batch 0150/0372 loss: 1.2640
+  train batch 0200/0372 loss: 1.3344
+  train batch 0250/0372 loss: 1.3490
+  train batch 0300/0372 loss: 1.2377
+  train batch 0350/0372 loss: 1.2594
+Train loss: 1.3185
+Val loss:   1.1625
+Val pixel accuracy: 0.9005
+Val mIoU: 0.3338
+Best val mIoU: 0.3338 at epoch 3
+Current learning rate: 0.00003941
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 1.1548
+  train batch 0100/0372 loss: 1.0682
+  train batch 0150/0372 loss: 1.1332
+  train batch 0200/0372 loss: 1.1089
+  train batch 0250/0372 loss: 1.0403
+  train batch 0300/0372 loss: 1.0625
+  train batch 0350/0372 loss: 0.9587
+Train loss: 1.0726
+Val loss:   0.9383
+Val pixel accuracy: 0.9052
+Val mIoU: 0.3522
+Best val mIoU: 0.3522 at epoch 4
+Current learning rate: 0.00003941
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.9299
+  train batch 0100/0372 loss: 0.9873
+  train batch 0150/0372 loss: 0.9131
+  train batch 0200/0372 loss: 0.8690
+  train batch 0250/0372 loss: 0.9973
+  train batch 0300/0372 loss: 0.7920
+  train batch 0350/0372 loss: 0.7990
+Train loss: 0.8641
+Val loss:   0.7679
+Val pixel accuracy: 0.9114
+Val mIoU: 0.3667
+Best val mIoU: 0.3667 at epoch 5
+Current learning rate: 0.00003941
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.7418
+  train batch 0100/0372 loss: 0.6766
+  train batch 0150/0372 loss: 0.7369
+  train batch 0200/0372 loss: 0.7038
+  train batch 0250/0372 loss: 0.8635
+  train batch 0300/0372 loss: 0.6645
+  train batch 0350/0372 loss: 0.6381
+Train loss: 0.7124
+Val loss:   0.6588
+Val pixel accuracy: 0.9119
+Val mIoU: 0.3614
+Best val mIoU: 0.3667 at epoch 5
+Current learning rate: 0.00003941
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.6100
+  train batch 0100/0372 loss: 0.6561
+  train batch 0150/0372 loss: 0.5735
+  train batch 0200/0372 loss: 0.6027
+  train batch 0250/0372 loss: 0.5893
+  train batch 0300/0372 loss: 0.5637
+  train batch 0350/0372 loss: 0.5819
+Train loss: 0.5943
+Val loss:   0.5547
+Val pixel accuracy: 0.9123
+Val mIoU: 0.3646
+Best val mIoU: 0.3667 at epoch 5
+Current learning rate: 0.00003941
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.5869
+  train batch 0100/0372 loss: 0.6128
+  train batch 0150/0372 loss: 0.4861
+  train batch 0200/0372 loss: 0.5166
+  train batch 0250/0372 loss: 0.4891
+  train batch 0300/0372 loss: 0.4403
+  train batch 0350/0372 loss: 0.4409
+Train loss: 0.5038
+Val loss:   0.4817
+Val pixel accuracy: 0.9181
+Val mIoU: 0.3925
+Best val mIoU: 0.3925 at epoch 8
+Current learning rate: 0.00003941
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.4092
+  train batch 0100/0372 loss: 0.4130
+  train batch 0150/0372 loss: 0.4194
+  train batch 0200/0372 loss: 0.4243
+  train batch 0250/0372 loss: 0.4283
+  train batch 0300/0372 loss: 0.4522
+  train batch 0350/0372 loss: 0.3591
+Train loss: 0.4393
+Val loss:   0.4383
+Val pixel accuracy: 0.9188
+Val mIoU: 0.3929
+Best val mIoU: 0.3929 at epoch 9
+Current learning rate: 0.00003941
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.4331
+  train batch 0100/0372 loss: 0.3172
+  train batch 0150/0372 loss: 0.3642
+  train batch 0200/0372 loss: 0.6404
+  train batch 0250/0372 loss: 0.3624
+  train batch 0300/0372 loss: 0.3458
+  train batch 0350/0372 loss: 0.3834
+Train loss: 0.3823
+Val loss:   0.4015
+Val pixel accuracy: 0.9207
+Val mIoU: 0.4057
+Best val mIoU: 0.4057 at epoch 10
+Current learning rate: 0.00003941
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial015_ep10_lr3p94073em05_adam_wd0_plateau
+Selected pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial015_ep10_lr3p94073em05_adam_wd0_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_unet_resnet34.py
+================================================================================
+
+================================================================================
+Pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\unet_resnet34\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial015_ep10_lr3p94073em05_adam_wd0_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 16
+Run ID: optuna_all_ep10_unet_resnet34_trial016_ep10_lr8p94858em05_adam_wd0_plateau
+Params: {'lr': 8.948583187123508e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --run-id optuna_all_ep10_unet_resnet34_trial016_ep10_lr8p94858em05_adam_wd0_plateau --epochs 10 --lr 8.948583187123508e-05 --optimizer adam --weight-decay 0.0 --scheduler plateau
+Training U-Net ResNet34
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 8.948583187123508e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial016_ep10_lr8p94858em05_adam_wd0_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 2.1895
+  train batch 0100/0372 loss: 1.9851
+  train batch 0150/0372 loss: 1.8742
+  train batch 0200/0372 loss: 1.7334
+  train batch 0250/0372 loss: 1.6302
+  train batch 0300/0372 loss: 1.5686
+  train batch 0350/0372 loss: 1.4329
+Train loss: 1.8543
+Val loss:   1.3760
+Val pixel accuracy: 0.8882
+Val mIoU: 0.2925
+Best val mIoU: 0.2925 at epoch 1
+Current learning rate: 0.00008949
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 1.3250
+  train batch 0100/0372 loss: 1.2343
+  train batch 0150/0372 loss: 1.1649
+  train batch 0200/0372 loss: 1.0670
+  train batch 0250/0372 loss: 1.0252
+  train batch 0300/0372 loss: 0.9211
+  train batch 0350/0372 loss: 0.9133
+Train loss: 1.1450
+Val loss:   0.8780
+Val pixel accuracy: 0.9004
+Val mIoU: 0.3088
+Best val mIoU: 0.3088 at epoch 2
+Current learning rate: 0.00008949
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.8729
+  train batch 0100/0372 loss: 0.8442
+  train batch 0150/0372 loss: 0.6781
+  train batch 0200/0372 loss: 0.7690
+  train batch 0250/0372 loss: 0.8170
+  train batch 0300/0372 loss: 0.6290
+  train batch 0350/0372 loss: 0.6881
+Train loss: 0.7548
+Val loss:   0.5931
+Val pixel accuracy: 0.9053
+Val mIoU: 0.3144
+Best val mIoU: 0.3144 at epoch 3
+Current learning rate: 0.00008949
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.5348
+  train batch 0100/0372 loss: 0.5089
+  train batch 0150/0372 loss: 0.6198
+  train batch 0200/0372 loss: 0.5790
+  train batch 0250/0372 loss: 0.5563
+  train batch 0300/0372 loss: 0.5439
+  train batch 0350/0372 loss: 0.4823
+Train loss: 0.5481
+Val loss:   0.4761
+Val pixel accuracy: 0.9068
+Val mIoU: 0.3395
+Best val mIoU: 0.3395 at epoch 4
+Current learning rate: 0.00008949
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.4508
+  train batch 0100/0372 loss: 0.5557
+  train batch 0150/0372 loss: 0.4339
+  train batch 0200/0372 loss: 0.4842
+  train batch 0250/0372 loss: 0.6338
+  train batch 0300/0372 loss: 0.4014
+  train batch 0350/0372 loss: 0.4545
+Train loss: 0.4413
+Val loss:   0.4022
+Val pixel accuracy: 0.9120
+Val mIoU: 0.3546
+Best val mIoU: 0.3546 at epoch 5
+Current learning rate: 0.00008949
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.3658
+  train batch 0100/0372 loss: 0.3138
+  train batch 0150/0372 loss: 0.3846
+  train batch 0200/0372 loss: 0.3416
+  train batch 0250/0372 loss: 0.6120
+  train batch 0300/0372 loss: 0.3591
+  train batch 0350/0372 loss: 0.3196
+Train loss: 0.3644
+Val loss:   0.3460
+Val pixel accuracy: 0.9159
+Val mIoU: 0.3641
+Best val mIoU: 0.3641 at epoch 6
+Current learning rate: 0.00008949
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.3024
+  train batch 0100/0372 loss: 0.3471
+  train batch 0150/0372 loss: 0.2655
+  train batch 0200/0372 loss: 0.3513
+  train batch 0250/0372 loss: 0.2948
+  train batch 0300/0372 loss: 0.2883
+  train batch 0350/0372 loss: 0.3166
+Train loss: 0.3130
+Val loss:   0.3153
+Val pixel accuracy: 0.9196
+Val mIoU: 0.4097
+Best val mIoU: 0.4097 at epoch 7
+Current learning rate: 0.00008949
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.3506
+  train batch 0100/0372 loss: 0.3455
+  train batch 0150/0372 loss: 0.2467
+  train batch 0200/0372 loss: 0.3500
+  train batch 0250/0372 loss: 0.2806
+  train batch 0300/0372 loss: 0.2218
+  train batch 0350/0372 loss: 0.2360
+Train loss: 0.2803
+Val loss:   0.2908
+Val pixel accuracy: 0.9227
+Val mIoU: 0.4465
+Best val mIoU: 0.4465 at epoch 8
+Current learning rate: 0.00008949
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.2275
+  train batch 0100/0372 loss: 0.2076
+  train batch 0150/0372 loss: 0.2072
+  train batch 0200/0372 loss: 0.2183
+  train batch 0250/0372 loss: 0.2259
+  train batch 0300/0372 loss: 0.2511
+  train batch 0350/0372 loss: 0.1932
+Train loss: 0.2496
+Val loss:   0.2738
+Val pixel accuracy: 0.9247
+Val mIoU: 0.4738
+Best val mIoU: 0.4738 at epoch 9
+Current learning rate: 0.00008949
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2478
+  train batch 0100/0372 loss: 0.1691
+  train batch 0150/0372 loss: 0.2020
+  train batch 0200/0372 loss: 0.4987
+  train batch 0250/0372 loss: 0.1950
+  train batch 0300/0372 loss: 0.2060
+  train batch 0350/0372 loss: 0.2310
+Train loss: 0.2252
+Val loss:   0.2763
+Val pixel accuracy: 0.9232
+Val mIoU: 0.4913
+Best val mIoU: 0.4913 at epoch 10
+Current learning rate: 0.00008949
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial016_ep10_lr8p94858em05_adam_wd0_plateau
+Selected pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial016_ep10_lr8p94858em05_adam_wd0_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_unet_resnet34.py
+================================================================================
+
+================================================================================
+Pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\unet_resnet34\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial016_ep10_lr8p94858em05_adam_wd0_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 17
+Run ID: optuna_all_ep10_unet_resnet34_trial017_ep10_lr6p17783em05_adam_wd0_plateau
+Params: {'lr': 6.177827793701867e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --run-id optuna_all_ep10_unet_resnet34_trial017_ep10_lr6p17783em05_adam_wd0_plateau --epochs 10 --lr 6.177827793701867e-05 --optimizer adam --weight-decay 0.0 --scheduler plateau
+Training U-Net ResNet34
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 6.177827793701867e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial017_ep10_lr6p17783em05_adam_wd0_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 2.2985
+  train batch 0100/0372 loss: 2.1021
+  train batch 0150/0372 loss: 1.9576
+  train batch 0200/0372 loss: 1.8452
+  train batch 0250/0372 loss: 1.7639
+  train batch 0300/0372 loss: 1.7035
+  train batch 0350/0372 loss: 1.6309
+Train loss: 1.9740
+Val loss:   1.5767
+Val pixel accuracy: 0.8814
+Val mIoU: 0.2924
+Best val mIoU: 0.2924 at epoch 1
+Current learning rate: 0.00006178
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 1.5175
+  train batch 0100/0372 loss: 1.4548
+  train batch 0150/0372 loss: 1.3897
+  train batch 0200/0372 loss: 1.2929
+  train batch 0250/0372 loss: 1.2783
+  train batch 0300/0372 loss: 1.1951
+  train batch 0350/0372 loss: 1.1878
+Train loss: 1.3789
+Val loss:   1.1471
+Val pixel accuracy: 0.8963
+Val mIoU: 0.3074
+Best val mIoU: 0.3074 at epoch 2
+Current learning rate: 0.00006178
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 1.1083
+  train batch 0100/0372 loss: 1.0908
+  train batch 0150/0372 loss: 0.9549
+  train batch 0200/0372 loss: 1.0235
+  train batch 0250/0372 loss: 1.0583
+  train batch 0300/0372 loss: 0.8939
+  train batch 0350/0372 loss: 0.9228
+Train loss: 1.0081
+Val loss:   0.8289
+Val pixel accuracy: 0.9034
+Val mIoU: 0.3094
+Best val mIoU: 0.3094 at epoch 3
+Current learning rate: 0.00006178
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.7853
+  train batch 0100/0372 loss: 0.7191
+  train batch 0150/0372 loss: 0.8145
+  train batch 0200/0372 loss: 0.7767
+  train batch 0250/0372 loss: 0.7554
+  train batch 0300/0372 loss: 0.7282
+  train batch 0350/0372 loss: 0.6576
+Train loss: 0.7453
+Val loss:   0.6455
+Val pixel accuracy: 0.9039
+Val mIoU: 0.3117
+Best val mIoU: 0.3117 at epoch 4
+Current learning rate: 0.00006178
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.6172
+  train batch 0100/0372 loss: 0.7157
+  train batch 0150/0372 loss: 0.5969
+  train batch 0200/0372 loss: 0.6222
+  train batch 0250/0372 loss: 0.7425
+  train batch 0300/0372 loss: 0.5350
+  train batch 0350/0372 loss: 0.5554
+Train loss: 0.5857
+Val loss:   0.5147
+Val pixel accuracy: 0.9102
+Val mIoU: 0.3367
+Best val mIoU: 0.3367 at epoch 5
+Current learning rate: 0.00006178
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.4837
+  train batch 0100/0372 loss: 0.4157
+  train batch 0150/0372 loss: 0.4956
+  train batch 0200/0372 loss: 0.4467
+  train batch 0250/0372 loss: 0.6603
+  train batch 0300/0372 loss: 0.4708
+  train batch 0350/0372 loss: 0.4179
+Train loss: 0.4720
+Val loss:   0.4423
+Val pixel accuracy: 0.9150
+Val mIoU: 0.3566
+Best val mIoU: 0.3566 at epoch 6
+Current learning rate: 0.00006178
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.3895
+  train batch 0100/0372 loss: 0.4493
+  train batch 0150/0372 loss: 0.3604
+  train batch 0200/0372 loss: 0.4109
+  train batch 0250/0372 loss: 0.3870
+  train batch 0300/0372 loss: 0.3840
+  train batch 0350/0372 loss: 0.4337
+Train loss: 0.3987
+Val loss:   0.4002
+Val pixel accuracy: 0.9150
+Val mIoU: 0.3938
+Best val mIoU: 0.3938 at epoch 7
+Current learning rate: 0.00006178
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.4493
+  train batch 0100/0372 loss: 0.4558
+  train batch 0150/0372 loss: 0.3298
+  train batch 0200/0372 loss: 0.3856
+  train batch 0250/0372 loss: 0.3383
+  train batch 0300/0372 loss: 0.2829
+  train batch 0350/0372 loss: 0.2923
+Train loss: 0.3472
+Val loss:   0.3441
+Val pixel accuracy: 0.9212
+Val mIoU: 0.4135
+Best val mIoU: 0.4135 at epoch 8
+Current learning rate: 0.00006178
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.2801
+  train batch 0100/0372 loss: 0.2544
+  train batch 0150/0372 loss: 0.2634
+  train batch 0200/0372 loss: 0.2863
+  train batch 0250/0372 loss: 0.2852
+  train batch 0300/0372 loss: 0.3151
+  train batch 0350/0372 loss: 0.2314
+Train loss: 0.3026
+Val loss:   0.3226
+Val pixel accuracy: 0.9205
+Val mIoU: 0.4110
+Best val mIoU: 0.4135 at epoch 8
+Current learning rate: 0.00006178
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.3115
+  train batch 0100/0372 loss: 0.2064
+  train batch 0150/0372 loss: 0.2378
+  train batch 0200/0372 loss: 0.4970
+  train batch 0250/0372 loss: 0.2469
+  train batch 0300/0372 loss: 0.2389
+  train batch 0350/0372 loss: 0.2761
+Train loss: 0.2678
+Val loss:   0.3061
+Val pixel accuracy: 0.9226
+Val mIoU: 0.4578
+Best val mIoU: 0.4578 at epoch 10
+Current learning rate: 0.00006178
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial017_ep10_lr6p17783em05_adam_wd0_plateau
+Selected pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial017_ep10_lr6p17783em05_adam_wd0_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_unet_resnet34.py
+================================================================================
+
+================================================================================
+Pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\unet_resnet34\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial017_ep10_lr6p17783em05_adam_wd0_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 18
+Run ID: optuna_all_ep10_unet_resnet34_trial018_ep10_lr9p76319em05_adamw_wd9p81823em05_plateau
+Params: {'lr': 9.763190534227069e-05, 'optimizer': 'adamw', 'weight_decay': 9.818226878189116e-05, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --run-id optuna_all_ep10_unet_resnet34_trial018_ep10_lr9p76319em05_adamw_wd9p81823em05_plateau --epochs 10 --lr 9.763190534227069e-05 --optimizer adamw --weight-decay 9.818226878189116e-05 --scheduler plateau
+Training U-Net ResNet34
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 9.763190534227069e-05
+Optimizer: adamw
+Weight decay: 9.818226878189116e-05
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial018_ep10_lr9p76319em05_adamw_wd9p81823em05_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 2.1695
+  train batch 0100/0372 loss: 1.9669
+  train batch 0150/0372 loss: 1.8279
+  train batch 0200/0372 loss: 1.7089
+  train batch 0250/0372 loss: 1.5788
+  train batch 0300/0372 loss: 1.5072
+  train batch 0350/0372 loss: 1.3956
+Train loss: 1.8239
+Val loss:   1.3446
+Val pixel accuracy: 0.8857
+Val mIoU: 0.2900
+Best val mIoU: 0.2900 at epoch 1
+Current learning rate: 0.00009763
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 1.2763
+  train batch 0100/0372 loss: 1.1796
+  train batch 0150/0372 loss: 1.0863
+  train batch 0200/0372 loss: 1.0254
+  train batch 0250/0372 loss: 0.9651
+  train batch 0300/0372 loss: 0.8567
+  train batch 0350/0372 loss: 0.8542
+Train loss: 1.0856
+Val loss:   0.8188
+Val pixel accuracy: 0.8996
+Val mIoU: 0.3085
+Best val mIoU: 0.3085 at epoch 2
+Current learning rate: 0.00009763
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.8091
+  train batch 0100/0372 loss: 0.7802
+  train batch 0150/0372 loss: 0.6291
+  train batch 0200/0372 loss: 0.7159
+  train batch 0250/0372 loss: 0.7670
+  train batch 0300/0372 loss: 0.5940
+  train batch 0350/0372 loss: 0.6756
+Train loss: 0.7045
+Val loss:   0.5677
+Val pixel accuracy: 0.9043
+Val mIoU: 0.3188
+Best val mIoU: 0.3188 at epoch 3
+Current learning rate: 0.00009763
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.5003
+  train batch 0100/0372 loss: 0.4679
+  train batch 0150/0372 loss: 0.5803
+  train batch 0200/0372 loss: 0.5579
+  train batch 0250/0372 loss: 0.5310
+  train batch 0300/0372 loss: 0.5166
+  train batch 0350/0372 loss: 0.4799
+Train loss: 0.5199
+Val loss:   0.4939
+Val pixel accuracy: 0.8902
+Val mIoU: 0.2980
+Best val mIoU: 0.3188 at epoch 3
+Current learning rate: 0.00009763
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.4324
+  train batch 0100/0372 loss: 0.5405
+  train batch 0150/0372 loss: 0.4031
+  train batch 0200/0372 loss: 0.4853
+  train batch 0250/0372 loss: 0.6260
+  train batch 0300/0372 loss: 0.3673
+  train batch 0350/0372 loss: 0.4225
+Train loss: 0.4223
+Val loss:   0.3758
+Val pixel accuracy: 0.9124
+Val mIoU: 0.3536
+Best val mIoU: 0.3536 at epoch 5
+Current learning rate: 0.00009763
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.3454
+  train batch 0100/0372 loss: 0.2972
+  train batch 0150/0372 loss: 0.3502
+  train batch 0200/0372 loss: 0.3168
+  train batch 0250/0372 loss: 0.5894
+  train batch 0300/0372 loss: 0.3830
+  train batch 0350/0372 loss: 0.3271
+Train loss: 0.3490
+Val loss:   0.3356
+Val pixel accuracy: 0.9157
+Val mIoU: 0.3635
+Best val mIoU: 0.3635 at epoch 6
+Current learning rate: 0.00009763
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.2937
+  train batch 0100/0372 loss: 0.3267
+  train batch 0150/0372 loss: 0.2621
+  train batch 0200/0372 loss: 0.3329
+  train batch 0250/0372 loss: 0.2861
+  train batch 0300/0372 loss: 0.2866
+  train batch 0350/0372 loss: 0.3217
+Train loss: 0.3043
+Val loss:   0.3055
+Val pixel accuracy: 0.9203
+Val mIoU: 0.4146
+Best val mIoU: 0.4146 at epoch 7
+Current learning rate: 0.00009763
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.3717
+  train batch 0100/0372 loss: 0.3482
+  train batch 0150/0372 loss: 0.2438
+  train batch 0200/0372 loss: 0.3283
+  train batch 0250/0372 loss: 0.2734
+  train batch 0300/0372 loss: 0.2150
+  train batch 0350/0372 loss: 0.2289
+Train loss: 0.2701
+Val loss:   0.2899
+Val pixel accuracy: 0.9196
+Val mIoU: 0.4362
+Best val mIoU: 0.4362 at epoch 8
+Current learning rate: 0.00009763
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.2332
+  train batch 0100/0372 loss: 0.2000
+  train batch 0150/0372 loss: 0.2005
+  train batch 0200/0372 loss: 0.2215
+  train batch 0250/0372 loss: 0.2256
+  train batch 0300/0372 loss: 0.2355
+  train batch 0350/0372 loss: 0.1845
+Train loss: 0.2450
+Val loss:   0.2700
+Val pixel accuracy: 0.9237
+Val mIoU: 0.4524
+Best val mIoU: 0.4524 at epoch 9
+Current learning rate: 0.00009763
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2476
+  train batch 0100/0372 loss: 0.1716
+  train batch 0150/0372 loss: 0.1883
+  train batch 0200/0372 loss: 0.4641
+  train batch 0250/0372 loss: 0.1924
+  train batch 0300/0372 loss: 0.2072
+  train batch 0350/0372 loss: 0.2529
+Train loss: 0.2243
+Val loss:   0.2942
+Val pixel accuracy: 0.9151
+Val mIoU: 0.4839
+Best val mIoU: 0.4839 at epoch 10
+Current learning rate: 0.00009763
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial018_ep10_lr9p76319em05_adamw_wd9p81823em05_plateau
+Selected pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial018_ep10_lr9p76319em05_adamw_wd9p81823em05_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_unet_resnet34.py
+================================================================================
+
+================================================================================
+Pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\unet_resnet34\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial018_ep10_lr9p76319em05_adamw_wd9p81823em05_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 19
+Run ID: optuna_all_ep10_unet_resnet34_trial019_ep10_lr4p4773em05_adam_wd0_plateau
+Params: {'lr': 4.477295959304507e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --run-id optuna_all_ep10_unet_resnet34_trial019_ep10_lr4p4773em05_adam_wd0_plateau --epochs 10 --lr 4.477295959304507e-05 --optimizer adam --weight-decay 0.0 --scheduler plateau
+Training U-Net ResNet34
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 4.477295959304507e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial019_ep10_lr4p4773em05_adam_wd0_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 2.3736
+  train batch 0100/0372 loss: 2.1739
+  train batch 0150/0372 loss: 2.0480
+  train batch 0200/0372 loss: 1.9208
+  train batch 0250/0372 loss: 1.8647
+  train batch 0300/0372 loss: 1.8171
+  train batch 0350/0372 loss: 1.7538
+Train loss: 2.0661
+Val loss:   1.6890
+Val pixel accuracy: 0.8776
+Val mIoU: 0.2875
+Best val mIoU: 0.2875 at epoch 1
+Current learning rate: 0.00004477
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 1.6628
+  train batch 0100/0372 loss: 1.6160
+  train batch 0150/0372 loss: 1.5252
+  train batch 0200/0372 loss: 1.4688
+  train batch 0250/0372 loss: 1.4727
+  train batch 0300/0372 loss: 1.3899
+  train batch 0350/0372 loss: 1.3933
+Train loss: 1.5530
+Val loss:   1.3542
+Val pixel accuracy: 0.8949
+Val mIoU: 0.3066
+Best val mIoU: 0.3066 at epoch 2
+Current learning rate: 0.00004477
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 1.3070
+  train batch 0100/0372 loss: 1.3038
+  train batch 0150/0372 loss: 1.1867
+  train batch 0200/0372 loss: 1.2531
+  train batch 0250/0372 loss: 1.2665
+  train batch 0300/0372 loss: 1.1403
+  train batch 0350/0372 loss: 1.1691
+Train loss: 1.2379
+Val loss:   1.0799
+Val pixel accuracy: 0.9007
+Val mIoU: 0.3171
+Best val mIoU: 0.3171 at epoch 3
+Current learning rate: 0.00004477
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 1.0582
+  train batch 0100/0372 loss: 0.9722
+  train batch 0150/0372 loss: 1.0678
+  train batch 0200/0372 loss: 1.0008
+  train batch 0250/0372 loss: 0.9532
+  train batch 0300/0372 loss: 0.9537
+  train batch 0350/0372 loss: 0.8569
+Train loss: 0.9783
+Val loss:   0.8486
+Val pixel accuracy: 0.9044
+Val mIoU: 0.3331
+Best val mIoU: 0.3331 at epoch 4
+Current learning rate: 0.00004477
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.8314
+  train batch 0100/0372 loss: 0.9184
+  train batch 0150/0372 loss: 0.7990
+  train batch 0200/0372 loss: 0.7963
+  train batch 0250/0372 loss: 0.9241
+  train batch 0300/0372 loss: 0.7158
+  train batch 0350/0372 loss: 0.7250
+Train loss: 0.7789
+Val loss:   0.6985
+Val pixel accuracy: 0.9065
+Val mIoU: 0.3392
+Best val mIoU: 0.3392 at epoch 5
+Current learning rate: 0.00004477
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.6603
+  train batch 0100/0372 loss: 0.5994
+  train batch 0150/0372 loss: 0.6744
+  train batch 0200/0372 loss: 0.6226
+  train batch 0250/0372 loss: 0.7788
+  train batch 0300/0372 loss: 0.6151
+  train batch 0350/0372 loss: 0.5679
+Train loss: 0.6361
+Val loss:   0.5829
+Val pixel accuracy: 0.9114
+Val mIoU: 0.3496
+Best val mIoU: 0.3496 at epoch 6
+Current learning rate: 0.00004477
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.5465
+  train batch 0100/0372 loss: 0.5980
+  train batch 0150/0372 loss: 0.5023
+  train batch 0200/0372 loss: 0.5469
+  train batch 0250/0372 loss: 0.5230
+  train batch 0300/0372 loss: 0.5016
+  train batch 0350/0372 loss: 0.5217
+Train loss: 0.5279
+Val loss:   0.4979
+Val pixel accuracy: 0.9116
+Val mIoU: 0.3720
+Best val mIoU: 0.3720 at epoch 7
+Current learning rate: 0.00004477
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.5332
+  train batch 0100/0372 loss: 0.5616
+  train batch 0150/0372 loss: 0.4284
+  train batch 0200/0372 loss: 0.4723
+  train batch 0250/0372 loss: 0.4343
+  train batch 0300/0372 loss: 0.3843
+  train batch 0350/0372 loss: 0.3916
+Train loss: 0.4488
+Val loss:   0.4310
+Val pixel accuracy: 0.9193
+Val mIoU: 0.4066
+Best val mIoU: 0.4066 at epoch 8
+Current learning rate: 0.00004477
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.3636
+  train batch 0100/0372 loss: 0.3561
+  train batch 0150/0372 loss: 0.3535
+  train batch 0200/0372 loss: 0.3630
+  train batch 0250/0372 loss: 0.3868
+  train batch 0300/0372 loss: 0.4239
+  train batch 0350/0372 loss: 0.3104
+Train loss: 0.3901
+Val loss:   0.3968
+Val pixel accuracy: 0.9203
+Val mIoU: 0.4160
+Best val mIoU: 0.4160 at epoch 9
+Current learning rate: 0.00004477
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.4069
+  train batch 0100/0372 loss: 0.2864
+  train batch 0150/0372 loss: 0.3308
+  train batch 0200/0372 loss: 0.6158
+  train batch 0250/0372 loss: 0.3290
+  train batch 0300/0372 loss: 0.3062
+  train batch 0350/0372 loss: 0.3385
+Train loss: 0.3435
+Val loss:   0.3685
+Val pixel accuracy: 0.9213
+Val mIoU: 0.4265
+Best val mIoU: 0.4265 at epoch 10
+Current learning rate: 0.00004477
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial019_ep10_lr4p4773em05_adam_wd0_plateau
+Selected pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial019_ep10_lr4p4773em05_adam_wd0_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_unet_resnet34.py
+================================================================================
+
+================================================================================
+Pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\unet_resnet34_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\unet_resnet34\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\unet_resnet34\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\unet_resnet34\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\optuna_all_ep10_unet_resnet34_trial019_ep10_lr4p4773em05_adam_wd0_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv

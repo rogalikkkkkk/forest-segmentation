@@ -1,0 +1,4466 @@
+================================================================================
+Trial 0
+Run ID: optuna_all_ep10_segformer_b0_trial000_ep10_lr2p36886em05_adam_wd0_none
+Params: {'lr': 2.368863950364079e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'none'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --run-id optuna_all_ep10_segformer_b0_trial000_ep10_lr2p36886em05_adam_wd0_none --epochs 10 --lr 2.368863950364079e-05 --optimizer adam --weight-decay 0.0 --scheduler none
+Training SegFormer-B0
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 2.368863950364079e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: none
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial000_ep10_lr2p36886em05_adam_wd0_none
+
+Epoch 1/10
+  train batch 0050/0372 loss: 0.9943
+  train batch 0100/0372 loss: 0.8084
+  train batch 0150/0372 loss: 0.7750
+  train batch 0200/0372 loss: 0.6046
+  train batch 0250/0372 loss: 0.5592
+  train batch 0300/0372 loss: 0.4725
+  train batch 0350/0372 loss: 0.5439
+Train loss: 0.8729
+Val loss:   0.4650
+Val pixel accuracy: 0.8675
+Val mIoU: 0.3209
+Best val mIoU: 0.3209 at epoch 1
+Current learning rate: 0.00002369
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 0.4918
+  train batch 0100/0372 loss: 0.5216
+  train batch 0150/0372 loss: 0.4487
+  train batch 0200/0372 loss: 0.4308
+  train batch 0250/0372 loss: 0.3562
+  train batch 0300/0372 loss: 0.3431
+  train batch 0350/0372 loss: 0.3133
+Train loss: 0.4515
+Val loss:   0.3658
+Val pixel accuracy: 0.8874
+Val mIoU: 0.3739
+Best val mIoU: 0.3739 at epoch 2
+Current learning rate: 0.00002369
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.4806
+  train batch 0100/0372 loss: 0.4023
+  train batch 0150/0372 loss: 0.4643
+  train batch 0200/0372 loss: 0.3669
+  train batch 0250/0372 loss: 0.3481
+  train batch 0300/0372 loss: 0.3332
+  train batch 0350/0372 loss: 0.4094
+Train loss: 0.3769
+Val loss:   0.3264
+Val pixel accuracy: 0.8958
+Val mIoU: 0.4076
+Best val mIoU: 0.4076 at epoch 3
+Current learning rate: 0.00002369
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.6574
+  train batch 0100/0372 loss: 0.3696
+  train batch 0150/0372 loss: 0.3591
+  train batch 0200/0372 loss: 0.3332
+  train batch 0250/0372 loss: 0.2945
+  train batch 0300/0372 loss: 0.3064
+  train batch 0350/0372 loss: 0.3177
+Train loss: 0.3382
+Val loss:   0.3026
+Val pixel accuracy: 0.9013
+Val mIoU: 0.4395
+Best val mIoU: 0.4395 at epoch 4
+Current learning rate: 0.00002369
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.4352
+  train batch 0100/0372 loss: 0.3077
+  train batch 0150/0372 loss: 0.3391
+  train batch 0200/0372 loss: 0.2563
+  train batch 0250/0372 loss: 0.3443
+  train batch 0300/0372 loss: 0.3456
+  train batch 0350/0372 loss: 0.2293
+Train loss: 0.3181
+Val loss:   0.2861
+Val pixel accuracy: 0.9054
+Val mIoU: 0.4575
+Best val mIoU: 0.4575 at epoch 5
+Current learning rate: 0.00002369
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.3143
+  train batch 0100/0372 loss: 0.2984
+  train batch 0150/0372 loss: 0.2645
+  train batch 0200/0372 loss: 0.3165
+  train batch 0250/0372 loss: 0.5325
+  train batch 0300/0372 loss: 0.3125
+  train batch 0350/0372 loss: 0.2833
+Train loss: 0.3004
+Val loss:   0.2814
+Val pixel accuracy: 0.9064
+Val mIoU: 0.4691
+Best val mIoU: 0.4691 at epoch 6
+Current learning rate: 0.00002369
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.2996
+  train batch 0100/0372 loss: 0.2907
+  train batch 0150/0372 loss: 0.3573
+  train batch 0200/0372 loss: 0.2839
+  train batch 0250/0372 loss: 0.2167
+  train batch 0300/0372 loss: 0.2245
+  train batch 0350/0372 loss: 0.2412
+Train loss: 0.2868
+Val loss:   0.2688
+Val pixel accuracy: 0.9094
+Val mIoU: 0.4793
+Best val mIoU: 0.4793 at epoch 7
+Current learning rate: 0.00002369
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.2368
+  train batch 0100/0372 loss: 0.2603
+  train batch 0150/0372 loss: 0.2545
+  train batch 0200/0372 loss: 0.1992
+  train batch 0250/0372 loss: 0.2470
+  train batch 0300/0372 loss: 0.2576
+  train batch 0350/0372 loss: 0.2199
+Train loss: 0.2758
+Val loss:   0.2653
+Val pixel accuracy: 0.9107
+Val mIoU: 0.4931
+Best val mIoU: 0.4931 at epoch 8
+Current learning rate: 0.00002369
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.2216
+  train batch 0100/0372 loss: 0.2476
+  train batch 0150/0372 loss: 0.2471
+  train batch 0200/0372 loss: 0.3532
+  train batch 0250/0372 loss: 0.3128
+  train batch 0300/0372 loss: 0.2580
+  train batch 0350/0372 loss: 0.2521
+Train loss: 0.2669
+Val loss:   0.2572
+Val pixel accuracy: 0.9123
+Val mIoU: 0.5135
+Best val mIoU: 0.5135 at epoch 9
+Current learning rate: 0.00002369
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2624
+  train batch 0100/0372 loss: 0.2835
+  train batch 0150/0372 loss: 0.2333
+  train batch 0200/0372 loss: 0.2682
+  train batch 0250/0372 loss: 0.2990
+  train batch 0300/0372 loss: 0.2354
+  train batch 0350/0372 loss: 0.2334
+Train loss: 0.2595
+Val loss:   0.2489
+Val pixel accuracy: 0.9144
+Val mIoU: 0.5221
+Best val mIoU: 0.5221 at epoch 10
+Current learning rate: 0.00002369
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial000_ep10_lr2p36886em05_adam_wd0_none
+Selected SegFormer-B0 pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial000_ep10_lr2p36886em05_adam_wd0_none
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_segformer_b0.py
+================================================================================
+
+================================================================================
+SegFormer-B0 pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\segformer_b0\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\segformer_b0\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial000_ep10_lr2p36886em05_adam_wd0_none
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 1
+Run ID: optuna_all_ep10_segformer_b0_trial001_ep10_lr1p43217em05_adamw_wd1p09943em06_plateau
+Params: {'lr': 1.4321698289111523e-05, 'optimizer': 'adamw', 'weight_decay': 1.0994335574766194e-06, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --run-id optuna_all_ep10_segformer_b0_trial001_ep10_lr1p43217em05_adamw_wd1p09943em06_plateau --epochs 10 --lr 1.4321698289111523e-05 --optimizer adamw --weight-decay 1.0994335574766194e-06 --scheduler plateau
+Training SegFormer-B0
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 1.4321698289111523e-05
+Optimizer: adamw
+Weight decay: 1.0994335574766194e-06
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial001_ep10_lr1p43217em05_adamw_wd1p09943em06_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 1.4581
+  train batch 0100/0372 loss: 0.9948
+  train batch 0150/0372 loss: 0.9372
+  train batch 0200/0372 loss: 0.7878
+  train batch 0250/0372 loss: 0.6472
+  train batch 0300/0372 loss: 0.5848
+  train batch 0350/0372 loss: 0.6412
+Train loss: 1.0617
+Val loss:   0.5553
+Val pixel accuracy: 0.8495
+Val mIoU: 0.2741
+Best val mIoU: 0.2741 at epoch 1
+Current learning rate: 0.00001432
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 0.5989
+  train batch 0100/0372 loss: 0.6024
+  train batch 0150/0372 loss: 0.5265
+  train batch 0200/0372 loss: 0.5053
+  train batch 0250/0372 loss: 0.4476
+  train batch 0300/0372 loss: 0.3924
+  train batch 0350/0372 loss: 0.3732
+Train loss: 0.5367
+Val loss:   0.4266
+Val pixel accuracy: 0.8747
+Val mIoU: 0.3450
+Best val mIoU: 0.3450 at epoch 2
+Current learning rate: 0.00001432
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.5926
+  train batch 0100/0372 loss: 0.4649
+  train batch 0150/0372 loss: 0.5161
+  train batch 0200/0372 loss: 0.4493
+  train batch 0250/0372 loss: 0.4012
+  train batch 0300/0372 loss: 0.3879
+  train batch 0350/0372 loss: 0.4597
+Train loss: 0.4392
+Val loss:   0.3721
+Val pixel accuracy: 0.8859
+Val mIoU: 0.3729
+Best val mIoU: 0.3729 at epoch 3
+Current learning rate: 0.00001432
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.7390
+  train batch 0100/0372 loss: 0.4298
+  train batch 0150/0372 loss: 0.4149
+  train batch 0200/0372 loss: 0.3830
+  train batch 0250/0372 loss: 0.3430
+  train batch 0300/0372 loss: 0.3501
+  train batch 0350/0372 loss: 0.3728
+Train loss: 0.3896
+Val loss:   0.3417
+Val pixel accuracy: 0.8921
+Val mIoU: 0.3883
+Best val mIoU: 0.3883 at epoch 4
+Current learning rate: 0.00001432
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.4955
+  train batch 0100/0372 loss: 0.3452
+  train batch 0150/0372 loss: 0.3892
+  train batch 0200/0372 loss: 0.2977
+  train batch 0250/0372 loss: 0.4026
+  train batch 0300/0372 loss: 0.4155
+  train batch 0350/0372 loss: 0.2688
+Train loss: 0.3626
+Val loss:   0.3213
+Val pixel accuracy: 0.8974
+Val mIoU: 0.4097
+Best val mIoU: 0.4097 at epoch 5
+Current learning rate: 0.00001432
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.3707
+  train batch 0100/0372 loss: 0.3210
+  train batch 0150/0372 loss: 0.2978
+  train batch 0200/0372 loss: 0.3533
+  train batch 0250/0372 loss: 0.5663
+  train batch 0300/0372 loss: 0.3633
+  train batch 0350/0372 loss: 0.3187
+Train loss: 0.3398
+Val loss:   0.3124
+Val pixel accuracy: 0.8990
+Val mIoU: 0.4270
+Best val mIoU: 0.4270 at epoch 6
+Current learning rate: 0.00001432
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.3419
+  train batch 0100/0372 loss: 0.3254
+  train batch 0150/0372 loss: 0.4027
+  train batch 0200/0372 loss: 0.3296
+  train batch 0250/0372 loss: 0.2446
+  train batch 0300/0372 loss: 0.2576
+  train batch 0350/0372 loss: 0.2744
+Train loss: 0.3230
+Val loss:   0.2951
+Val pixel accuracy: 0.9028
+Val mIoU: 0.4441
+Best val mIoU: 0.4441 at epoch 7
+Current learning rate: 0.00001432
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.2701
+  train batch 0100/0372 loss: 0.2956
+  train batch 0150/0372 loss: 0.2800
+  train batch 0200/0372 loss: 0.2143
+  train batch 0250/0372 loss: 0.2681
+  train batch 0300/0372 loss: 0.2843
+  train batch 0350/0372 loss: 0.2409
+Train loss: 0.3094
+Val loss:   0.2902
+Val pixel accuracy: 0.9039
+Val mIoU: 0.4551
+Best val mIoU: 0.4551 at epoch 8
+Current learning rate: 0.00001432
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.2510
+  train batch 0100/0372 loss: 0.2664
+  train batch 0150/0372 loss: 0.2729
+  train batch 0200/0372 loss: 0.4021
+  train batch 0250/0372 loss: 0.3466
+  train batch 0300/0372 loss: 0.2941
+  train batch 0350/0372 loss: 0.2771
+Train loss: 0.2981
+Val loss:   0.2763
+Val pixel accuracy: 0.9079
+Val mIoU: 0.4685
+Best val mIoU: 0.4685 at epoch 9
+Current learning rate: 0.00001432
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2933
+  train batch 0100/0372 loss: 0.3060
+  train batch 0150/0372 loss: 0.2673
+  train batch 0200/0372 loss: 0.2940
+  train batch 0250/0372 loss: 0.3289
+  train batch 0300/0372 loss: 0.2618
+  train batch 0350/0372 loss: 0.2582
+Train loss: 0.2899
+Val loss:   0.2714
+Val pixel accuracy: 0.9087
+Val mIoU: 0.4732
+Best val mIoU: 0.4732 at epoch 10
+Current learning rate: 0.00001432
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial001_ep10_lr1p43217em05_adamw_wd1p09943em06_plateau
+Selected SegFormer-B0 pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial001_ep10_lr1p43217em05_adamw_wd1p09943em06_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_segformer_b0.py
+================================================================================
+
+================================================================================
+SegFormer-B0 pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\segformer_b0\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\segformer_b0\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial001_ep10_lr1p43217em05_adamw_wd1p09943em06_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 2
+Run ID: optuna_all_ep10_segformer_b0_trial002_ep10_lr9p33061em05_adam_wd0_plateau
+Params: {'lr': 9.330606024425662e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --run-id optuna_all_ep10_segformer_b0_trial002_ep10_lr9p33061em05_adam_wd0_plateau --epochs 10 --lr 9.330606024425662e-05 --optimizer adam --weight-decay 0.0 --scheduler plateau
+Training SegFormer-B0
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 9.330606024425662e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial002_ep10_lr9p33061em05_adam_wd0_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 0.5795
+  train batch 0100/0372 loss: 0.5326
+  train batch 0150/0372 loss: 0.4839
+  train batch 0200/0372 loss: 0.3590
+  train batch 0250/0372 loss: 0.3701
+  train batch 0300/0372 loss: 0.3096
+  train batch 0350/0372 loss: 0.3496
+Train loss: 0.5527
+Val loss:   0.3285
+Val pixel accuracy: 0.8940
+Val mIoU: 0.4098
+Best val mIoU: 0.4098 at epoch 1
+Current learning rate: 0.00009331
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 0.3590
+  train batch 0100/0372 loss: 0.3842
+  train batch 0150/0372 loss: 0.3193
+  train batch 0200/0372 loss: 0.3154
+  train batch 0250/0372 loss: 0.2344
+  train batch 0300/0372 loss: 0.2608
+  train batch 0350/0372 loss: 0.2420
+Train loss: 0.3213
+Val loss:   0.2734
+Val pixel accuracy: 0.9079
+Val mIoU: 0.4714
+Best val mIoU: 0.4714 at epoch 2
+Current learning rate: 0.00009331
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.3157
+  train batch 0100/0372 loss: 0.3121
+  train batch 0150/0372 loss: 0.3929
+  train batch 0200/0372 loss: 0.2689
+  train batch 0250/0372 loss: 0.2738
+  train batch 0300/0372 loss: 0.2385
+  train batch 0350/0372 loss: 0.2851
+Train loss: 0.2821
+Val loss:   0.2566
+Val pixel accuracy: 0.9116
+Val mIoU: 0.5102
+Best val mIoU: 0.5102 at epoch 3
+Current learning rate: 0.00009331
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.4754
+  train batch 0100/0372 loss: 0.2960
+  train batch 0150/0372 loss: 0.3022
+  train batch 0200/0372 loss: 0.2462
+  train batch 0250/0372 loss: 0.2178
+  train batch 0300/0372 loss: 0.2540
+  train batch 0350/0372 loss: 0.2247
+Train loss: 0.2597
+Val loss:   0.2489
+Val pixel accuracy: 0.9151
+Val mIoU: 0.5392
+Best val mIoU: 0.5392 at epoch 4
+Current learning rate: 0.00009331
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.3121
+  train batch 0100/0372 loss: 0.2542
+  train batch 0150/0372 loss: 0.2482
+  train batch 0200/0372 loss: 0.2044
+  train batch 0250/0372 loss: 0.2578
+  train batch 0300/0372 loss: 0.2637
+  train batch 0350/0372 loss: 0.1761
+Train loss: 0.2478
+Val loss:   0.2384
+Val pixel accuracy: 0.9165
+Val mIoU: 0.5482
+Best val mIoU: 0.5482 at epoch 5
+Current learning rate: 0.00009331
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.2489
+  train batch 0100/0372 loss: 0.2610
+  train batch 0150/0372 loss: 0.1996
+  train batch 0200/0372 loss: 0.2655
+  train batch 0250/0372 loss: 0.3781
+  train batch 0300/0372 loss: 0.2476
+  train batch 0350/0372 loss: 0.2434
+Train loss: 0.2358
+Val loss:   0.2471
+Val pixel accuracy: 0.9139
+Val mIoU: 0.5451
+Best val mIoU: 0.5482 at epoch 5
+Current learning rate: 0.00009331
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.2300
+  train batch 0100/0372 loss: 0.2466
+  train batch 0150/0372 loss: 0.2870
+  train batch 0200/0372 loss: 0.2209
+  train batch 0250/0372 loss: 0.1729
+  train batch 0300/0372 loss: 0.1705
+  train batch 0350/0372 loss: 0.1926
+Train loss: 0.2253
+Val loss:   0.2312
+Val pixel accuracy: 0.9195
+Val mIoU: 0.5621
+Best val mIoU: 0.5621 at epoch 7
+Current learning rate: 0.00009331
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.1986
+  train batch 0100/0372 loss: 0.1939
+  train batch 0150/0372 loss: 0.2273
+  train batch 0200/0372 loss: 0.1662
+  train batch 0250/0372 loss: 0.2013
+  train batch 0300/0372 loss: 0.2109
+  train batch 0350/0372 loss: 0.1876
+Train loss: 0.2157
+Val loss:   0.2337
+Val pixel accuracy: 0.9186
+Val mIoU: 0.5535
+Best val mIoU: 0.5621 at epoch 7
+Current learning rate: 0.00009331
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.1770
+  train batch 0100/0372 loss: 0.2138
+  train batch 0150/0372 loss: 0.2017
+  train batch 0200/0372 loss: 0.2353
+  train batch 0250/0372 loss: 0.2324
+  train batch 0300/0372 loss: 0.1954
+  train batch 0350/0372 loss: 0.1977
+Train loss: 0.2084
+Val loss:   0.2250
+Val pixel accuracy: 0.9211
+Val mIoU: 0.5692
+Best val mIoU: 0.5692 at epoch 9
+Current learning rate: 0.00009331
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2169
+  train batch 0100/0372 loss: 0.2379
+  train batch 0150/0372 loss: 0.1848
+  train batch 0200/0372 loss: 0.2265
+  train batch 0250/0372 loss: 0.2301
+  train batch 0300/0372 loss: 0.1794
+  train batch 0350/0372 loss: 0.1937
+Train loss: 0.1990
+Val loss:   0.2271
+Val pixel accuracy: 0.9200
+Val mIoU: 0.5757
+Best val mIoU: 0.5757 at epoch 10
+Current learning rate: 0.00009331
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial002_ep10_lr9p33061em05_adam_wd0_plateau
+Selected SegFormer-B0 pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial002_ep10_lr9p33061em05_adam_wd0_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_segformer_b0.py
+================================================================================
+
+================================================================================
+SegFormer-B0 pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\segformer_b0\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\segformer_b0\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial002_ep10_lr9p33061em05_adam_wd0_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 3
+Run ID: optuna_all_ep10_segformer_b0_trial003_ep10_lr2p01485em05_adam_wd0_plateau
+Params: {'lr': 2.0148477884158675e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --run-id optuna_all_ep10_segformer_b0_trial003_ep10_lr2p01485em05_adam_wd0_plateau --epochs 10 --lr 2.0148477884158675e-05 --optimizer adam --weight-decay 0.0 --scheduler plateau
+Training SegFormer-B0
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 2.0148477884158675e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial003_ep10_lr2p01485em05_adam_wd0_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 1.1180
+  train batch 0100/0372 loss: 0.8603
+  train batch 0150/0372 loss: 0.8241
+  train batch 0200/0372 loss: 0.6574
+  train batch 0250/0372 loss: 0.5846
+  train batch 0300/0372 loss: 0.5035
+  train batch 0350/0372 loss: 0.5741
+Train loss: 0.9286
+Val loss:   0.4915
+Val pixel accuracy: 0.8622
+Val mIoU: 0.3063
+Best val mIoU: 0.3063 at epoch 1
+Current learning rate: 0.00002015
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 0.5226
+  train batch 0100/0372 loss: 0.5460
+  train batch 0150/0372 loss: 0.4706
+  train batch 0200/0372 loss: 0.4520
+  train batch 0250/0372 loss: 0.3824
+  train batch 0300/0372 loss: 0.3582
+  train batch 0350/0372 loss: 0.3307
+Train loss: 0.4762
+Val loss:   0.3828
+Val pixel accuracy: 0.8838
+Val mIoU: 0.3659
+Best val mIoU: 0.3659 at epoch 2
+Current learning rate: 0.00002015
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.5166
+  train batch 0100/0372 loss: 0.4201
+  train batch 0150/0372 loss: 0.4794
+  train batch 0200/0372 loss: 0.3887
+  train batch 0250/0372 loss: 0.3626
+  train batch 0300/0372 loss: 0.3475
+  train batch 0350/0372 loss: 0.4264
+Train loss: 0.3946
+Val loss:   0.3395
+Val pixel accuracy: 0.8929
+Val mIoU: 0.3925
+Best val mIoU: 0.3925 at epoch 3
+Current learning rate: 0.00002015
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.6818
+  train batch 0100/0372 loss: 0.3860
+  train batch 0150/0372 loss: 0.3743
+  train batch 0200/0372 loss: 0.3482
+  train batch 0250/0372 loss: 0.3080
+  train batch 0300/0372 loss: 0.3186
+  train batch 0350/0372 loss: 0.3330
+Train loss: 0.3529
+Val loss:   0.3140
+Val pixel accuracy: 0.8986
+Val mIoU: 0.4238
+Best val mIoU: 0.4238 at epoch 4
+Current learning rate: 0.00002015
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.4530
+  train batch 0100/0372 loss: 0.3165
+  train batch 0150/0372 loss: 0.3552
+  train batch 0200/0372 loss: 0.2678
+  train batch 0250/0372 loss: 0.3612
+  train batch 0300/0372 loss: 0.3660
+  train batch 0350/0372 loss: 0.2399
+Train loss: 0.3310
+Val loss:   0.2961
+Val pixel accuracy: 0.9030
+Val mIoU: 0.4432
+Best val mIoU: 0.4432 at epoch 5
+Current learning rate: 0.00002015
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.3305
+  train batch 0100/0372 loss: 0.3038
+  train batch 0150/0372 loss: 0.2752
+  train batch 0200/0372 loss: 0.3278
+  train batch 0250/0372 loss: 0.5449
+  train batch 0300/0372 loss: 0.3260
+  train batch 0350/0372 loss: 0.2926
+Train loss: 0.3118
+Val loss:   0.2901
+Val pixel accuracy: 0.9043
+Val mIoU: 0.4565
+Best val mIoU: 0.4565 at epoch 6
+Current learning rate: 0.00002015
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.3127
+  train batch 0100/0372 loss: 0.3019
+  train batch 0150/0372 loss: 0.3695
+  train batch 0200/0372 loss: 0.2963
+  train batch 0250/0372 loss: 0.2247
+  train batch 0300/0372 loss: 0.2344
+  train batch 0350/0372 loss: 0.2508
+Train loss: 0.2973
+Val loss:   0.2760
+Val pixel accuracy: 0.9075
+Val mIoU: 0.4683
+Best val mIoU: 0.4683 at epoch 7
+Current learning rate: 0.00002015
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.2454
+  train batch 0100/0372 loss: 0.2706
+  train batch 0150/0372 loss: 0.2618
+  train batch 0200/0372 loss: 0.2029
+  train batch 0250/0372 loss: 0.2529
+  train batch 0300/0372 loss: 0.2653
+  train batch 0350/0372 loss: 0.2256
+Train loss: 0.2856
+Val loss:   0.2729
+Val pixel accuracy: 0.9085
+Val mIoU: 0.4800
+Best val mIoU: 0.4800 at epoch 8
+Current learning rate: 0.00002015
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.2296
+  train batch 0100/0372 loss: 0.2531
+  train batch 0150/0372 loss: 0.2549
+  train batch 0200/0372 loss: 0.3681
+  train batch 0250/0372 loss: 0.3230
+  train batch 0300/0372 loss: 0.2697
+  train batch 0350/0372 loss: 0.2607
+Train loss: 0.2761
+Val loss:   0.2621
+Val pixel accuracy: 0.9112
+Val mIoU: 0.4960
+Best val mIoU: 0.4960 at epoch 9
+Current learning rate: 0.00002015
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2717
+  train batch 0100/0372 loss: 0.2899
+  train batch 0150/0372 loss: 0.2428
+  train batch 0200/0372 loss: 0.2759
+  train batch 0250/0372 loss: 0.3070
+  train batch 0300/0372 loss: 0.2437
+  train batch 0350/0372 loss: 0.2406
+Train loss: 0.2686
+Val loss:   0.2551
+Val pixel accuracy: 0.9129
+Val mIoU: 0.5019
+Best val mIoU: 0.5019 at epoch 10
+Current learning rate: 0.00002015
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial003_ep10_lr2p01485em05_adam_wd0_plateau
+Selected SegFormer-B0 pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial003_ep10_lr2p01485em05_adam_wd0_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_segformer_b0.py
+================================================================================
+
+================================================================================
+SegFormer-B0 pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\segformer_b0\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\segformer_b0\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial003_ep10_lr2p01485em05_adam_wd0_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 4
+Run ID: optuna_all_ep10_segformer_b0_trial004_ep10_lr1p37878em05_adamw_wd2p50812em06_plateau
+Params: {'lr': 1.378776461935377e-05, 'optimizer': 'adamw', 'weight_decay': 2.5081156860452325e-06, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --run-id optuna_all_ep10_segformer_b0_trial004_ep10_lr1p37878em05_adamw_wd2p50812em06_plateau --epochs 10 --lr 1.378776461935377e-05 --optimizer adamw --weight-decay 2.5081156860452325e-06 --scheduler plateau
+Training SegFormer-B0
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 1.378776461935377e-05
+Optimizer: adamw
+Weight decay: 2.5081156860452325e-06
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial004_ep10_lr1p37878em05_adamw_wd2p50812em06_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 1.5046
+  train batch 0100/0372 loss: 1.0132
+  train batch 0150/0372 loss: 0.9510
+  train batch 0200/0372 loss: 0.8029
+  train batch 0250/0372 loss: 0.6555
+  train batch 0300/0372 loss: 0.5951
+  train batch 0350/0372 loss: 0.6497
+Train loss: 1.0779
+Val loss:   0.5629
+Val pixel accuracy: 0.8481
+Val mIoU: 0.2711
+Best val mIoU: 0.2711 at epoch 1
+Current learning rate: 0.00001379
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 0.6078
+  train batch 0100/0372 loss: 0.6088
+  train batch 0150/0372 loss: 0.5336
+  train batch 0200/0372 loss: 0.5121
+  train batch 0250/0372 loss: 0.4553
+  train batch 0300/0372 loss: 0.3962
+  train batch 0350/0372 loss: 0.3782
+Train loss: 0.5441
+Val loss:   0.4321
+Val pixel accuracy: 0.8735
+Val mIoU: 0.3419
+Best val mIoU: 0.3419 at epoch 2
+Current learning rate: 0.00001379
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.6010
+  train batch 0100/0372 loss: 0.4701
+  train batch 0150/0372 loss: 0.5200
+  train batch 0200/0372 loss: 0.4574
+  train batch 0250/0372 loss: 0.4062
+  train batch 0300/0372 loss: 0.3932
+  train batch 0350/0372 loss: 0.4636
+Train loss: 0.4448
+Val loss:   0.3762
+Val pixel accuracy: 0.8850
+Val mIoU: 0.3709
+Best val mIoU: 0.3709 at epoch 3
+Current learning rate: 0.00001379
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.7457
+  train batch 0100/0372 loss: 0.4354
+  train batch 0150/0372 loss: 0.4205
+  train batch 0200/0372 loss: 0.3873
+  train batch 0250/0372 loss: 0.3478
+  train batch 0300/0372 loss: 0.3541
+  train batch 0350/0372 loss: 0.3779
+Train loss: 0.3942
+Val loss:   0.3452
+Val pixel accuracy: 0.8914
+Val mIoU: 0.3859
+Best val mIoU: 0.3859 at epoch 4
+Current learning rate: 0.00001379
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.5006
+  train batch 0100/0372 loss: 0.3495
+  train batch 0150/0372 loss: 0.3933
+  train batch 0200/0372 loss: 0.3013
+  train batch 0250/0372 loss: 0.4075
+  train batch 0300/0372 loss: 0.4203
+  train batch 0350/0372 loss: 0.2724
+Train loss: 0.3665
+Val loss:   0.3243
+Val pixel accuracy: 0.8967
+Val mIoU: 0.4054
+Best val mIoU: 0.4054 at epoch 5
+Current learning rate: 0.00001379
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.3758
+  train batch 0100/0372 loss: 0.3234
+  train batch 0150/0372 loss: 0.3008
+  train batch 0200/0372 loss: 0.3562
+  train batch 0250/0372 loss: 0.5687
+  train batch 0300/0372 loss: 0.3682
+  train batch 0350/0372 loss: 0.3221
+Train loss: 0.3433
+Val loss:   0.3153
+Val pixel accuracy: 0.8984
+Val mIoU: 0.4233
+Best val mIoU: 0.4233 at epoch 6
+Current learning rate: 0.00001379
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.3455
+  train batch 0100/0372 loss: 0.3277
+  train batch 0150/0372 loss: 0.4072
+  train batch 0200/0372 loss: 0.3339
+  train batch 0250/0372 loss: 0.2472
+  train batch 0300/0372 loss: 0.2604
+  train batch 0350/0372 loss: 0.2774
+Train loss: 0.3262
+Val loss:   0.2976
+Val pixel accuracy: 0.9022
+Val mIoU: 0.4410
+Best val mIoU: 0.4410 at epoch 7
+Current learning rate: 0.00001379
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.2733
+  train batch 0100/0372 loss: 0.2988
+  train batch 0150/0372 loss: 0.2822
+  train batch 0200/0372 loss: 0.2158
+  train batch 0250/0372 loss: 0.2701
+  train batch 0300/0372 loss: 0.2869
+  train batch 0350/0372 loss: 0.2428
+Train loss: 0.3123
+Val loss:   0.2923
+Val pixel accuracy: 0.9034
+Val mIoU: 0.4525
+Best val mIoU: 0.4525 at epoch 8
+Current learning rate: 0.00001379
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.2537
+  train batch 0100/0372 loss: 0.2682
+  train batch 0150/0372 loss: 0.2749
+  train batch 0200/0372 loss: 0.4064
+  train batch 0250/0372 loss: 0.3493
+  train batch 0300/0372 loss: 0.2970
+  train batch 0350/0372 loss: 0.2790
+Train loss: 0.3008
+Val loss:   0.2782
+Val pixel accuracy: 0.9074
+Val mIoU: 0.4656
+Best val mIoU: 0.4656 at epoch 9
+Current learning rate: 0.00001379
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2958
+  train batch 0100/0372 loss: 0.3082
+  train batch 0150/0372 loss: 0.2702
+  train batch 0200/0372 loss: 0.2963
+  train batch 0250/0372 loss: 0.3317
+  train batch 0300/0372 loss: 0.2639
+  train batch 0350/0372 loss: 0.2602
+Train loss: 0.2925
+Val loss:   0.2735
+Val pixel accuracy: 0.9082
+Val mIoU: 0.4702
+Best val mIoU: 0.4702 at epoch 10
+Current learning rate: 0.00001379
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial004_ep10_lr1p37878em05_adamw_wd2p50812em06_plateau
+Selected SegFormer-B0 pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial004_ep10_lr1p37878em05_adamw_wd2p50812em06_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_segformer_b0.py
+================================================================================
+
+================================================================================
+SegFormer-B0 pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\segformer_b0\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\segformer_b0\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial004_ep10_lr1p37878em05_adamw_wd2p50812em06_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 5
+Run ID: optuna_all_ep10_segformer_b0_trial005_ep10_lr3p26764em05_adam_wd0_none
+Params: {'lr': 3.267641765781762e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'none'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --run-id optuna_all_ep10_segformer_b0_trial005_ep10_lr3p26764em05_adam_wd0_none --epochs 10 --lr 3.267641765781762e-05 --optimizer adam --weight-decay 0.0 --scheduler none
+Training SegFormer-B0
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 3.267641765781762e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: none
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial005_ep10_lr3p26764em05_adam_wd0_none
+
+Epoch 1/10
+  train batch 0050/0372 loss: 0.8164
+  train batch 0100/0372 loss: 0.7188
+  train batch 0150/0372 loss: 0.6907
+  train batch 0200/0372 loss: 0.5252
+  train batch 0250/0372 loss: 0.5073
+  train batch 0300/0372 loss: 0.4230
+  train batch 0350/0372 loss: 0.4863
+Train loss: 0.7754
+Val loss:   0.4198
+Val pixel accuracy: 0.8769
+Val mIoU: 0.3486
+Best val mIoU: 0.3486 at epoch 1
+Current learning rate: 0.00003268
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 0.4415
+  train batch 0100/0372 loss: 0.4795
+  train batch 0150/0372 loss: 0.4117
+  train batch 0200/0372 loss: 0.3928
+  train batch 0250/0372 loss: 0.3140
+  train batch 0300/0372 loss: 0.3162
+  train batch 0350/0372 loss: 0.2838
+Train loss: 0.4094
+Val loss:   0.3379
+Val pixel accuracy: 0.8934
+Val mIoU: 0.3952
+Best val mIoU: 0.3952 at epoch 2
+Current learning rate: 0.00003268
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.4255
+  train batch 0100/0372 loss: 0.3738
+  train batch 0150/0372 loss: 0.4412
+  train batch 0200/0372 loss: 0.3327
+  train batch 0250/0372 loss: 0.3242
+  train batch 0300/0372 loss: 0.3105
+  train batch 0350/0372 loss: 0.3750
+Train loss: 0.3466
+Val loss:   0.3035
+Val pixel accuracy: 0.9010
+Val mIoU: 0.4359
+Best val mIoU: 0.4359 at epoch 3
+Current learning rate: 0.00003268
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.6111
+  train batch 0100/0372 loss: 0.3446
+  train batch 0150/0372 loss: 0.3348
+  train batch 0200/0372 loss: 0.3067
+  train batch 0250/0372 loss: 0.2690
+  train batch 0300/0372 loss: 0.2883
+  train batch 0350/0372 loss: 0.2938
+Train loss: 0.3127
+Val loss:   0.2834
+Val pixel accuracy: 0.9056
+Val mIoU: 0.4655
+Best val mIoU: 0.4655 at epoch 4
+Current learning rate: 0.00003268
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.4027
+  train batch 0100/0372 loss: 0.2907
+  train batch 0150/0372 loss: 0.3097
+  train batch 0200/0372 loss: 0.2396
+  train batch 0250/0372 loss: 0.3127
+  train batch 0300/0372 loss: 0.3173
+  train batch 0350/0372 loss: 0.2123
+Train loss: 0.2959
+Val loss:   0.2699
+Val pixel accuracy: 0.9091
+Val mIoU: 0.4832
+Best val mIoU: 0.4832 at epoch 5
+Current learning rate: 0.00003268
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.2889
+  train batch 0100/0372 loss: 0.2883
+  train batch 0150/0372 loss: 0.2422
+  train batch 0200/0372 loss: 0.2965
+  train batch 0250/0372 loss: 0.4993
+  train batch 0300/0372 loss: 0.2918
+  train batch 0350/0372 loss: 0.2719
+Train loss: 0.2805
+Val loss:   0.2655
+Val pixel accuracy: 0.9100
+Val mIoU: 0.4938
+Best val mIoU: 0.4938 at epoch 6
+Current learning rate: 0.00003268
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.2755
+  train batch 0100/0372 loss: 0.2757
+  train batch 0150/0372 loss: 0.3388
+  train batch 0200/0372 loss: 0.2624
+  train batch 0250/0372 loss: 0.2027
+  train batch 0300/0372 loss: 0.2075
+  train batch 0350/0372 loss: 0.2250
+Train loss: 0.2685
+Val loss:   0.2566
+Val pixel accuracy: 0.9126
+Val mIoU: 0.5117
+Best val mIoU: 0.5117 at epoch 7
+Current learning rate: 0.00003268
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.2236
+  train batch 0100/0372 loss: 0.2407
+  train batch 0150/0372 loss: 0.2420
+  train batch 0200/0372 loss: 0.1918
+  train batch 0250/0372 loss: 0.2355
+  train batch 0300/0372 loss: 0.2442
+  train batch 0350/0372 loss: 0.2126
+Train loss: 0.2585
+Val loss:   0.2522
+Val pixel accuracy: 0.9140
+Val mIoU: 0.5239
+Best val mIoU: 0.5239 at epoch 8
+Current learning rate: 0.00003268
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.2092
+  train batch 0100/0372 loss: 0.2363
+  train batch 0150/0372 loss: 0.2323
+  train batch 0200/0372 loss: 0.3188
+  train batch 0250/0372 loss: 0.2923
+  train batch 0300/0372 loss: 0.2385
+  train batch 0350/0372 loss: 0.2347
+Train loss: 0.2505
+Val loss:   0.2481
+Val pixel accuracy: 0.9144
+Val mIoU: 0.5361
+Best val mIoU: 0.5361 at epoch 9
+Current learning rate: 0.00003268
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2452
+  train batch 0100/0372 loss: 0.2735
+  train batch 0150/0372 loss: 0.2183
+  train batch 0200/0372 loss: 0.2536
+  train batch 0250/0372 loss: 0.2845
+  train batch 0300/0372 loss: 0.2200
+  train batch 0350/0372 loss: 0.2211
+Train loss: 0.2428
+Val loss:   0.2394
+Val pixel accuracy: 0.9167
+Val mIoU: 0.5433
+Best val mIoU: 0.5433 at epoch 10
+Current learning rate: 0.00003268
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial005_ep10_lr3p26764em05_adam_wd0_none
+Selected SegFormer-B0 pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial005_ep10_lr3p26764em05_adam_wd0_none
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_segformer_b0.py
+================================================================================
+
+================================================================================
+SegFormer-B0 pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\segformer_b0\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\segformer_b0\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial005_ep10_lr3p26764em05_adam_wd0_none
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 6
+Run ID: optuna_all_ep10_segformer_b0_trial006_ep10_lr1p16159em05_adamw_wd1p56799em06_none
+Params: {'lr': 1.1615865989246456e-05, 'optimizer': 'adamw', 'weight_decay': 1.5679933916723006e-06, 'scheduler': 'none'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --run-id optuna_all_ep10_segformer_b0_trial006_ep10_lr1p16159em05_adamw_wd1p56799em06_none --epochs 10 --lr 1.1615865989246456e-05 --optimizer adamw --weight-decay 1.5679933916723006e-06 --scheduler none
+Training SegFormer-B0
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 1.1615865989246456e-05
+Optimizer: adamw
+Weight decay: 1.5679933916723006e-06
+Scheduler: none
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial006_ep10_lr1p16159em05_adamw_wd1p56799em06_none
+
+Epoch 1/10
+  train batch 0050/0372 loss: 1.6989
+  train batch 0100/0372 loss: 1.1073
+  train batch 0150/0372 loss: 1.0155
+  train batch 0200/0372 loss: 0.8749
+  train batch 0250/0372 loss: 0.6953
+  train batch 0300/0372 loss: 0.6430
+  train batch 0350/0372 loss: 0.6899
+Train loss: 1.1544
+Val loss:   0.5995
+Val pixel accuracy: 0.8421
+Val mIoU: 0.2597
+Best val mIoU: 0.2597 at epoch 1
+Current learning rate: 0.00001162
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 0.6518
+  train batch 0100/0372 loss: 0.6399
+  train batch 0150/0372 loss: 0.5701
+  train batch 0200/0372 loss: 0.5453
+  train batch 0250/0372 loss: 0.4911
+  train batch 0300/0372 loss: 0.4152
+  train batch 0350/0372 loss: 0.4034
+Train loss: 0.5794
+Val loss:   0.4585
+Val pixel accuracy: 0.8679
+Val mIoU: 0.3268
+Best val mIoU: 0.3268 at epoch 2
+Current learning rate: 0.00001162
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.6413
+  train batch 0100/0372 loss: 0.4938
+  train batch 0150/0372 loss: 0.5397
+  train batch 0200/0372 loss: 0.4961
+  train batch 0250/0372 loss: 0.4310
+  train batch 0300/0372 loss: 0.4184
+  train batch 0350/0372 loss: 0.4830
+Train loss: 0.4717
+Val loss:   0.3962
+Val pixel accuracy: 0.8809
+Val mIoU: 0.3616
+Best val mIoU: 0.3616 at epoch 3
+Current learning rate: 0.00001162
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.7764
+  train batch 0100/0372 loss: 0.4617
+  train batch 0150/0372 loss: 0.4470
+  train batch 0200/0372 loss: 0.4073
+  train batch 0250/0372 loss: 0.3700
+  train batch 0300/0372 loss: 0.3738
+  train batch 0350/0372 loss: 0.4011
+Train loss: 0.4163
+Val loss:   0.3618
+Val pixel accuracy: 0.8878
+Val mIoU: 0.3758
+Best val mIoU: 0.3758 at epoch 4
+Current learning rate: 0.00001162
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.5252
+  train batch 0100/0372 loss: 0.3721
+  train batch 0150/0372 loss: 0.4159
+  train batch 0200/0372 loss: 0.3183
+  train batch 0250/0372 loss: 0.4326
+  train batch 0300/0372 loss: 0.4416
+  train batch 0350/0372 loss: 0.2904
+Train loss: 0.3851
+Val loss:   0.3391
+Val pixel accuracy: 0.8936
+Val mIoU: 0.3902
+Best val mIoU: 0.3902 at epoch 5
+Current learning rate: 0.00001162
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.3999
+  train batch 0100/0372 loss: 0.3359
+  train batch 0150/0372 loss: 0.3153
+  train batch 0200/0372 loss: 0.3705
+  train batch 0250/0372 loss: 0.5786
+  train batch 0300/0372 loss: 0.3917
+  train batch 0350/0372 loss: 0.3380
+Train loss: 0.3600
+Val loss:   0.3287
+Val pixel accuracy: 0.8953
+Val mIoU: 0.4057
+Best val mIoU: 0.4057 at epoch 6
+Current learning rate: 0.00001162
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.3633
+  train batch 0100/0372 loss: 0.3389
+  train batch 0150/0372 loss: 0.4289
+  train batch 0200/0372 loss: 0.3543
+  train batch 0250/0372 loss: 0.2591
+  train batch 0300/0372 loss: 0.2736
+  train batch 0350/0372 loss: 0.2916
+Train loss: 0.3414
+Val loss:   0.3094
+Val pixel accuracy: 0.8995
+Val mIoU: 0.4262
+Best val mIoU: 0.4262 at epoch 7
+Current learning rate: 0.00001162
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.2880
+  train batch 0100/0372 loss: 0.3147
+  train batch 0150/0372 loss: 0.2932
+  train batch 0200/0372 loss: 0.2235
+  train batch 0250/0372 loss: 0.2806
+  train batch 0300/0372 loss: 0.2990
+  train batch 0350/0372 loss: 0.2519
+Train loss: 0.3265
+Val loss:   0.3028
+Val pixel accuracy: 0.9011
+Val mIoU: 0.4392
+Best val mIoU: 0.4392 at epoch 8
+Current learning rate: 0.00001162
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.2671
+  train batch 0100/0372 loss: 0.2772
+  train batch 0150/0372 loss: 0.2840
+  train batch 0200/0372 loss: 0.4261
+  train batch 0250/0372 loss: 0.3624
+  train batch 0300/0372 loss: 0.3117
+  train batch 0350/0372 loss: 0.2867
+Train loss: 0.3137
+Val loss:   0.2878
+Val pixel accuracy: 0.9051
+Val mIoU: 0.4527
+Best val mIoU: 0.4527 at epoch 9
+Current learning rate: 0.00001162
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.3081
+  train batch 0100/0372 loss: 0.3181
+  train batch 0150/0372 loss: 0.2839
+  train batch 0200/0372 loss: 0.3075
+  train batch 0250/0372 loss: 0.3455
+  train batch 0300/0372 loss: 0.2739
+  train batch 0350/0372 loss: 0.2692
+Train loss: 0.3047
+Val loss:   0.2834
+Val pixel accuracy: 0.9057
+Val mIoU: 0.4579
+Best val mIoU: 0.4579 at epoch 10
+Current learning rate: 0.00001162
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial006_ep10_lr1p16159em05_adamw_wd1p56799em06_none
+Selected SegFormer-B0 pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial006_ep10_lr1p16159em05_adamw_wd1p56799em06_none
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_segformer_b0.py
+================================================================================
+
+================================================================================
+SegFormer-B0 pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\segformer_b0\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\segformer_b0\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial006_ep10_lr1p16159em05_adamw_wd1p56799em06_none
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 7
+Run ID: optuna_all_ep10_segformer_b0_trial007_ep10_lr4p83318em05_adam_wd0_none
+Params: {'lr': 4.833180632488465e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'none'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --run-id optuna_all_ep10_segformer_b0_trial007_ep10_lr4p83318em05_adam_wd0_none --epochs 10 --lr 4.833180632488465e-05 --optimizer adam --weight-decay 0.0 --scheduler none
+Training SegFormer-B0
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 4.833180632488465e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: none
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial007_ep10_lr4p83318em05_adam_wd0_none
+
+Epoch 1/10
+  train batch 0050/0372 loss: 0.6829
+  train batch 0100/0372 loss: 0.6305
+  train batch 0150/0372 loss: 0.5858
+  train batch 0200/0372 loss: 0.4529
+  train batch 0250/0372 loss: 0.4455
+  train batch 0300/0372 loss: 0.3732
+  train batch 0350/0372 loss: 0.4272
+Train loss: 0.6750
+Val loss:   0.3804
+Val pixel accuracy: 0.8838
+Val mIoU: 0.3708
+Best val mIoU: 0.3708 at epoch 1
+Current learning rate: 0.00004833
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 0.3992
+  train batch 0100/0372 loss: 0.4422
+  train batch 0150/0372 loss: 0.3701
+  train batch 0200/0372 loss: 0.3571
+  train batch 0250/0372 loss: 0.2758
+  train batch 0300/0372 loss: 0.2923
+  train batch 0350/0372 loss: 0.2604
+Train loss: 0.3687
+Val loss:   0.3075
+Val pixel accuracy: 0.9003
+Val mIoU: 0.4298
+Best val mIoU: 0.4298 at epoch 2
+Current learning rate: 0.00004833
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.3795
+  train batch 0100/0372 loss: 0.3484
+  train batch 0150/0372 loss: 0.4219
+  train batch 0200/0372 loss: 0.2987
+  train batch 0250/0372 loss: 0.2941
+  train batch 0300/0372 loss: 0.2827
+  train batch 0350/0372 loss: 0.3311
+Train loss: 0.3165
+Val loss:   0.2808
+Val pixel accuracy: 0.9063
+Val mIoU: 0.4641
+Best val mIoU: 0.4641 at epoch 3
+Current learning rate: 0.00004833
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.5593
+  train batch 0100/0372 loss: 0.3209
+  train batch 0150/0372 loss: 0.3156
+  train batch 0200/0372 loss: 0.2759
+  train batch 0250/0372 loss: 0.2384
+  train batch 0300/0372 loss: 0.2732
+  train batch 0350/0372 loss: 0.2640
+Train loss: 0.2880
+Val loss:   0.2640
+Val pixel accuracy: 0.9107
+Val mIoU: 0.4955
+Best val mIoU: 0.4955 at epoch 4
+Current learning rate: 0.00004833
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.3663
+  train batch 0100/0372 loss: 0.2659
+  train batch 0150/0372 loss: 0.2762
+  train batch 0200/0372 loss: 0.2226
+  train batch 0250/0372 loss: 0.2799
+  train batch 0300/0372 loss: 0.2907
+  train batch 0350/0372 loss: 0.1957
+Train loss: 0.2739
+Val loss:   0.2547
+Val pixel accuracy: 0.9129
+Val mIoU: 0.5177
+Best val mIoU: 0.5177 at epoch 5
+Current learning rate: 0.00004833
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.2760
+  train batch 0100/0372 loss: 0.2763
+  train batch 0150/0372 loss: 0.2196
+  train batch 0200/0372 loss: 0.2787
+  train batch 0250/0372 loss: 0.4467
+  train batch 0300/0372 loss: 0.2716
+  train batch 0350/0372 loss: 0.2614
+Train loss: 0.2608
+Val loss:   0.2496
+Val pixel accuracy: 0.9139
+Val mIoU: 0.5235
+Best val mIoU: 0.5235 at epoch 6
+Current learning rate: 0.00004833
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.2514
+  train batch 0100/0372 loss: 0.2611
+  train batch 0150/0372 loss: 0.3231
+  train batch 0200/0372 loss: 0.2411
+  train batch 0250/0372 loss: 0.1890
+  train batch 0300/0372 loss: 0.1902
+  train batch 0350/0372 loss: 0.2102
+Train loss: 0.2500
+Val loss:   0.2441
+Val pixel accuracy: 0.9161
+Val mIoU: 0.5358
+Best val mIoU: 0.5358 at epoch 7
+Current learning rate: 0.00004833
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.2102
+  train batch 0100/0372 loss: 0.2172
+  train batch 0150/0372 loss: 0.2310
+  train batch 0200/0372 loss: 0.1807
+  train batch 0250/0372 loss: 0.2214
+  train batch 0300/0372 loss: 0.2271
+  train batch 0350/0372 loss: 0.2050
+Train loss: 0.2401
+Val loss:   0.2420
+Val pixel accuracy: 0.9167
+Val mIoU: 0.5395
+Best val mIoU: 0.5395 at epoch 8
+Current learning rate: 0.00004833
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.1968
+  train batch 0100/0372 loss: 0.2242
+  train batch 0150/0372 loss: 0.2176
+  train batch 0200/0372 loss: 0.2783
+  train batch 0250/0372 loss: 0.2646
+  train batch 0300/0372 loss: 0.2238
+  train batch 0350/0372 loss: 0.2152
+Train loss: 0.2327
+Val loss:   0.2351
+Val pixel accuracy: 0.9182
+Val mIoU: 0.5535
+Best val mIoU: 0.5535 at epoch 9
+Current learning rate: 0.00004833
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2272
+  train batch 0100/0372 loss: 0.2630
+  train batch 0150/0372 loss: 0.2057
+  train batch 0200/0372 loss: 0.2394
+  train batch 0250/0372 loss: 0.2695
+  train batch 0300/0372 loss: 0.2015
+  train batch 0350/0372 loss: 0.2086
+Train loss: 0.2245
+Val loss:   0.2321
+Val pixel accuracy: 0.9186
+Val mIoU: 0.5590
+Best val mIoU: 0.5590 at epoch 10
+Current learning rate: 0.00004833
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial007_ep10_lr4p83318em05_adam_wd0_none
+Selected SegFormer-B0 pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial007_ep10_lr4p83318em05_adam_wd0_none
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_segformer_b0.py
+================================================================================
+
+================================================================================
+SegFormer-B0 pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\segformer_b0\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\segformer_b0\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial007_ep10_lr4p83318em05_adam_wd0_none
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 8
+Run ID: optuna_all_ep10_segformer_b0_trial008_ep10_lr8p1156em05_adamw_wd1p24em05_plateau
+Params: {'lr': 8.115595675970508e-05, 'optimizer': 'adamw', 'weight_decay': 1.2399967836846103e-05, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --run-id optuna_all_ep10_segformer_b0_trial008_ep10_lr8p1156em05_adamw_wd1p24em05_plateau --epochs 10 --lr 8.115595675970508e-05 --optimizer adamw --weight-decay 1.2399967836846103e-05 --scheduler plateau
+Training SegFormer-B0
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 8.115595675970508e-05
+Optimizer: adamw
+Weight decay: 1.2399967836846103e-05
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial008_ep10_lr8p1156em05_adamw_wd1p24em05_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 0.5872
+  train batch 0100/0372 loss: 0.5550
+  train batch 0150/0372 loss: 0.4982
+  train batch 0200/0372 loss: 0.3736
+  train batch 0250/0372 loss: 0.3839
+  train batch 0300/0372 loss: 0.3218
+  train batch 0350/0372 loss: 0.3648
+Train loss: 0.5746
+Val loss:   0.3389
+Val pixel accuracy: 0.8918
+Val mIoU: 0.4011
+Best val mIoU: 0.4011 at epoch 1
+Current learning rate: 0.00008116
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 0.3671
+  train batch 0100/0372 loss: 0.3966
+  train batch 0150/0372 loss: 0.3280
+  train batch 0200/0372 loss: 0.3211
+  train batch 0250/0372 loss: 0.2389
+  train batch 0300/0372 loss: 0.2681
+  train batch 0350/0372 loss: 0.2438
+Train loss: 0.3291
+Val loss:   0.2791
+Val pixel accuracy: 0.9067
+Val mIoU: 0.4637
+Best val mIoU: 0.4637 at epoch 2
+Current learning rate: 0.00008116
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.3231
+  train batch 0100/0372 loss: 0.3169
+  train batch 0150/0372 loss: 0.4011
+  train batch 0200/0372 loss: 0.2722
+  train batch 0250/0372 loss: 0.2750
+  train batch 0300/0372 loss: 0.2479
+  train batch 0350/0372 loss: 0.2921
+Train loss: 0.2877
+Val loss:   0.2612
+Val pixel accuracy: 0.9105
+Val mIoU: 0.5001
+Best val mIoU: 0.5001 at epoch 3
+Current learning rate: 0.00008116
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.4950
+  train batch 0100/0372 loss: 0.3013
+  train batch 0150/0372 loss: 0.2989
+  train batch 0200/0372 loss: 0.2502
+  train batch 0250/0372 loss: 0.2208
+  train batch 0300/0372 loss: 0.2567
+  train batch 0350/0372 loss: 0.2304
+Train loss: 0.2642
+Val loss:   0.2495
+Val pixel accuracy: 0.9150
+Val mIoU: 0.5347
+Best val mIoU: 0.5347 at epoch 4
+Current learning rate: 0.00008116
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.3296
+  train batch 0100/0372 loss: 0.2540
+  train batch 0150/0372 loss: 0.2547
+  train batch 0200/0372 loss: 0.2063
+  train batch 0250/0372 loss: 0.2584
+  train batch 0300/0372 loss: 0.2724
+  train batch 0350/0372 loss: 0.1801
+Train loss: 0.2524
+Val loss:   0.2416
+Val pixel accuracy: 0.9158
+Val mIoU: 0.5424
+Best val mIoU: 0.5424 at epoch 5
+Current learning rate: 0.00008116
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.2501
+  train batch 0100/0372 loss: 0.2616
+  train batch 0150/0372 loss: 0.2024
+  train batch 0200/0372 loss: 0.2669
+  train batch 0250/0372 loss: 0.3904
+  train batch 0300/0372 loss: 0.2543
+  train batch 0350/0372 loss: 0.2475
+Train loss: 0.2403
+Val loss:   0.2441
+Val pixel accuracy: 0.9151
+Val mIoU: 0.5426
+Best val mIoU: 0.5426 at epoch 6
+Current learning rate: 0.00008116
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.2353
+  train batch 0100/0372 loss: 0.2546
+  train batch 0150/0372 loss: 0.2908
+  train batch 0200/0372 loss: 0.2200
+  train batch 0250/0372 loss: 0.1753
+  train batch 0300/0372 loss: 0.1730
+  train batch 0350/0372 loss: 0.1953
+Train loss: 0.2297
+Val loss:   0.2318
+Val pixel accuracy: 0.9195
+Val mIoU: 0.5589
+Best val mIoU: 0.5589 at epoch 7
+Current learning rate: 0.00008116
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.2010
+  train batch 0100/0372 loss: 0.1958
+  train batch 0150/0372 loss: 0.2181
+  train batch 0200/0372 loss: 0.1714
+  train batch 0250/0372 loss: 0.2049
+  train batch 0300/0372 loss: 0.2123
+  train batch 0350/0372 loss: 0.1947
+Train loss: 0.2199
+Val loss:   0.2365
+Val pixel accuracy: 0.9173
+Val mIoU: 0.5451
+Best val mIoU: 0.5589 at epoch 7
+Current learning rate: 0.00008116
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.1830
+  train batch 0100/0372 loss: 0.2149
+  train batch 0150/0372 loss: 0.2030
+  train batch 0200/0372 loss: 0.2333
+  train batch 0250/0372 loss: 0.2368
+  train batch 0300/0372 loss: 0.1983
+  train batch 0350/0372 loss: 0.2023
+Train loss: 0.2128
+Val loss:   0.2263
+Val pixel accuracy: 0.9209
+Val mIoU: 0.5704
+Best val mIoU: 0.5704 at epoch 9
+Current learning rate: 0.00008116
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2165
+  train batch 0100/0372 loss: 0.2438
+  train batch 0150/0372 loss: 0.1893
+  train batch 0200/0372 loss: 0.2268
+  train batch 0250/0372 loss: 0.2412
+  train batch 0300/0372 loss: 0.1835
+  train batch 0350/0372 loss: 0.1963
+Train loss: 0.2040
+Val loss:   0.2276
+Val pixel accuracy: 0.9195
+Val mIoU: 0.5745
+Best val mIoU: 0.5745 at epoch 10
+Current learning rate: 0.00008116
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial008_ep10_lr8p1156em05_adamw_wd1p24em05_plateau
+Selected SegFormer-B0 pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial008_ep10_lr8p1156em05_adamw_wd1p24em05_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_segformer_b0.py
+================================================================================
+
+================================================================================
+SegFormer-B0 pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\segformer_b0\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\segformer_b0\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial008_ep10_lr8p1156em05_adamw_wd1p24em05_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 9
+Run ID: optuna_all_ep10_segformer_b0_trial009_ep10_lr1p53057em05_adam_wd0_none
+Params: {'lr': 1.5305744365500174e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'none'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --run-id optuna_all_ep10_segformer_b0_trial009_ep10_lr1p53057em05_adam_wd0_none --epochs 10 --lr 1.5305744365500174e-05 --optimizer adam --weight-decay 0.0 --scheduler none
+Training SegFormer-B0
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 1.5305744365500174e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: none
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial009_ep10_lr1p53057em05_adam_wd0_none
+
+Epoch 1/10
+  train batch 0050/0372 loss: 1.3840
+  train batch 0100/0372 loss: 0.9650
+  train batch 0150/0372 loss: 0.9135
+  train batch 0200/0372 loss: 0.7615
+  train batch 0250/0372 loss: 0.6339
+  train batch 0300/0372 loss: 0.5673
+  train batch 0350/0372 loss: 0.6270
+Train loss: 1.0341
+Val loss:   0.5422
+Val pixel accuracy: 0.8519
+Val mIoU: 0.2799
+Best val mIoU: 0.2799 at epoch 1
+Current learning rate: 0.00001531
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 0.5829
+  train batch 0100/0372 loss: 0.5911
+  train batch 0150/0372 loss: 0.5144
+  train batch 0200/0372 loss: 0.4938
+  train batch 0250/0372 loss: 0.4344
+  train batch 0300/0372 loss: 0.3855
+  train batch 0350/0372 loss: 0.3644
+Train loss: 0.5241
+Val loss:   0.4173
+Val pixel accuracy: 0.8767
+Val mIoU: 0.3501
+Best val mIoU: 0.3501 at epoch 2
+Current learning rate: 0.00001531
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.5778
+  train batch 0100/0372 loss: 0.4561
+  train batch 0150/0372 loss: 0.5088
+  train batch 0200/0372 loss: 0.4360
+  train batch 0250/0372 loss: 0.3928
+  train batch 0300/0372 loss: 0.3791
+  train batch 0350/0372 loss: 0.4530
+Train loss: 0.4298
+Val loss:   0.3651
+Val pixel accuracy: 0.8873
+Val mIoU: 0.3764
+Best val mIoU: 0.3764 at epoch 3
+Current learning rate: 0.00001531
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.7276
+  train batch 0100/0372 loss: 0.4202
+  train batch 0150/0372 loss: 0.4061
+  train batch 0200/0372 loss: 0.3759
+  train batch 0250/0372 loss: 0.3352
+  train batch 0300/0372 loss: 0.3434
+  train batch 0350/0372 loss: 0.3644
+Train loss: 0.3819
+Val loss:   0.3360
+Val pixel accuracy: 0.8934
+Val mIoU: 0.3934
+Best val mIoU: 0.3934 at epoch 4
+Current learning rate: 0.00001531
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.4870
+  train batch 0100/0372 loss: 0.3379
+  train batch 0150/0372 loss: 0.3821
+  train batch 0200/0372 loss: 0.2916
+  train batch 0250/0372 loss: 0.3935
+  train batch 0300/0372 loss: 0.4061
+  train batch 0350/0372 loss: 0.2626
+Train loss: 0.3560
+Val loss:   0.3159
+Val pixel accuracy: 0.8985
+Val mIoU: 0.4167
+Best val mIoU: 0.4167 at epoch 5
+Current learning rate: 0.00001531
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.3623
+  train batch 0100/0372 loss: 0.3169
+  train batch 0150/0372 loss: 0.2931
+  train batch 0200/0372 loss: 0.3485
+  train batch 0250/0372 loss: 0.5624
+  train batch 0300/0372 loss: 0.3552
+  train batch 0350/0372 loss: 0.3132
+Train loss: 0.3339
+Val loss:   0.3076
+Val pixel accuracy: 0.9001
+Val mIoU: 0.4332
+Best val mIoU: 0.4332 at epoch 6
+Current learning rate: 0.00001531
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.3357
+  train batch 0100/0372 loss: 0.3211
+  train batch 0150/0372 loss: 0.3949
+  train batch 0200/0372 loss: 0.3223
+  train batch 0250/0372 loss: 0.2404
+  train batch 0300/0372 loss: 0.2527
+  train batch 0350/0372 loss: 0.2694
+Train loss: 0.3176
+Val loss:   0.2910
+Val pixel accuracy: 0.9038
+Val mIoU: 0.4493
+Best val mIoU: 0.4493 at epoch 7
+Current learning rate: 0.00001531
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.2648
+  train batch 0100/0372 loss: 0.2904
+  train batch 0150/0372 loss: 0.2762
+  train batch 0200/0372 loss: 0.2117
+  train batch 0250/0372 loss: 0.2647
+  train batch 0300/0372 loss: 0.2802
+  train batch 0350/0372 loss: 0.2377
+Train loss: 0.3044
+Val loss:   0.2866
+Val pixel accuracy: 0.9048
+Val mIoU: 0.4594
+Best val mIoU: 0.4594 at epoch 8
+Current learning rate: 0.00001531
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.2464
+  train batch 0100/0372 loss: 0.2634
+  train batch 0150/0372 loss: 0.2694
+  train batch 0200/0372 loss: 0.3949
+  train batch 0250/0372 loss: 0.3419
+  train batch 0300/0372 loss: 0.2890
+  train batch 0350/0372 loss: 0.2740
+Train loss: 0.2936
+Val loss:   0.2731
+Val pixel accuracy: 0.9087
+Val mIoU: 0.4733
+Best val mIoU: 0.4733 at epoch 9
+Current learning rate: 0.00001531
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2889
+  train batch 0100/0372 loss: 0.3028
+  train batch 0150/0372 loss: 0.2625
+  train batch 0200/0372 loss: 0.2901
+  train batch 0250/0372 loss: 0.3241
+  train batch 0300/0372 loss: 0.2583
+  train batch 0350/0372 loss: 0.2547
+Train loss: 0.2855
+Val loss:   0.2679
+Val pixel accuracy: 0.9096
+Val mIoU: 0.4781
+Best val mIoU: 0.4781 at epoch 10
+Current learning rate: 0.00001531
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial009_ep10_lr1p53057em05_adam_wd0_none
+Selected SegFormer-B0 pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial009_ep10_lr1p53057em05_adam_wd0_none
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_segformer_b0.py
+================================================================================
+
+================================================================================
+SegFormer-B0 pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\segformer_b0\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\segformer_b0\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial009_ep10_lr1p53057em05_adam_wd0_none
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 10
+Run ID: optuna_all_ep10_segformer_b0_trial010_ep10_lr9p53884em05_adam_wd0_plateau
+Params: {'lr': 9.538839436462497e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --run-id optuna_all_ep10_segformer_b0_trial010_ep10_lr9p53884em05_adam_wd0_plateau --epochs 10 --lr 9.538839436462497e-05 --optimizer adam --weight-decay 0.0 --scheduler plateau
+Training SegFormer-B0
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 9.538839436462497e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial010_ep10_lr9p53884em05_adam_wd0_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 0.5792
+  train batch 0100/0372 loss: 0.5296
+  train batch 0150/0372 loss: 0.4805
+  train batch 0200/0372 loss: 0.3566
+  train batch 0250/0372 loss: 0.3679
+  train batch 0300/0372 loss: 0.3075
+  train batch 0350/0372 loss: 0.3467
+Train loss: 0.5494
+Val loss:   0.3277
+Val pixel accuracy: 0.8942
+Val mIoU: 0.4123
+Best val mIoU: 0.4123 at epoch 1
+Current learning rate: 0.00009539
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 0.3566
+  train batch 0100/0372 loss: 0.3807
+  train batch 0150/0372 loss: 0.3181
+  train batch 0200/0372 loss: 0.3148
+  train batch 0250/0372 loss: 0.2341
+  train batch 0300/0372 loss: 0.2596
+  train batch 0350/0372 loss: 0.2419
+Train loss: 0.3201
+Val loss:   0.2726
+Val pixel accuracy: 0.9080
+Val mIoU: 0.4727
+Best val mIoU: 0.4727 at epoch 2
+Current learning rate: 0.00009539
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.3142
+  train batch 0100/0372 loss: 0.3122
+  train batch 0150/0372 loss: 0.3926
+  train batch 0200/0372 loss: 0.2671
+  train batch 0250/0372 loss: 0.2734
+  train batch 0300/0372 loss: 0.2373
+  train batch 0350/0372 loss: 0.2838
+Train loss: 0.2812
+Val loss:   0.2559
+Val pixel accuracy: 0.9118
+Val mIoU: 0.5122
+Best val mIoU: 0.5122 at epoch 3
+Current learning rate: 0.00009539
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.4734
+  train batch 0100/0372 loss: 0.2950
+  train batch 0150/0372 loss: 0.3298
+  train batch 0200/0372 loss: 0.2463
+  train batch 0250/0372 loss: 0.2165
+  train batch 0300/0372 loss: 0.2542
+  train batch 0350/0372 loss: 0.2237
+Train loss: 0.2596
+Val loss:   0.2482
+Val pixel accuracy: 0.9151
+Val mIoU: 0.5410
+Best val mIoU: 0.5410 at epoch 4
+Current learning rate: 0.00009539
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.3111
+  train batch 0100/0372 loss: 0.2548
+  train batch 0150/0372 loss: 0.2481
+  train batch 0200/0372 loss: 0.2043
+  train batch 0250/0372 loss: 0.2589
+  train batch 0300/0372 loss: 0.2631
+  train batch 0350/0372 loss: 0.1760
+Train loss: 0.2472
+Val loss:   0.2376
+Val pixel accuracy: 0.9168
+Val mIoU: 0.5504
+Best val mIoU: 0.5504 at epoch 5
+Current learning rate: 0.00009539
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.2448
+  train batch 0100/0372 loss: 0.2608
+  train batch 0150/0372 loss: 0.1988
+  train batch 0200/0372 loss: 0.2670
+  train batch 0250/0372 loss: 0.3767
+  train batch 0300/0372 loss: 0.2464
+  train batch 0350/0372 loss: 0.2420
+Train loss: 0.2350
+Val loss:   0.2422
+Val pixel accuracy: 0.9156
+Val mIoU: 0.5504
+Best val mIoU: 0.5504 at epoch 5
+Current learning rate: 0.00009539
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.2298
+  train batch 0100/0372 loss: 0.2456
+  train batch 0150/0372 loss: 0.2887
+  train batch 0200/0372 loss: 0.2210
+  train batch 0250/0372 loss: 0.1728
+  train batch 0300/0372 loss: 0.1696
+  train batch 0350/0372 loss: 0.1924
+Train loss: 0.2247
+Val loss:   0.2310
+Val pixel accuracy: 0.9195
+Val mIoU: 0.5622
+Best val mIoU: 0.5622 at epoch 7
+Current learning rate: 0.00009539
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.1985
+  train batch 0100/0372 loss: 0.1956
+  train batch 0150/0372 loss: 0.2268
+  train batch 0200/0372 loss: 0.1660
+  train batch 0250/0372 loss: 0.1993
+  train batch 0300/0372 loss: 0.2119
+  train batch 0350/0372 loss: 0.1852
+Train loss: 0.2150
+Val loss:   0.2338
+Val pixel accuracy: 0.9184
+Val mIoU: 0.5509
+Best val mIoU: 0.5622 at epoch 7
+Current learning rate: 0.00009539
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.1763
+  train batch 0100/0372 loss: 0.2155
+  train batch 0150/0372 loss: 0.2006
+  train batch 0200/0372 loss: 0.2347
+  train batch 0250/0372 loss: 0.2316
+  train batch 0300/0372 loss: 0.1993
+  train batch 0350/0372 loss: 0.1936
+Train loss: 0.2077
+Val loss:   0.2251
+Val pixel accuracy: 0.9210
+Val mIoU: 0.5676
+Best val mIoU: 0.5676 at epoch 9
+Current learning rate: 0.00009539
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2185
+  train batch 0100/0372 loss: 0.2351
+  train batch 0150/0372 loss: 0.1839
+  train batch 0200/0372 loss: 0.2238
+  train batch 0250/0372 loss: 0.2301
+  train batch 0300/0372 loss: 0.1785
+  train batch 0350/0372 loss: 0.1926
+Train loss: 0.1978
+Val loss:   0.2264
+Val pixel accuracy: 0.9202
+Val mIoU: 0.5744
+Best val mIoU: 0.5744 at epoch 10
+Current learning rate: 0.00009539
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial010_ep10_lr9p53884em05_adam_wd0_plateau
+Selected SegFormer-B0 pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial010_ep10_lr9p53884em05_adam_wd0_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_segformer_b0.py
+================================================================================
+
+================================================================================
+SegFormer-B0 pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\segformer_b0\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\segformer_b0\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial010_ep10_lr9p53884em05_adam_wd0_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 11
+Run ID: optuna_all_ep10_segformer_b0_trial011_ep10_lr9p4205em05_adamw_wd3p88572em05_plateau
+Params: {'lr': 9.420501180940846e-05, 'optimizer': 'adamw', 'weight_decay': 3.8857190594746905e-05, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --run-id optuna_all_ep10_segformer_b0_trial011_ep10_lr9p4205em05_adamw_wd3p88572em05_plateau --epochs 10 --lr 9.420501180940846e-05 --optimizer adamw --weight-decay 3.8857190594746905e-05 --scheduler plateau
+Training SegFormer-B0
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 9.420501180940846e-05
+Optimizer: adamw
+Weight decay: 3.8857190594746905e-05
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial011_ep10_lr9p4205em05_adamw_wd3p88572em05_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 0.5793
+  train batch 0100/0372 loss: 0.5310
+  train batch 0150/0372 loss: 0.4826
+  train batch 0200/0372 loss: 0.3579
+  train batch 0250/0372 loss: 0.3691
+  train batch 0300/0372 loss: 0.3087
+  train batch 0350/0372 loss: 0.3480
+Train loss: 0.5512
+Val loss:   0.3276
+Val pixel accuracy: 0.8942
+Val mIoU: 0.4111
+Best val mIoU: 0.4111 at epoch 1
+Current learning rate: 0.00009421
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 0.3586
+  train batch 0100/0372 loss: 0.3825
+  train batch 0150/0372 loss: 0.3187
+  train batch 0200/0372 loss: 0.3151
+  train batch 0250/0372 loss: 0.2343
+  train batch 0300/0372 loss: 0.2603
+  train batch 0350/0372 loss: 0.2421
+Train loss: 0.3207
+Val loss:   0.2731
+Val pixel accuracy: 0.9079
+Val mIoU: 0.4719
+Best val mIoU: 0.4719 at epoch 2
+Current learning rate: 0.00009421
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.3154
+  train batch 0100/0372 loss: 0.3117
+  train batch 0150/0372 loss: 0.3927
+  train batch 0200/0372 loss: 0.2681
+  train batch 0250/0372 loss: 0.2737
+  train batch 0300/0372 loss: 0.2379
+  train batch 0350/0372 loss: 0.2844
+Train loss: 0.2817
+Val loss:   0.2565
+Val pixel accuracy: 0.9116
+Val mIoU: 0.5112
+Best val mIoU: 0.5112 at epoch 3
+Current learning rate: 0.00009421
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.4751
+  train batch 0100/0372 loss: 0.2957
+  train batch 0150/0372 loss: 0.3096
+  train batch 0200/0372 loss: 0.2467
+  train batch 0250/0372 loss: 0.2170
+  train batch 0300/0372 loss: 0.2536
+  train batch 0350/0372 loss: 0.2244
+Train loss: 0.2595
+Val loss:   0.2486
+Val pixel accuracy: 0.9151
+Val mIoU: 0.5397
+Best val mIoU: 0.5397 at epoch 4
+Current learning rate: 0.00009421
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.3118
+  train batch 0100/0372 loss: 0.2532
+  train batch 0150/0372 loss: 0.2485
+  train batch 0200/0372 loss: 0.2042
+  train batch 0250/0372 loss: 0.2587
+  train batch 0300/0372 loss: 0.2636
+  train batch 0350/0372 loss: 0.1760
+Train loss: 0.2475
+Val loss:   0.2378
+Val pixel accuracy: 0.9168
+Val mIoU: 0.5498
+Best val mIoU: 0.5498 at epoch 5
+Current learning rate: 0.00009421
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.2473
+  train batch 0100/0372 loss: 0.2608
+  train batch 0150/0372 loss: 0.1990
+  train batch 0200/0372 loss: 0.2651
+  train batch 0250/0372 loss: 0.3786
+  train batch 0300/0372 loss: 0.2470
+  train batch 0350/0372 loss: 0.2430
+Train loss: 0.2355
+Val loss:   0.2459
+Val pixel accuracy: 0.9144
+Val mIoU: 0.5469
+Best val mIoU: 0.5498 at epoch 5
+Current learning rate: 0.00009421
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.2298
+  train batch 0100/0372 loss: 0.2468
+  train batch 0150/0372 loss: 0.2871
+  train batch 0200/0372 loss: 0.2201
+  train batch 0250/0372 loss: 0.1726
+  train batch 0300/0372 loss: 0.1701
+  train batch 0350/0372 loss: 0.1923
+Train loss: 0.2251
+Val loss:   0.2310
+Val pixel accuracy: 0.9196
+Val mIoU: 0.5629
+Best val mIoU: 0.5629 at epoch 7
+Current learning rate: 0.00009421
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.1984
+  train batch 0100/0372 loss: 0.1934
+  train batch 0150/0372 loss: 0.2270
+  train batch 0200/0372 loss: 0.1661
+  train batch 0250/0372 loss: 0.1996
+  train batch 0300/0372 loss: 0.2112
+  train batch 0350/0372 loss: 0.1879
+Train loss: 0.2155
+Val loss:   0.2347
+Val pixel accuracy: 0.9182
+Val mIoU: 0.5493
+Best val mIoU: 0.5629 at epoch 7
+Current learning rate: 0.00009421
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.1771
+  train batch 0100/0372 loss: 0.2147
+  train batch 0150/0372 loss: 0.2029
+  train batch 0200/0372 loss: 0.2323
+  train batch 0250/0372 loss: 0.2314
+  train batch 0300/0372 loss: 0.2062
+  train batch 0350/0372 loss: 0.1956
+Train loss: 0.2082
+Val loss:   0.2239
+Val pixel accuracy: 0.9213
+Val mIoU: 0.5704
+Best val mIoU: 0.5704 at epoch 9
+Current learning rate: 0.00009421
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2187
+  train batch 0100/0372 loss: 0.2397
+  train batch 0150/0372 loss: 0.1842
+  train batch 0200/0372 loss: 0.2243
+  train batch 0250/0372 loss: 0.2311
+  train batch 0300/0372 loss: 0.1791
+  train batch 0350/0372 loss: 0.1938
+Train loss: 0.1986
+Val loss:   0.2261
+Val pixel accuracy: 0.9202
+Val mIoU: 0.5753
+Best val mIoU: 0.5753 at epoch 10
+Current learning rate: 0.00009421
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial011_ep10_lr9p4205em05_adamw_wd3p88572em05_plateau
+Selected SegFormer-B0 pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial011_ep10_lr9p4205em05_adamw_wd3p88572em05_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_segformer_b0.py
+================================================================================
+
+================================================================================
+SegFormer-B0 pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\segformer_b0\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\segformer_b0\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial011_ep10_lr9p4205em05_adamw_wd3p88572em05_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 12
+Run ID: optuna_all_ep10_segformer_b0_trial012_ep10_lr5p91048em05_adamw_wd9p5849em05_plateau
+Params: {'lr': 5.9104846284584405e-05, 'optimizer': 'adamw', 'weight_decay': 9.584899674890296e-05, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --run-id optuna_all_ep10_segformer_b0_trial012_ep10_lr5p91048em05_adamw_wd9p5849em05_plateau --epochs 10 --lr 5.9104846284584405e-05 --optimizer adamw --weight-decay 9.584899674890296e-05 --scheduler plateau
+Training SegFormer-B0
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 5.9104846284584405e-05
+Optimizer: adamw
+Weight decay: 9.584899674890296e-05
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial012_ep10_lr5p91048em05_adamw_wd9p5849em05_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 0.6357
+  train batch 0100/0372 loss: 0.5983
+  train batch 0150/0372 loss: 0.5486
+  train batch 0200/0372 loss: 0.4192
+  train batch 0250/0372 loss: 0.4188
+  train batch 0300/0372 loss: 0.3522
+  train batch 0350/0372 loss: 0.3997
+Train loss: 0.6322
+Val loss:   0.3645
+Val pixel accuracy: 0.8868
+Val mIoU: 0.3816
+Best val mIoU: 0.3816 at epoch 1
+Current learning rate: 0.00005910
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 0.3861
+  train batch 0100/0372 loss: 0.4271
+  train batch 0150/0372 loss: 0.3505
+  train batch 0200/0372 loss: 0.3395
+  train batch 0250/0372 loss: 0.2597
+  train batch 0300/0372 loss: 0.2820
+  train batch 0350/0372 loss: 0.2529
+Train loss: 0.3515
+Val loss:   0.2951
+Val pixel accuracy: 0.9032
+Val mIoU: 0.4441
+Best val mIoU: 0.4441 at epoch 2
+Current learning rate: 0.00005910
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.3580
+  train batch 0100/0372 loss: 0.3356
+  train batch 0150/0372 loss: 0.4111
+  train batch 0200/0372 loss: 0.2865
+  train batch 0250/0372 loss: 0.2834
+  train batch 0300/0372 loss: 0.2694
+  train batch 0350/0372 loss: 0.3109
+Train loss: 0.3039
+Val loss:   0.2723
+Val pixel accuracy: 0.9081
+Val mIoU: 0.4763
+Best val mIoU: 0.4763 at epoch 3
+Current learning rate: 0.00005910
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.5342
+  train batch 0100/0372 loss: 0.3110
+  train batch 0150/0372 loss: 0.3088
+  train batch 0200/0372 loss: 0.2645
+  train batch 0250/0372 loss: 0.2282
+  train batch 0300/0372 loss: 0.2654
+  train batch 0350/0372 loss: 0.2491
+Train loss: 0.2777
+Val loss:   0.2564
+Val pixel accuracy: 0.9130
+Val mIoU: 0.5142
+Best val mIoU: 0.5142 at epoch 4
+Current learning rate: 0.00005910
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.3517
+  train batch 0100/0372 loss: 0.2580
+  train batch 0150/0372 loss: 0.2640
+  train batch 0200/0372 loss: 0.2144
+  train batch 0250/0372 loss: 0.2679
+  train batch 0300/0372 loss: 0.2823
+  train batch 0350/0372 loss: 0.1891
+Train loss: 0.2645
+Val loss:   0.2483
+Val pixel accuracy: 0.9145
+Val mIoU: 0.5309
+Best val mIoU: 0.5309 at epoch 5
+Current learning rate: 0.00005910
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.2669
+  train batch 0100/0372 loss: 0.2685
+  train batch 0150/0372 loss: 0.2121
+  train batch 0200/0372 loss: 0.2730
+  train batch 0250/0372 loss: 0.4231
+  train batch 0300/0372 loss: 0.2636
+  train batch 0350/0372 loss: 0.2546
+Train loss: 0.2523
+Val loss:   0.2436
+Val pixel accuracy: 0.9155
+Val mIoU: 0.5336
+Best val mIoU: 0.5336 at epoch 6
+Current learning rate: 0.00005910
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.2448
+  train batch 0100/0372 loss: 0.2563
+  train batch 0150/0372 loss: 0.3119
+  train batch 0200/0372 loss: 0.2313
+  train batch 0250/0372 loss: 0.1827
+  train batch 0300/0372 loss: 0.1819
+  train batch 0350/0372 loss: 0.2042
+Train loss: 0.2414
+Val loss:   0.2388
+Val pixel accuracy: 0.9176
+Val mIoU: 0.5446
+Best val mIoU: 0.5446 at epoch 7
+Current learning rate: 0.00005910
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.2062
+  train batch 0100/0372 loss: 0.2063
+  train batch 0150/0372 loss: 0.2257
+  train batch 0200/0372 loss: 0.1751
+  train batch 0250/0372 loss: 0.2158
+  train batch 0300/0372 loss: 0.2185
+  train batch 0350/0372 loss: 0.2030
+Train loss: 0.2317
+Val loss:   0.2393
+Val pixel accuracy: 0.9171
+Val mIoU: 0.5433
+Best val mIoU: 0.5446 at epoch 7
+Current learning rate: 0.00005910
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.1904
+  train batch 0100/0372 loss: 0.2202
+  train batch 0150/0372 loss: 0.2120
+  train batch 0200/0372 loss: 0.2632
+  train batch 0250/0372 loss: 0.2538
+  train batch 0300/0372 loss: 0.2087
+  train batch 0350/0372 loss: 0.2084
+Train loss: 0.2243
+Val loss:   0.2304
+Val pixel accuracy: 0.9198
+Val mIoU: 0.5608
+Best val mIoU: 0.5608 at epoch 9
+Current learning rate: 0.00005910
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2212
+  train batch 0100/0372 loss: 0.2572
+  train batch 0150/0372 loss: 0.1983
+  train batch 0200/0372 loss: 0.2333
+  train batch 0250/0372 loss: 0.2606
+  train batch 0300/0372 loss: 0.1948
+  train batch 0350/0372 loss: 0.2030
+Train loss: 0.2162
+Val loss:   0.2292
+Val pixel accuracy: 0.9192
+Val mIoU: 0.5650
+Best val mIoU: 0.5650 at epoch 10
+Current learning rate: 0.00005910
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial012_ep10_lr5p91048em05_adamw_wd9p5849em05_plateau
+Selected SegFormer-B0 pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial012_ep10_lr5p91048em05_adamw_wd9p5849em05_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_segformer_b0.py
+================================================================================
+
+================================================================================
+SegFormer-B0 pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\segformer_b0\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\segformer_b0\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial012_ep10_lr5p91048em05_adamw_wd9p5849em05_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 13
+Run ID: optuna_all_ep10_segformer_b0_trial013_ep10_lr5p97723em05_adamw_wd4p4232em05_plateau
+Params: {'lr': 5.977227849905029e-05, 'optimizer': 'adamw', 'weight_decay': 4.423195039291345e-05, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --run-id optuna_all_ep10_segformer_b0_trial013_ep10_lr5p97723em05_adamw_wd4p4232em05_plateau --epochs 10 --lr 5.977227849905029e-05 --optimizer adamw --weight-decay 4.423195039291345e-05 --scheduler plateau
+Training SegFormer-B0
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 5.977227849905029e-05
+Optimizer: adamw
+Weight decay: 4.423195039291345e-05
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial013_ep10_lr5p97723em05_adamw_wd4p4232em05_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 0.6334
+  train batch 0100/0372 loss: 0.5970
+  train batch 0150/0372 loss: 0.5452
+  train batch 0200/0372 loss: 0.4172
+  train batch 0250/0372 loss: 0.4172
+  train batch 0300/0372 loss: 0.3510
+  train batch 0350/0372 loss: 0.3967
+Train loss: 0.6300
+Val loss:   0.3638
+Val pixel accuracy: 0.8868
+Val mIoU: 0.3819
+Best val mIoU: 0.3819 at epoch 1
+Current learning rate: 0.00005977
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 0.3857
+  train batch 0100/0372 loss: 0.4258
+  train batch 0150/0372 loss: 0.3496
+  train batch 0200/0372 loss: 0.3383
+  train batch 0250/0372 loss: 0.2587
+  train batch 0300/0372 loss: 0.2814
+  train batch 0350/0372 loss: 0.2521
+Train loss: 0.3506
+Val loss:   0.2945
+Val pixel accuracy: 0.9033
+Val mIoU: 0.4448
+Best val mIoU: 0.4448 at epoch 2
+Current learning rate: 0.00005977
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.3568
+  train batch 0100/0372 loss: 0.3351
+  train batch 0150/0372 loss: 0.4108
+  train batch 0200/0372 loss: 0.2861
+  train batch 0250/0372 loss: 0.2828
+  train batch 0300/0372 loss: 0.2688
+  train batch 0350/0372 loss: 0.3100
+Train loss: 0.3033
+Val loss:   0.2718
+Val pixel accuracy: 0.9082
+Val mIoU: 0.4770
+Best val mIoU: 0.4770 at epoch 3
+Current learning rate: 0.00005977
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.5327
+  train batch 0100/0372 loss: 0.3104
+  train batch 0150/0372 loss: 0.3084
+  train batch 0200/0372 loss: 0.2641
+  train batch 0250/0372 loss: 0.2278
+  train batch 0300/0372 loss: 0.2650
+  train batch 0350/0372 loss: 0.2484
+Train loss: 0.2771
+Val loss:   0.2560
+Val pixel accuracy: 0.9131
+Val mIoU: 0.5151
+Best val mIoU: 0.5151 at epoch 4
+Current learning rate: 0.00005977
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.3508
+  train batch 0100/0372 loss: 0.2577
+  train batch 0150/0372 loss: 0.2631
+  train batch 0200/0372 loss: 0.2141
+  train batch 0250/0372 loss: 0.2672
+  train batch 0300/0372 loss: 0.2819
+  train batch 0350/0372 loss: 0.1889
+Train loss: 0.2641
+Val loss:   0.2480
+Val pixel accuracy: 0.9145
+Val mIoU: 0.5314
+Best val mIoU: 0.5314 at epoch 5
+Current learning rate: 0.00005977
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.2662
+  train batch 0100/0372 loss: 0.2683
+  train batch 0150/0372 loss: 0.2119
+  train batch 0200/0372 loss: 0.2725
+  train batch 0250/0372 loss: 0.4214
+  train batch 0300/0372 loss: 0.2630
+  train batch 0350/0372 loss: 0.2541
+Train loss: 0.2518
+Val loss:   0.2434
+Val pixel accuracy: 0.9155
+Val mIoU: 0.5341
+Best val mIoU: 0.5341 at epoch 6
+Current learning rate: 0.00005977
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.2443
+  train batch 0100/0372 loss: 0.2558
+  train batch 0150/0372 loss: 0.3117
+  train batch 0200/0372 loss: 0.2309
+  train batch 0250/0372 loss: 0.1824
+  train batch 0300/0372 loss: 0.1815
+  train batch 0350/0372 loss: 0.2039
+Train loss: 0.2410
+Val loss:   0.2385
+Val pixel accuracy: 0.9177
+Val mIoU: 0.5451
+Best val mIoU: 0.5451 at epoch 7
+Current learning rate: 0.00005977
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.2060
+  train batch 0100/0372 loss: 0.2058
+  train batch 0150/0372 loss: 0.2254
+  train batch 0200/0372 loss: 0.1750
+  train batch 0250/0372 loss: 0.2155
+  train batch 0300/0372 loss: 0.2184
+  train batch 0350/0372 loss: 0.2028
+Train loss: 0.2313
+Val loss:   0.2390
+Val pixel accuracy: 0.9171
+Val mIoU: 0.5434
+Best val mIoU: 0.5451 at epoch 7
+Current learning rate: 0.00005977
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.1899
+  train batch 0100/0372 loss: 0.2200
+  train batch 0150/0372 loss: 0.2118
+  train batch 0200/0372 loss: 0.2621
+  train batch 0250/0372 loss: 0.2533
+  train batch 0300/0372 loss: 0.2080
+  train batch 0350/0372 loss: 0.2080
+Train loss: 0.2239
+Val loss:   0.2302
+Val pixel accuracy: 0.9199
+Val mIoU: 0.5612
+Best val mIoU: 0.5612 at epoch 9
+Current learning rate: 0.00005977
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2209
+  train batch 0100/0372 loss: 0.2564
+  train batch 0150/0372 loss: 0.1977
+  train batch 0200/0372 loss: 0.2327
+  train batch 0250/0372 loss: 0.2596
+  train batch 0300/0372 loss: 0.1943
+  train batch 0350/0372 loss: 0.2025
+Train loss: 0.2158
+Val loss:   0.2290
+Val pixel accuracy: 0.9193
+Val mIoU: 0.5655
+Best val mIoU: 0.5655 at epoch 10
+Current learning rate: 0.00005977
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial013_ep10_lr5p97723em05_adamw_wd4p4232em05_plateau
+Selected SegFormer-B0 pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial013_ep10_lr5p97723em05_adamw_wd4p4232em05_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_segformer_b0.py
+================================================================================
+
+================================================================================
+SegFormer-B0 pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\segformer_b0\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\segformer_b0\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial013_ep10_lr5p97723em05_adamw_wd4p4232em05_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 14
+Run ID: optuna_all_ep10_segformer_b0_trial014_ep10_lr3p95431em05_adamw_wd1p83896em05_plateau
+Params: {'lr': 3.954306474720882e-05, 'optimizer': 'adamw', 'weight_decay': 1.838964609658358e-05, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --run-id optuna_all_ep10_segformer_b0_trial014_ep10_lr3p95431em05_adamw_wd1p83896em05_plateau --epochs 10 --lr 3.954306474720882e-05 --optimizer adamw --weight-decay 1.838964609658358e-05 --scheduler plateau
+Training SegFormer-B0
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 3.954306474720882e-05
+Optimizer: adamw
+Weight decay: 1.838964609658358e-05
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial014_ep10_lr3p95431em05_adamw_wd1p83896em05_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 0.7389
+  train batch 0100/0372 loss: 0.6725
+  train batch 0150/0372 loss: 0.6397
+  train batch 0200/0372 loss: 0.4887
+  train batch 0250/0372 loss: 0.4765
+  train batch 0300/0372 loss: 0.3978
+  train batch 0350/0372 loss: 0.4563
+Train loss: 0.7243
+Val loss:   0.3986
+Val pixel accuracy: 0.8806
+Val mIoU: 0.3600
+Best val mIoU: 0.3600 at epoch 1
+Current learning rate: 0.00003954
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 0.4184
+  train batch 0100/0372 loss: 0.4589
+  train batch 0150/0372 loss: 0.3921
+  train batch 0200/0372 loss: 0.3745
+  train batch 0250/0372 loss: 0.2940
+  train batch 0300/0372 loss: 0.3034
+  train batch 0350/0372 loss: 0.2699
+Train loss: 0.3884
+Val loss:   0.3222
+Val pixel accuracy: 0.8969
+Val mIoU: 0.4145
+Best val mIoU: 0.4145 at epoch 2
+Current learning rate: 0.00003954
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.4009
+  train batch 0100/0372 loss: 0.3616
+  train batch 0150/0372 loss: 0.4307
+  train batch 0200/0372 loss: 0.3145
+  train batch 0250/0372 loss: 0.3084
+  train batch 0300/0372 loss: 0.2978
+  train batch 0350/0372 loss: 0.3545
+Train loss: 0.3311
+Val loss:   0.2916
+Val pixel accuracy: 0.9037
+Val mIoU: 0.4498
+Best val mIoU: 0.4498 at epoch 3
+Current learning rate: 0.00003954
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.5853
+  train batch 0100/0372 loss: 0.3327
+  train batch 0150/0372 loss: 0.3236
+  train batch 0200/0372 loss: 0.2906
+  train batch 0250/0372 loss: 0.2526
+  train batch 0300/0372 loss: 0.2817
+  train batch 0350/0372 loss: 0.2806
+Train loss: 0.3000
+Val loss:   0.2736
+Val pixel accuracy: 0.9080
+Val mIoU: 0.4796
+Best val mIoU: 0.4796 at epoch 4
+Current learning rate: 0.00003954
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.3851
+  train batch 0100/0372 loss: 0.2770
+  train batch 0150/0372 loss: 0.2921
+  train batch 0200/0372 loss: 0.2315
+  train batch 0250/0372 loss: 0.2958
+  train batch 0300/0372 loss: 0.3031
+  train batch 0350/0372 loss: 0.2041
+Train loss: 0.2846
+Val loss:   0.2620
+Val pixel accuracy: 0.9111
+Val mIoU: 0.5005
+Best val mIoU: 0.5005 at epoch 5
+Current learning rate: 0.00003954
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.2787
+  train batch 0100/0372 loss: 0.2827
+  train batch 0150/0372 loss: 0.2305
+  train batch 0200/0372 loss: 0.2869
+  train batch 0250/0372 loss: 0.4753
+  train batch 0300/0372 loss: 0.2817
+  train batch 0350/0372 loss: 0.2674
+Train loss: 0.2703
+Val loss:   0.2570
+Val pixel accuracy: 0.9120
+Val mIoU: 0.5097
+Best val mIoU: 0.5097 at epoch 6
+Current learning rate: 0.00003954
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.2629
+  train batch 0100/0372 loss: 0.2683
+  train batch 0150/0372 loss: 0.3314
+  train batch 0200/0372 loss: 0.2514
+  train batch 0250/0372 loss: 0.1957
+  train batch 0300/0372 loss: 0.1988
+  train batch 0350/0372 loss: 0.2168
+Train loss: 0.2591
+Val loss:   0.2502
+Val pixel accuracy: 0.9143
+Val mIoU: 0.5257
+Best val mIoU: 0.5257 at epoch 7
+Current learning rate: 0.00003954
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.2171
+  train batch 0100/0372 loss: 0.2292
+  train batch 0150/0372 loss: 0.2365
+  train batch 0200/0372 loss: 0.1867
+  train batch 0250/0372 loss: 0.2277
+  train batch 0300/0372 loss: 0.2347
+  train batch 0350/0372 loss: 0.2088
+Train loss: 0.2493
+Val loss:   0.2464
+Val pixel accuracy: 0.9155
+Val mIoU: 0.5326
+Best val mIoU: 0.5326 at epoch 8
+Current learning rate: 0.00003954
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.2037
+  train batch 0100/0372 loss: 0.2300
+  train batch 0150/0372 loss: 0.2241
+  train batch 0200/0372 loss: 0.2982
+  train batch 0250/0372 loss: 0.2790
+  train batch 0300/0372 loss: 0.2315
+  train batch 0350/0372 loss: 0.2245
+Train loss: 0.2416
+Val loss:   0.2420
+Val pixel accuracy: 0.9160
+Val mIoU: 0.5449
+Best val mIoU: 0.5449 at epoch 9
+Current learning rate: 0.00003954
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2360
+  train batch 0100/0372 loss: 0.2689
+  train batch 0150/0372 loss: 0.2119
+  train batch 0200/0372 loss: 0.2473
+  train batch 0250/0372 loss: 0.2775
+  train batch 0300/0372 loss: 0.2108
+  train batch 0350/0372 loss: 0.2148
+Train loss: 0.2335
+Val loss:   0.2355
+Val pixel accuracy: 0.9177
+Val mIoU: 0.5515
+Best val mIoU: 0.5515 at epoch 10
+Current learning rate: 0.00003954
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial014_ep10_lr3p95431em05_adamw_wd1p83896em05_plateau
+Selected SegFormer-B0 pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial014_ep10_lr3p95431em05_adamw_wd1p83896em05_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_segformer_b0.py
+================================================================================
+
+================================================================================
+SegFormer-B0 pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\segformer_b0\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\segformer_b0\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial014_ep10_lr3p95431em05_adamw_wd1p83896em05_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 15
+Run ID: optuna_all_ep10_segformer_b0_trial015_ep10_lr7p66406em05_adam_wd0_plateau
+Params: {'lr': 7.66405890844888e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --run-id optuna_all_ep10_segformer_b0_trial015_ep10_lr7p66406em05_adam_wd0_plateau --epochs 10 --lr 7.66405890844888e-05 --optimizer adam --weight-decay 0.0 --scheduler plateau
+Training SegFormer-B0
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 7.66405890844888e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial015_ep10_lr7p66406em05_adam_wd0_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 0.5946
+  train batch 0100/0372 loss: 0.5645
+  train batch 0150/0372 loss: 0.5043
+  train batch 0200/0372 loss: 0.3810
+  train batch 0250/0372 loss: 0.3866
+  train batch 0300/0372 loss: 0.3265
+  train batch 0350/0372 loss: 0.3654
+Train loss: 0.5844
+Val loss:   0.3440
+Val pixel accuracy: 0.8908
+Val mIoU: 0.3968
+Best val mIoU: 0.3968 at epoch 1
+Current learning rate: 0.00007664
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 0.3719
+  train batch 0100/0372 loss: 0.4028
+  train batch 0150/0372 loss: 0.3314
+  train batch 0200/0372 loss: 0.3226
+  train batch 0250/0372 loss: 0.2437
+  train batch 0300/0372 loss: 0.2707
+  train batch 0350/0372 loss: 0.2446
+Train loss: 0.3330
+Val loss:   0.2819
+Val pixel accuracy: 0.9061
+Val mIoU: 0.4596
+Best val mIoU: 0.4596 at epoch 2
+Current learning rate: 0.00007664
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.3289
+  train batch 0100/0372 loss: 0.3220
+  train batch 0150/0372 loss: 0.4056
+  train batch 0200/0372 loss: 0.2757
+  train batch 0250/0372 loss: 0.2756
+  train batch 0300/0372 loss: 0.2515
+  train batch 0350/0372 loss: 0.2931
+Train loss: 0.2906
+Val loss:   0.2631
+Val pixel accuracy: 0.9102
+Val mIoU: 0.4967
+Best val mIoU: 0.4967 at epoch 3
+Current learning rate: 0.00007664
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.5033
+  train batch 0100/0372 loss: 0.3025
+  train batch 0150/0372 loss: 0.2999
+  train batch 0200/0372 loss: 0.2531
+  train batch 0250/0372 loss: 0.2210
+  train batch 0300/0372 loss: 0.2576
+  train batch 0350/0372 loss: 0.2342
+Train loss: 0.2664
+Val loss:   0.2502
+Val pixel accuracy: 0.9149
+Val mIoU: 0.5330
+Best val mIoU: 0.5330 at epoch 4
+Current learning rate: 0.00007664
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.3331
+  train batch 0100/0372 loss: 0.2521
+  train batch 0150/0372 loss: 0.2521
+  train batch 0200/0372 loss: 0.2089
+  train batch 0250/0372 loss: 0.2587
+  train batch 0300/0372 loss: 0.2725
+  train batch 0350/0372 loss: 0.1799
+Train loss: 0.2544
+Val loss:   0.2422
+Val pixel accuracy: 0.9157
+Val mIoU: 0.5418
+Best val mIoU: 0.5418 at epoch 5
+Current learning rate: 0.00007664
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.2551
+  train batch 0100/0372 loss: 0.2622
+  train batch 0150/0372 loss: 0.2064
+  train batch 0200/0372 loss: 0.2686
+  train batch 0250/0372 loss: 0.3985
+  train batch 0300/0372 loss: 0.2562
+  train batch 0350/0372 loss: 0.2479
+Train loss: 0.2424
+Val loss:   0.2441
+Val pixel accuracy: 0.9151
+Val mIoU: 0.5412
+Best val mIoU: 0.5418 at epoch 5
+Current learning rate: 0.00007664
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.2360
+  train batch 0100/0372 loss: 0.2592
+  train batch 0150/0372 loss: 0.3061
+  train batch 0200/0372 loss: 0.2242
+  train batch 0250/0372 loss: 0.1762
+  train batch 0300/0372 loss: 0.1738
+  train batch 0350/0372 loss: 0.1976
+Train loss: 0.2316
+Val loss:   0.2328
+Val pixel accuracy: 0.9191
+Val mIoU: 0.5567
+Best val mIoU: 0.5567 at epoch 7
+Current learning rate: 0.00007664
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.2026
+  train batch 0100/0372 loss: 0.1955
+  train batch 0150/0372 loss: 0.2189
+  train batch 0200/0372 loss: 0.1709
+  train batch 0250/0372 loss: 0.2050
+  train batch 0300/0372 loss: 0.2126
+  train batch 0350/0372 loss: 0.1961
+Train loss: 0.2217
+Val loss:   0.2371
+Val pixel accuracy: 0.9169
+Val mIoU: 0.5450
+Best val mIoU: 0.5567 at epoch 7
+Current learning rate: 0.00007664
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.1857
+  train batch 0100/0372 loss: 0.2193
+  train batch 0150/0372 loss: 0.2054
+  train batch 0200/0372 loss: 0.2379
+  train batch 0250/0372 loss: 0.2403
+  train batch 0300/0372 loss: 0.1974
+  train batch 0350/0372 loss: 0.2015
+Train loss: 0.2145
+Val loss:   0.2273
+Val pixel accuracy: 0.9208
+Val mIoU: 0.5695
+Best val mIoU: 0.5695 at epoch 9
+Current learning rate: 0.00007664
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2163
+  train batch 0100/0372 loss: 0.2473
+  train batch 0150/0372 loss: 0.1905
+  train batch 0200/0372 loss: 0.2271
+  train batch 0250/0372 loss: 0.2477
+  train batch 0300/0372 loss: 0.1860
+  train batch 0350/0372 loss: 0.1975
+Train loss: 0.2063
+Val loss:   0.2273
+Val pixel accuracy: 0.9196
+Val mIoU: 0.5731
+Best val mIoU: 0.5731 at epoch 10
+Current learning rate: 0.00007664
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial015_ep10_lr7p66406em05_adam_wd0_plateau
+Selected SegFormer-B0 pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial015_ep10_lr7p66406em05_adam_wd0_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_segformer_b0.py
+================================================================================
+
+================================================================================
+SegFormer-B0 pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\segformer_b0\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\segformer_b0\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial015_ep10_lr7p66406em05_adam_wd0_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 16
+Run ID: optuna_all_ep10_segformer_b0_trial016_ep10_lr9p93094em05_adam_wd0_plateau
+Params: {'lr': 9.930937595431418e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --run-id optuna_all_ep10_segformer_b0_trial016_ep10_lr9p93094em05_adam_wd0_plateau --epochs 10 --lr 9.930937595431418e-05 --optimizer adam --weight-decay 0.0 --scheduler plateau
+Training SegFormer-B0
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 9.930937595431418e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial016_ep10_lr9p93094em05_adam_wd0_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 0.5782
+  train batch 0100/0372 loss: 0.5253
+  train batch 0150/0372 loss: 0.4749
+  train batch 0200/0372 loss: 0.3523
+  train batch 0250/0372 loss: 0.3636
+  train batch 0300/0372 loss: 0.3046
+  train batch 0350/0372 loss: 0.3462
+Train loss: 0.5436
+Val loss:   0.3262
+Val pixel accuracy: 0.8944
+Val mIoU: 0.4145
+Best val mIoU: 0.4145 at epoch 1
+Current learning rate: 0.00009931
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 0.3540
+  train batch 0100/0372 loss: 0.3775
+  train batch 0150/0372 loss: 0.3166
+  train batch 0200/0372 loss: 0.3124
+  train batch 0250/0372 loss: 0.2332
+  train batch 0300/0372 loss: 0.2572
+  train batch 0350/0372 loss: 0.2412
+Train loss: 0.3179
+Val loss:   0.2710
+Val pixel accuracy: 0.9084
+Val mIoU: 0.4752
+Best val mIoU: 0.4752 at epoch 2
+Current learning rate: 0.00009931
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.3138
+  train batch 0100/0372 loss: 0.3108
+  train batch 0150/0372 loss: 0.3912
+  train batch 0200/0372 loss: 0.2655
+  train batch 0250/0372 loss: 0.2723
+  train batch 0300/0372 loss: 0.2357
+  train batch 0350/0372 loss: 0.2825
+Train loss: 0.2797
+Val loss:   0.2547
+Val pixel accuracy: 0.9120
+Val mIoU: 0.5144
+Best val mIoU: 0.5144 at epoch 3
+Current learning rate: 0.00009931
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.4713
+  train batch 0100/0372 loss: 0.2934
+  train batch 0150/0372 loss: 0.3255
+  train batch 0200/0372 loss: 0.2444
+  train batch 0250/0372 loss: 0.2158
+  train batch 0300/0372 loss: 0.2552
+  train batch 0350/0372 loss: 0.2226
+Train loss: 0.2583
+Val loss:   0.2479
+Val pixel accuracy: 0.9152
+Val mIoU: 0.5427
+Best val mIoU: 0.5427 at epoch 4
+Current learning rate: 0.00009931
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.3085
+  train batch 0100/0372 loss: 0.2528
+  train batch 0150/0372 loss: 0.2466
+  train batch 0200/0372 loss: 0.2042
+  train batch 0250/0372 loss: 0.2594
+  train batch 0300/0372 loss: 0.2599
+  train batch 0350/0372 loss: 0.1753
+Train loss: 0.2461
+Val loss:   0.2368
+Val pixel accuracy: 0.9170
+Val mIoU: 0.5521
+Best val mIoU: 0.5521 at epoch 5
+Current learning rate: 0.00009931
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.2424
+  train batch 0100/0372 loss: 0.2606
+  train batch 0150/0372 loss: 0.1973
+  train batch 0200/0372 loss: 0.2665
+  train batch 0250/0372 loss: 0.3730
+  train batch 0300/0372 loss: 0.2459
+  train batch 0350/0372 loss: 0.2406
+Train loss: 0.2337
+Val loss:   0.2411
+Val pixel accuracy: 0.9159
+Val mIoU: 0.5523
+Best val mIoU: 0.5523 at epoch 6
+Current learning rate: 0.00009931
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.2284
+  train batch 0100/0372 loss: 0.2442
+  train batch 0150/0372 loss: 0.2877
+  train batch 0200/0372 loss: 0.2202
+  train batch 0250/0372 loss: 0.1724
+  train batch 0300/0372 loss: 0.1690
+  train batch 0350/0372 loss: 0.1920
+Train loss: 0.2234
+Val loss:   0.2301
+Val pixel accuracy: 0.9197
+Val mIoU: 0.5646
+Best val mIoU: 0.5646 at epoch 7
+Current learning rate: 0.00009931
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.1972
+  train batch 0100/0372 loss: 0.1958
+  train batch 0150/0372 loss: 0.2326
+  train batch 0200/0372 loss: 0.1644
+  train batch 0250/0372 loss: 0.1997
+  train batch 0300/0372 loss: 0.2106
+  train batch 0350/0372 loss: 0.1847
+Train loss: 0.2139
+Val loss:   0.2335
+Val pixel accuracy: 0.9188
+Val mIoU: 0.5561
+Best val mIoU: 0.5646 at epoch 7
+Current learning rate: 0.00009931
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.1774
+  train batch 0100/0372 loss: 0.2128
+  train batch 0150/0372 loss: 0.2003
+  train batch 0200/0372 loss: 0.2290
+  train batch 0250/0372 loss: 0.2290
+  train batch 0300/0372 loss: 0.1939
+  train batch 0350/0372 loss: 0.1876
+Train loss: 0.2066
+Val loss:   0.2244
+Val pixel accuracy: 0.9212
+Val mIoU: 0.5673
+Best val mIoU: 0.5673 at epoch 9
+Current learning rate: 0.00009931
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2201
+  train batch 0100/0372 loss: 0.2354
+  train batch 0150/0372 loss: 0.1810
+  train batch 0200/0372 loss: 0.2225
+  train batch 0250/0372 loss: 0.2301
+  train batch 0300/0372 loss: 0.1773
+  train batch 0350/0372 loss: 0.1920
+Train loss: 0.1964
+Val loss:   0.2250
+Val pixel accuracy: 0.9208
+Val mIoU: 0.5767
+Best val mIoU: 0.5767 at epoch 10
+Current learning rate: 0.00009931
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial016_ep10_lr9p93094em05_adam_wd0_plateau
+Selected SegFormer-B0 pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial016_ep10_lr9p93094em05_adam_wd0_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_segformer_b0.py
+================================================================================
+
+================================================================================
+SegFormer-B0 pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\segformer_b0\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\segformer_b0\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial016_ep10_lr9p93094em05_adam_wd0_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 17
+Run ID: optuna_all_ep10_segformer_b0_trial017_ep10_lr6p0178em05_adam_wd0_plateau
+Params: {'lr': 6.0178028096014283e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --run-id optuna_all_ep10_segformer_b0_trial017_ep10_lr6p0178em05_adam_wd0_plateau --epochs 10 --lr 6.0178028096014283e-05 --optimizer adam --weight-decay 0.0 --scheduler plateau
+Training SegFormer-B0
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 6.0178028096014283e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial017_ep10_lr6p0178em05_adam_wd0_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 0.6320
+  train batch 0100/0372 loss: 0.5963
+  train batch 0150/0372 loss: 0.5439
+  train batch 0200/0372 loss: 0.4160
+  train batch 0250/0372 loss: 0.4164
+  train batch 0300/0372 loss: 0.3504
+  train batch 0350/0372 loss: 0.3955
+Train loss: 0.6286
+Val loss:   0.3633
+Val pixel accuracy: 0.8869
+Val mIoU: 0.3822
+Best val mIoU: 0.3822 at epoch 1
+Current learning rate: 0.00006018
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 0.3852
+  train batch 0100/0372 loss: 0.4253
+  train batch 0150/0372 loss: 0.3491
+  train batch 0200/0372 loss: 0.3377
+  train batch 0250/0372 loss: 0.2581
+  train batch 0300/0372 loss: 0.2810
+  train batch 0350/0372 loss: 0.2519
+Train loss: 0.3501
+Val loss:   0.2941
+Val pixel accuracy: 0.9034
+Val mIoU: 0.4452
+Best val mIoU: 0.4452 at epoch 2
+Current learning rate: 0.00006018
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.3559
+  train batch 0100/0372 loss: 0.3347
+  train batch 0150/0372 loss: 0.4105
+  train batch 0200/0372 loss: 0.2858
+  train batch 0250/0372 loss: 0.2825
+  train batch 0300/0372 loss: 0.2684
+  train batch 0350/0372 loss: 0.3094
+Train loss: 0.3029
+Val loss:   0.2716
+Val pixel accuracy: 0.9083
+Val mIoU: 0.4774
+Best val mIoU: 0.4774 at epoch 3
+Current learning rate: 0.00006018
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.5318
+  train batch 0100/0372 loss: 0.3101
+  train batch 0150/0372 loss: 0.3081
+  train batch 0200/0372 loss: 0.2637
+  train batch 0250/0372 loss: 0.2276
+  train batch 0300/0372 loss: 0.2647
+  train batch 0350/0372 loss: 0.2480
+Train loss: 0.2768
+Val loss:   0.2558
+Val pixel accuracy: 0.9131
+Val mIoU: 0.5156
+Best val mIoU: 0.5156 at epoch 4
+Current learning rate: 0.00006018
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.3505
+  train batch 0100/0372 loss: 0.2574
+  train batch 0150/0372 loss: 0.2626
+  train batch 0200/0372 loss: 0.2140
+  train batch 0250/0372 loss: 0.2669
+  train batch 0300/0372 loss: 0.2816
+  train batch 0350/0372 loss: 0.1886
+Train loss: 0.2638
+Val loss:   0.2478
+Val pixel accuracy: 0.9146
+Val mIoU: 0.5316
+Best val mIoU: 0.5316 at epoch 5
+Current learning rate: 0.00006018
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.2661
+  train batch 0100/0372 loss: 0.2682
+  train batch 0150/0372 loss: 0.2117
+  train batch 0200/0372 loss: 0.2723
+  train batch 0250/0372 loss: 0.4208
+  train batch 0300/0372 loss: 0.2627
+  train batch 0350/0372 loss: 0.2539
+Train loss: 0.2516
+Val loss:   0.2433
+Val pixel accuracy: 0.9156
+Val mIoU: 0.5344
+Best val mIoU: 0.5344 at epoch 6
+Current learning rate: 0.00006018
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.2441
+  train batch 0100/0372 loss: 0.2558
+  train batch 0150/0372 loss: 0.3113
+  train batch 0200/0372 loss: 0.2306
+  train batch 0250/0372 loss: 0.1821
+  train batch 0300/0372 loss: 0.1813
+  train batch 0350/0372 loss: 0.2037
+Train loss: 0.2407
+Val loss:   0.2383
+Val pixel accuracy: 0.9177
+Val mIoU: 0.5455
+Best val mIoU: 0.5455 at epoch 7
+Current learning rate: 0.00006018
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.2060
+  train batch 0100/0372 loss: 0.2054
+  train batch 0150/0372 loss: 0.2252
+  train batch 0200/0372 loss: 0.1748
+  train batch 0250/0372 loss: 0.2152
+  train batch 0300/0372 loss: 0.2182
+  train batch 0350/0372 loss: 0.2028
+Train loss: 0.2310
+Val loss:   0.2389
+Val pixel accuracy: 0.9171
+Val mIoU: 0.5435
+Best val mIoU: 0.5455 at epoch 7
+Current learning rate: 0.00006018
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.1897
+  train batch 0100/0372 loss: 0.2200
+  train batch 0150/0372 loss: 0.2116
+  train batch 0200/0372 loss: 0.2616
+  train batch 0250/0372 loss: 0.2527
+  train batch 0300/0372 loss: 0.2075
+  train batch 0350/0372 loss: 0.2077
+Train loss: 0.2236
+Val loss:   0.2301
+Val pixel accuracy: 0.9199
+Val mIoU: 0.5615
+Best val mIoU: 0.5615 at epoch 9
+Current learning rate: 0.00006018
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2207
+  train batch 0100/0372 loss: 0.2561
+  train batch 0150/0372 loss: 0.1974
+  train batch 0200/0372 loss: 0.2327
+  train batch 0250/0372 loss: 0.2592
+  train batch 0300/0372 loss: 0.1940
+  train batch 0350/0372 loss: 0.2024
+Train loss: 0.2155
+Val loss:   0.2290
+Val pixel accuracy: 0.9193
+Val mIoU: 0.5657
+Best val mIoU: 0.5657 at epoch 10
+Current learning rate: 0.00006018
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial017_ep10_lr6p0178em05_adam_wd0_plateau
+Selected SegFormer-B0 pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial017_ep10_lr6p0178em05_adam_wd0_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_segformer_b0.py
+================================================================================
+
+================================================================================
+SegFormer-B0 pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\segformer_b0\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\segformer_b0\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial017_ep10_lr6p0178em05_adam_wd0_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 18
+Run ID: optuna_all_ep10_segformer_b0_trial018_ep10_lr7p03066em05_adam_wd0_plateau
+Params: {'lr': 7.030660441283872e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --run-id optuna_all_ep10_segformer_b0_trial018_ep10_lr7p03066em05_adam_wd0_plateau --epochs 10 --lr 7.030660441283872e-05 --optimizer adam --weight-decay 0.0 --scheduler plateau
+Training SegFormer-B0
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 7.030660441283872e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial018_ep10_lr7p03066em05_adam_wd0_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 0.6046
+  train batch 0100/0372 loss: 0.5768
+  train batch 0150/0372 loss: 0.5201
+  train batch 0200/0372 loss: 0.3920
+  train batch 0250/0372 loss: 0.3956
+  train batch 0300/0372 loss: 0.3351
+  train batch 0350/0372 loss: 0.3763
+Train loss: 0.5993
+Val loss:   0.3509
+Val pixel accuracy: 0.8894
+Val mIoU: 0.3906
+Best val mIoU: 0.3906 at epoch 1
+Current learning rate: 0.00007031
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 0.3765
+  train batch 0100/0372 loss: 0.4123
+  train batch 0150/0372 loss: 0.3379
+  train batch 0200/0372 loss: 0.3270
+  train batch 0250/0372 loss: 0.2487
+  train batch 0300/0372 loss: 0.2741
+  train batch 0350/0372 loss: 0.2464
+Train loss: 0.3386
+Val loss:   0.2860
+Val pixel accuracy: 0.9052
+Val mIoU: 0.4549
+Best val mIoU: 0.4549 at epoch 2
+Current learning rate: 0.00007031
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.3377
+  train batch 0100/0372 loss: 0.3260
+  train batch 0150/0372 loss: 0.4063
+  train batch 0200/0372 loss: 0.2795
+  train batch 0250/0372 loss: 0.2772
+  train batch 0300/0372 loss: 0.2559
+  train batch 0350/0372 loss: 0.2979
+Train loss: 0.2948
+Val loss:   0.2659
+Val pixel accuracy: 0.9096
+Val mIoU: 0.4871
+Best val mIoU: 0.4871 at epoch 3
+Current learning rate: 0.00007031
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.5139
+  train batch 0100/0372 loss: 0.3055
+  train batch 0150/0372 loss: 0.3026
+  train batch 0200/0372 loss: 0.2565
+  train batch 0250/0372 loss: 0.2227
+  train batch 0300/0372 loss: 0.2600
+  train batch 0350/0372 loss: 0.2397
+Train loss: 0.2699
+Val loss:   0.2516
+Val pixel accuracy: 0.9145
+Val mIoU: 0.5283
+Best val mIoU: 0.5283 at epoch 4
+Current learning rate: 0.00007031
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.3403
+  train batch 0100/0372 loss: 0.2509
+  train batch 0150/0372 loss: 0.2537
+  train batch 0200/0372 loss: 0.2106
+  train batch 0250/0372 loss: 0.2614
+  train batch 0300/0372 loss: 0.2768
+  train batch 0350/0372 loss: 0.1828
+Train loss: 0.2575
+Val loss:   0.2443
+Val pixel accuracy: 0.9152
+Val mIoU: 0.5376
+Best val mIoU: 0.5376 at epoch 5
+Current learning rate: 0.00007031
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.2606
+  train batch 0100/0372 loss: 0.2639
+  train batch 0150/0372 loss: 0.2087
+  train batch 0200/0372 loss: 0.2696
+  train batch 0250/0372 loss: 0.4084
+  train batch 0300/0372 loss: 0.2585
+  train batch 0350/0372 loss: 0.2504
+Train loss: 0.2455
+Val loss:   0.2424
+Val pixel accuracy: 0.9157
+Val mIoU: 0.5402
+Best val mIoU: 0.5402 at epoch 6
+Current learning rate: 0.00007031
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.2392
+  train batch 0100/0372 loss: 0.2565
+  train batch 0150/0372 loss: 0.3024
+  train batch 0200/0372 loss: 0.2263
+  train batch 0250/0372 loss: 0.1781
+  train batch 0300/0372 loss: 0.1762
+  train batch 0350/0372 loss: 0.1997
+Train loss: 0.2347
+Val loss:   0.2343
+Val pixel accuracy: 0.9188
+Val mIoU: 0.5526
+Best val mIoU: 0.5526 at epoch 7
+Current learning rate: 0.00007031
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.2044
+  train batch 0100/0372 loss: 0.1973
+  train batch 0150/0372 loss: 0.2205
+  train batch 0200/0372 loss: 0.1710
+  train batch 0250/0372 loss: 0.2081
+  train batch 0300/0372 loss: 0.2154
+  train batch 0350/0372 loss: 0.2003
+Train loss: 0.2250
+Val loss:   0.2380
+Val pixel accuracy: 0.9167
+Val mIoU: 0.5429
+Best val mIoU: 0.5526 at epoch 7
+Current learning rate: 0.00007031
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.1878
+  train batch 0100/0372 loss: 0.2186
+  train batch 0150/0372 loss: 0.2073
+  train batch 0200/0372 loss: 0.2500
+  train batch 0250/0372 loss: 0.2459
+  train batch 0300/0372 loss: 0.1981
+  train batch 0350/0372 loss: 0.2034
+Train loss: 0.2176
+Val loss:   0.2281
+Val pixel accuracy: 0.9205
+Val mIoU: 0.5674
+Best val mIoU: 0.5674 at epoch 9
+Current learning rate: 0.00007031
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2171
+  train batch 0100/0372 loss: 0.2516
+  train batch 0150/0372 loss: 0.1942
+  train batch 0200/0372 loss: 0.2295
+  train batch 0250/0372 loss: 0.2527
+  train batch 0300/0372 loss: 0.1885
+  train batch 0350/0372 loss: 0.1995
+Train loss: 0.2097
+Val loss:   0.2284
+Val pixel accuracy: 0.9191
+Val mIoU: 0.5705
+Best val mIoU: 0.5705 at epoch 10
+Current learning rate: 0.00007031
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial018_ep10_lr7p03066em05_adam_wd0_plateau
+Selected SegFormer-B0 pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial018_ep10_lr7p03066em05_adam_wd0_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_segformer_b0.py
+================================================================================
+
+================================================================================
+SegFormer-B0 pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\segformer_b0\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\segformer_b0\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial018_ep10_lr7p03066em05_adam_wd0_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv
+================================================================================
+Trial 19
+Run ID: optuna_all_ep10_segformer_b0_trial019_ep10_lr5p09192em05_adam_wd0_plateau
+Params: {'lr': 5.091917297724615e-05, 'optimizer': 'adam', 'weight_decay': 0.0, 'scheduler': 'plateau'}
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --run-id optuna_all_ep10_segformer_b0_trial019_ep10_lr5p09192em05_adam_wd0_plateau --epochs 10 --lr 5.091917297724615e-05 --optimizer adam --weight-decay 0.0 --scheduler plateau
+Training SegFormer-B0
+============================================================
+Device: cuda
+Images dir: D:\Studying\Diplom maga\code\data\processed\RUGD\images
+Masks dir: D:\Studying\Diplom maga\code\data\processed\RUGD\masks_id
+Train split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split: D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Train size: 5948
+Val size: 743
+Image size: 256 x 320
+Batch size: 16
+Number of classes: 25
+Encoder weights: imagenet
+Epochs: 10
+Learning rate: 5.091917297724615e-05
+Optimizer: adam
+Weight decay: 0.0
+Scheduler: plateau
+Batch logging interval: 50
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial019_ep10_lr5p09192em05_adam_wd0_plateau
+
+Epoch 1/10
+  train batch 0050/0372 loss: 0.6696
+  train batch 0100/0372 loss: 0.6212
+  train batch 0150/0372 loss: 0.5754
+  train batch 0200/0372 loss: 0.4445
+  train batch 0250/0372 loss: 0.4387
+  train batch 0300/0372 loss: 0.3675
+  train batch 0350/0372 loss: 0.4191
+Train loss: 0.6632
+Val loss:   0.3760
+Val pixel accuracy: 0.8846
+Val mIoU: 0.3737
+Best val mIoU: 0.3737 at epoch 1
+Current learning rate: 0.00005092
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 2/10
+  train batch 0050/0372 loss: 0.3955
+  train batch 0100/0372 loss: 0.4382
+  train batch 0150/0372 loss: 0.3641
+  train batch 0200/0372 loss: 0.3527
+  train batch 0250/0372 loss: 0.2712
+  train batch 0300/0372 loss: 0.2896
+  train batch 0350/0372 loss: 0.2584
+Train loss: 0.3640
+Val loss:   0.3040
+Val pixel accuracy: 0.9011
+Val mIoU: 0.4333
+Best val mIoU: 0.4333 at epoch 2
+Current learning rate: 0.00005092
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 3/10
+  train batch 0050/0372 loss: 0.3742
+  train batch 0100/0372 loss: 0.3451
+  train batch 0150/0372 loss: 0.4191
+  train batch 0200/0372 loss: 0.2951
+  train batch 0250/0372 loss: 0.2909
+  train batch 0300/0372 loss: 0.2793
+  train batch 0350/0372 loss: 0.3258
+Train loss: 0.3130
+Val loss:   0.2783
+Val pixel accuracy: 0.9068
+Val mIoU: 0.4676
+Best val mIoU: 0.4676 at epoch 3
+Current learning rate: 0.00005092
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 4/10
+  train batch 0050/0372 loss: 0.5527
+  train batch 0100/0372 loss: 0.3181
+  train batch 0150/0372 loss: 0.3138
+  train batch 0200/0372 loss: 0.2726
+  train batch 0250/0372 loss: 0.2351
+  train batch 0300/0372 loss: 0.2710
+  train batch 0350/0372 loss: 0.2596
+Train loss: 0.2852
+Val loss:   0.2617
+Val pixel accuracy: 0.9114
+Val mIoU: 0.5002
+Best val mIoU: 0.5002 at epoch 4
+Current learning rate: 0.00005092
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 5/10
+  train batch 0050/0372 loss: 0.3618
+  train batch 0100/0372 loss: 0.2637
+  train batch 0150/0372 loss: 0.2727
+  train batch 0200/0372 loss: 0.2202
+  train batch 0250/0372 loss: 0.2765
+  train batch 0300/0372 loss: 0.2883
+  train batch 0350/0372 loss: 0.1936
+Train loss: 0.2713
+Val loss:   0.2530
+Val pixel accuracy: 0.9134
+Val mIoU: 0.5222
+Best val mIoU: 0.5222 at epoch 5
+Current learning rate: 0.00005092
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 6/10
+  train batch 0050/0372 loss: 0.2747
+  train batch 0100/0372 loss: 0.2742
+  train batch 0150/0372 loss: 0.2172
+  train batch 0200/0372 loss: 0.2768
+  train batch 0250/0372 loss: 0.4406
+  train batch 0300/0372 loss: 0.2691
+  train batch 0350/0372 loss: 0.2595
+Train loss: 0.2585
+Val loss:   0.2479
+Val pixel accuracy: 0.9144
+Val mIoU: 0.5264
+Best val mIoU: 0.5264 at epoch 6
+Current learning rate: 0.00005092
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 7/10
+  train batch 0050/0372 loss: 0.2492
+  train batch 0100/0372 loss: 0.2594
+  train batch 0150/0372 loss: 0.3206
+  train batch 0200/0372 loss: 0.2388
+  train batch 0250/0372 loss: 0.1872
+  train batch 0300/0372 loss: 0.1882
+  train batch 0350/0372 loss: 0.2085
+Train loss: 0.2477
+Val loss:   0.2427
+Val pixel accuracy: 0.9165
+Val mIoU: 0.5380
+Best val mIoU: 0.5380 at epoch 7
+Current learning rate: 0.00005092
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 8/10
+  train batch 0050/0372 loss: 0.2090
+  train batch 0100/0372 loss: 0.2143
+  train batch 0150/0372 loss: 0.2300
+  train batch 0200/0372 loss: 0.1790
+  train batch 0250/0372 loss: 0.2203
+  train batch 0300/0372 loss: 0.2247
+  train batch 0350/0372 loss: 0.2042
+Train loss: 0.2379
+Val loss:   0.2411
+Val pixel accuracy: 0.9169
+Val mIoU: 0.5407
+Best val mIoU: 0.5407 at epoch 8
+Current learning rate: 0.00005092
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 9/10
+  train batch 0050/0372 loss: 0.1951
+  train batch 0100/0372 loss: 0.2228
+  train batch 0150/0372 loss: 0.2158
+  train batch 0200/0372 loss: 0.2732
+  train batch 0250/0372 loss: 0.2616
+  train batch 0300/0372 loss: 0.2207
+  train batch 0350/0372 loss: 0.2136
+Train loss: 0.2305
+Val loss:   0.2336
+Val pixel accuracy: 0.9187
+Val mIoU: 0.5554
+Best val mIoU: 0.5554 at epoch 9
+Current learning rate: 0.00005092
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Epoch 10/10
+  train batch 0050/0372 loss: 0.2251
+  train batch 0100/0372 loss: 0.2617
+  train batch 0150/0372 loss: 0.2040
+  train batch 0200/0372 loss: 0.2378
+  train batch 0250/0372 loss: 0.2673
+  train batch 0300/0372 loss: 0.1997
+  train batch 0350/0372 loss: 0.2070
+Train loss: 0.2223
+Val loss:   0.2313
+Val pixel accuracy: 0.9188
+Val mIoU: 0.5607
+Best val mIoU: 0.5607 at epoch 10
+Current learning rate: 0.00005092
+Best checkpoint updated: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+
+Training finished successfully.
+Last checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Best metrics saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Run artifacts saved to: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial019_ep10_lr5p09192em05_adam_wd0_plateau
+Selected SegFormer-B0 pipeline steps:
+1. train
+Run dir: D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial019_ep10_lr5p09192em05_adam_wd0_plateau
+
+================================================================================
+Running step: train
+Script: D:\Studying\Diplom maga\code\scripts\train_segformer_b0.py
+================================================================================
+
+================================================================================
+SegFormer-B0 pipeline result paths
+================================================================================
+Train split:       D:\Studying\Diplom maga\code\data\processed\RUGD\splits\train.txt
+Val split:         D:\Studying\Diplom maga\code\data\processed\RUGD\splits\val.txt
+Test split:        D:\Studying\Diplom maga\code\data\processed\RUGD\splits\test.txt
+Last checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_last.pth
+Best checkpoint:   D:\Studying\Diplom maga\code\outputs\segformer_b0\segformer_b0_best.pth
+History:           D:\Studying\Diplom maga\code\outputs\segformer_b0\history.csv
+Step history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\step_history.csv
+Loss history:      D:\Studying\Diplom maga\code\outputs\segformer_b0\loss_history.txt
+Metrics:           D:\Studying\Diplom maga\code\outputs\segformer_b0\metrics.txt
+Best metrics:      D:\Studying\Diplom maga\code\outputs\segformer_b0\best_metrics.txt
+Training curves:   D:\Studying\Diplom maga\code\outputs\segformer_b0\training_curves.png
+Step loss curve:   D:\Studying\Diplom maga\code\outputs\segformer_b0\step_loss_curve.png
+Predictions grid:  D:\Studying\Diplom maga\code\outputs\segformer_b0\predictions_grid.png
+Run dir:           D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\optuna_all_ep10_segformer_b0_trial019_ep10_lr5p09192em05_adam_wd0_plateau
+Summary CSV:       D:\Studying\Diplom maga\code\outputs\experiments_summary.csv

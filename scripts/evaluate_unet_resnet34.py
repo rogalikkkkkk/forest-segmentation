@@ -1,0 +1,223 @@
+from pathlib import Path
+import argparse
+import sys
+
+import numpy as np
+import torch
+from torch.utils.data import DataLoader
+
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+sys.path.append(str(PROJECT_ROOT / "src"))
+
+from config import (
+    BATCH_SIZE,
+    IMAGE_HEIGHT,
+    IMAGE_MEAN,
+    IMAGE_STD,
+    IMAGE_WIDTH,
+    RUGD_NUM_CLASSES,
+    UNET_RESNET34_BEST_CHECKPOINT_PATH,
+    UNET_RESNET34_ENCODER_WEIGHTS,
+    UNET_RESNET34_METRICS_PATH,
+    UNET_RESNET34_TEST_SPLIT_PATH,
+    UNET_RESNET34_TRAIN_IMAGES_DIR,
+    UNET_RESNET34_TRAIN_MASKS_ID_DIR,
+)
+from datasets.rugd_dataset import RUGDDataset
+from experiment_utils import get_run_artifact_path
+from models.unet_resnet34 import UNetResNet34
+
+
+def update_confusion_matrix(confusion_matrix, predictions, targets, num_classes):
+    valid_pixels = (targets >= 0) & (targets < num_classes)
+
+    encoded = num_classes * targets[valid_pixels] + predictions[valid_pixels]
+    batch_confusion = np.bincount(
+        encoded,
+        minlength=num_classes * num_classes,
+    )
+    batch_confusion = batch_confusion.reshape(num_classes, num_classes)
+
+    confusion_matrix += batch_confusion
+
+
+def calculate_metrics(confusion_matrix):
+    true_positive = np.diag(confusion_matrix)
+    ground_truth_pixels = confusion_matrix.sum(axis=1)
+    predicted_pixels = confusion_matrix.sum(axis=0)
+
+    total_correct = true_positive.sum()
+    total_pixels = confusion_matrix.sum()
+    pixel_accuracy = total_correct / total_pixels
+
+    union = ground_truth_pixels + predicted_pixels - true_positive
+    valid_classes = union > 0
+    iou_per_class = np.full(confusion_matrix.shape[0], np.nan, dtype=np.float64)
+    iou_per_class[valid_classes] = true_positive[valid_classes] / union[valid_classes]
+    mean_iou = np.nanmean(iou_per_class)
+
+    return pixel_accuracy, mean_iou, iou_per_class
+
+
+def get_class_status(gt_pixels, pred_pixels, true_positive):
+    if gt_pixels == 0 and pred_pixels == 0:
+        return "absent_in_gt_and_prediction"
+
+    if gt_pixels == 0 and pred_pixels > 0:
+        return "absent_in_gt_false_positive"
+
+    if gt_pixels > 0 and pred_pixels == 0:
+        return "present_in_gt_not_predicted"
+
+    if true_positive == 0:
+        return "present_but_no_true_positive"
+
+    return "present"
+
+
+def write_metrics_file(path, pixel_accuracy, mean_iou, confusion_matrix, iou_per_class):
+    true_positive = np.diag(confusion_matrix)
+    ground_truth_pixels = confusion_matrix.sum(axis=1)
+    predicted_pixels = confusion_matrix.sum(axis=0)
+    union_pixels = ground_truth_pixels + predicted_pixels - true_positive
+
+    with path.open("w", encoding="utf-8") as file:
+        file.write("metric,value\n")
+        file.write(f"pixel_accuracy,{pixel_accuracy:.6f}\n")
+        file.write(f"mean_iou,{mean_iou:.6f}\n")
+        file.write("\n")
+        file.write(
+            "class_id,gt_pixels,pred_pixels,tp_pixels,union_pixels,iou,status\n"
+        )
+
+        for class_id, class_iou in enumerate(iou_per_class):
+            gt_pixels = int(ground_truth_pixels[class_id])
+            pred_pixels = int(predicted_pixels[class_id])
+            tp_pixels = int(true_positive[class_id])
+            union = int(union_pixels[class_id])
+            status = get_class_status(gt_pixels, pred_pixels, tp_pixels)
+
+            if np.isnan(class_iou):
+                iou_value = "nan"
+            else:
+                iou_value = f"{class_iou:.6f}"
+
+            file.write(
+                f"{class_id},{gt_pixels},{pred_pixels},{tp_pixels},"
+                f"{union},{iou_value},{status}\n"
+            )
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Evaluate U-Net ResNet34 on RUGD test split.")
+    parser.add_argument("--run-dir", type=Path, default=None)
+    return parser.parse_args()
+
+
+def main():
+    args = parse_args()
+    run_dir = args.run_dir
+    if run_dir is not None:
+        run_dir.mkdir(parents=True, exist_ok=True)
+
+    checkpoint_path = get_run_artifact_path(UNET_RESNET34_BEST_CHECKPOINT_PATH, run_dir)
+    if run_dir is not None and not checkpoint_path.exists():
+        checkpoint_path = UNET_RESNET34_BEST_CHECKPOINT_PATH
+    metrics_path = get_run_artifact_path(UNET_RESNET34_METRICS_PATH, run_dir)
+
+    if not checkpoint_path.exists():
+        raise FileNotFoundError(
+            f"Best checkpoint not found: {checkpoint_path}. "
+            "Run scripts/train_unet_resnet34.py first."
+        )
+
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    dataset = RUGDDataset(
+        images_dir=UNET_RESNET34_TRAIN_IMAGES_DIR,
+        masks_dir=UNET_RESNET34_TRAIN_MASKS_ID_DIR,
+        image_height=IMAGE_HEIGHT,
+        image_width=IMAGE_WIDTH,
+        image_mean=IMAGE_MEAN,
+        image_std=IMAGE_STD,
+        split_file=UNET_RESNET34_TEST_SPLIT_PATH,
+    )
+
+    dataloader = DataLoader(
+        dataset,
+        batch_size=BATCH_SIZE,
+        shuffle=False,
+        num_workers=0,
+    )
+
+    model = UNetResNet34(
+        num_classes=RUGD_NUM_CLASSES,
+        encoder_weights=UNET_RESNET34_ENCODER_WEIGHTS,
+    ).to(device)
+
+    checkpoint = torch.load(
+        checkpoint_path,
+        map_location=device,
+        weights_only=False,
+    )
+    model.load_state_dict(checkpoint["model_state_dict"])
+    model.eval()
+
+    confusion_matrix = np.zeros((RUGD_NUM_CLASSES, RUGD_NUM_CLASSES), dtype=np.int64)
+
+    print("Evaluation U-Net ResNet34")
+    print("=" * 60)
+    print(f"Device: {device}")
+    print(f"Images dir: {UNET_RESNET34_TRAIN_IMAGES_DIR}")
+    print(f"Masks dir: {UNET_RESNET34_TRAIN_MASKS_ID_DIR}")
+    print(f"Test split: {UNET_RESNET34_TEST_SPLIT_PATH}")
+    print(f"Dataset size: {len(dataset)}")
+    print(f"Best checkpoint: {checkpoint_path}")
+    print()
+
+    with torch.no_grad():
+        for batch_index, batch in enumerate(dataloader, start=1):
+            images = batch["image"].to(device)
+            masks = batch["mask"].cpu().numpy()
+
+            logits = model(images)
+            predictions = torch.argmax(logits, dim=1).cpu().numpy()
+
+            update_confusion_matrix(
+                confusion_matrix=confusion_matrix,
+                predictions=predictions,
+                targets=masks,
+                num_classes=RUGD_NUM_CLASSES,
+            )
+
+            if batch_index % 500 == 0:
+                print(f"  evaluated batch {batch_index:04d}/{len(dataloader):04d}")
+
+    pixel_accuracy, mean_iou, iou_per_class = calculate_metrics(confusion_matrix)
+
+    print()
+    print(f"Pixel Accuracy: {pixel_accuracy:.4f}")
+    print(f"Mean IoU:        {mean_iou:.4f}")
+    print()
+    print("IoU per class:")
+    for class_id, class_iou in enumerate(iou_per_class):
+        if np.isnan(class_iou):
+            print(f"  class {class_id:02d}: n/a")
+        else:
+            print(f"  class {class_id:02d}: {class_iou:.4f}")
+
+    write_metrics_file(
+        path=metrics_path,
+        pixel_accuracy=pixel_accuracy,
+        mean_iou=mean_iou,
+        confusion_matrix=confusion_matrix,
+        iou_per_class=iou_per_class,
+    )
+
+    print()
+    print(f"Metrics saved to: {metrics_path}")
+
+
+if __name__ == "__main__":
+    main()

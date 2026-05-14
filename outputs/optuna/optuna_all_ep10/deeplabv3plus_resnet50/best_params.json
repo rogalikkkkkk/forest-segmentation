@@ -1,0 +1,21 @@
+{
+  "model": "deeplabv3plus_resnet50",
+  "epochs": 10,
+  "best_value": 0.565727,
+  "best_trial_number": 19,
+  "best_params": {
+    "lr": 9.759918974787204e-05,
+    "optimizer": "adam",
+    "scheduler": "plateau"
+  },
+  "user_attrs": {
+    "best_epoch": "9",
+    "run_dir": "D:\\Studying\\Diplom maga\\code\\outputs\\deeplabv3plus_resnet50\\runs\\optuna_all_ep10_deeplabv3plus_resnet50_trial019_ep10_lr9p75992em05_adam_wd0_plateau",
+    "run_id": "optuna_all_ep10_deeplabv3plus_resnet50_trial019_ep10_lr9p75992em05_adam_wd0_plateau",
+    "test_mean_iou": null,
+    "test_pixel_accuracy": null,
+    "val_loss": "0.231231",
+    "val_mean_iou": "0.565727",
+    "val_pixel_accuracy": "0.922237"
+  }
+}

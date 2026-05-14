@@ -1,0 +1,36 @@
+================================================================================
+Run: dryrun_lr_test_unet_resnet34_lr_lr1e-4_ep10_lr0p0001_adam_wd0_none
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --evaluate --run-id dryrun_lr_test_unet_resnet34_lr_lr1e-4_ep10_lr0p0001_adam_wd0_none --epochs 10 --lr 0.0001 --optimizer adam --weight-decay 0.0 --scheduler none
+================================================================================
+Run: dryrun_lr_test_deeplabv3plus_resnet50_lr_lr1e-4_ep10_lr0p0001_adam_wd0_none
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_deeplabv3plus_resnet50_pipeline.py --train --evaluate --run-id dryrun_lr_test_deeplabv3plus_resnet50_lr_lr1e-4_ep10_lr0p0001_adam_wd0_none --epochs 10 --lr 0.0001 --optimizer adam --weight-decay 0.0 --scheduler none
+================================================================================
+Run: dryrun_lr_test_segformer_b0_lr_lr1e-4_ep10_lr0p0001_adam_wd0_none
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --evaluate --run-id dryrun_lr_test_segformer_b0_lr_lr1e-4_ep10_lr0p0001_adam_wd0_none --epochs 10 --lr 0.0001 --optimizer adam --weight-decay 0.0 --scheduler none
+================================================================================
+Run: dryrun_lr_test_unet_resnet34_lr_lr3e-5_ep10_lr3em05_adam_wd0_none
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --evaluate --run-id dryrun_lr_test_unet_resnet34_lr_lr3e-5_ep10_lr3em05_adam_wd0_none --epochs 10 --lr 3e-05 --optimizer adam --weight-decay 0.0 --scheduler none
+================================================================================
+Run: dryrun_lr_test_deeplabv3plus_resnet50_lr_lr3e-5_ep10_lr3em05_adam_wd0_none
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_deeplabv3plus_resnet50_pipeline.py --train --evaluate --run-id dryrun_lr_test_deeplabv3plus_resnet50_lr_lr3e-5_ep10_lr3em05_adam_wd0_none --epochs 10 --lr 3e-05 --optimizer adam --weight-decay 0.0 --scheduler none
+================================================================================
+Run: dryrun_lr_test_segformer_b0_lr_lr3e-5_ep10_lr3em05_adam_wd0_none
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --evaluate --run-id dryrun_lr_test_segformer_b0_lr_lr3e-5_ep10_lr3em05_adam_wd0_none --epochs 10 --lr 3e-05 --optimizer adam --weight-decay 0.0 --scheduler none
+================================================================================
+Run: dryrun_lr_test_unet_resnet34_lr_lr1e-5_ep10_lr1em05_adam_wd0_none
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_unet_resnet34_pipeline.py --train --evaluate --run-id dryrun_lr_test_unet_resnet34_lr_lr1e-5_ep10_lr1em05_adam_wd0_none --epochs 10 --lr 1e-05 --optimizer adam --weight-decay 0.0 --scheduler none
+================================================================================
+Run: dryrun_lr_test_deeplabv3plus_resnet50_lr_lr1e-5_ep10_lr1em05_adam_wd0_none
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_deeplabv3plus_resnet50_pipeline.py --train --evaluate --run-id dryrun_lr_test_deeplabv3plus_resnet50_lr_lr1e-5_ep10_lr1em05_adam_wd0_none --epochs 10 --lr 1e-05 --optimizer adam --weight-decay 0.0 --scheduler none
+================================================================================
+Run: dryrun_lr_test_segformer_b0_lr_lr1e-5_ep10_lr1em05_adam_wd0_none
+Command:
+C:\Users\dmitr\miniconda3\envs\master-ai\python.exe D:\Studying\Diplom maga\code\scripts\run_segformer_b0_pipeline.py --train --evaluate --run-id dryrun_lr_test_segformer_b0_lr_lr1e-5_ep10_lr1em05_adam_wd0_none --epochs 10 --lr 1e-05 --optimizer adam --weight-decay 0.0 --scheduler none
