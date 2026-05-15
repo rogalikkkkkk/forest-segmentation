@@ -75,3 +75,6 @@ weighted_ce_ep10_2026-05-13_02-51-05_segformer_b0,segformer_b0,D:\Studying\Diplo
 final_unet_resnet34_weighted_ce_ep30,unet_resnet34,D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\final_unet_resnet34_weighted_ce_ep30,30,0.0001,adam,0.0,none,weighted_ce,30,0.601921,0.605303,0.918824
 final_deeplabv3plus_resnet50_ce_ep30,deeplabv3plus_resnet50,D:\Studying\Diplom maga\code\outputs\deeplabv3plus_resnet50\runs\final_deeplabv3plus_resnet50_ce_ep30,30,9.759918974787204e-05,adam,0.0,plateau,ce,26,0.620560,0.619617,0.926652
 final_segformer_b0_ce_ep30,segformer_b0,D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\final_segformer_b0_ce_ep30,30,0.0001,adam,0.0,none,ce,28,0.610040,0.583784,0.923929
+final_unet_resnet34_weighted_ce_ep30_v3,unet_resnet34,D:\Studying\Diplom maga\code\outputs\unet_resnet34\runs\final_unet_resnet34_weighted_ce_ep30_v3,30,0.0001,adam,0.0,none,weighted_ce,23,0.595705,0.597710,0.917865
+final_deeplabv3plus_resnet50_ce_ep30_v3,deeplabv3plus_resnet50,D:\Studying\Diplom maga\code\outputs\deeplabv3plus_resnet50\runs\final_deeplabv3plus_resnet50_ce_ep30_v3,30,9.759918974787204e-05,adam,0.0,plateau,ce,28,0.616294,0.622758,0.927082
+final_segformer_b0_ce_ep30_v3,segformer_b0,D:\Studying\Diplom maga\code\outputs\segformer_b0\runs\final_segformer_b0_ce_ep30_v3,30,0.0001,adam,0.0,none,ce,30,0.611783,0.587871,0.923587
