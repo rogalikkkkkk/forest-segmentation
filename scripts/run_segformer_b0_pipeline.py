@@ -224,7 +224,17 @@ def run_pipeline(args):
         args.scheduler,
         "--loss",
         args.loss,
+        "--prediction-interval",
+        str(args.prediction_interval),
+        "--prediction-epochs",
+        *[str(epoch) for epoch in args.prediction_epochs],
+        "--prediction-sample-count",
+        str(args.prediction_sample_count),
+        "--prediction-seed",
+        str(args.prediction_seed),
     ]
+    if args.disable_epoch_predictions:
+        train_args.append("--disable-epoch-predictions")
 
     print("Selected SegFormer-B0 pipeline steps:")
     for index, step in enumerate(steps, start=1):
@@ -274,6 +284,11 @@ def parse_args():
     parser.add_argument("--weight-decay", type=float, default=SEGFORMER_B0_WEIGHT_DECAY)
     parser.add_argument("--scheduler", choices=["none", "plateau"], default=SEGFORMER_B0_SCHEDULER)
     parser.add_argument("--loss", choices=["ce", "weighted_ce"], default=SEGFORMER_B0_LOSS)
+    parser.add_argument("--prediction-interval", type=int, default=5)
+    parser.add_argument("--prediction-epochs", nargs="+", type=int, default=[1, 5, 10, 15, 20, 25, 30])
+    parser.add_argument("--prediction-sample-count", type=int, default=5)
+    parser.add_argument("--prediction-seed", type=int, default=42)
+    parser.add_argument("--disable-epoch-predictions", action="store_true")
 
     parser.add_argument("--check-dataloader", action="store_true")
     parser.add_argument("--check-forward", action="store_true")

@@ -22,6 +22,7 @@ from config import (
     IMAGE_WIDTH,
     RUGD_CLASS_WEIGHTS_NPY_PATH,
     RUGD_NUM_CLASSES,
+    RUGD_SAMPLE_COLORMAP_PATH,
     SEGFORMER_B0_BEST_CHECKPOINT_PATH,
     SEGFORMER_B0_BEST_METRICS_PATH,
     SEGFORMER_B0_CHECKPOINT_PATH,
@@ -53,6 +54,12 @@ from training_utils import (
     create_scheduler,
     get_current_learning_rate,
     step_scheduler,
+)
+from visualization_utils import (
+    read_id_to_color,
+    save_epoch_prediction_grid,
+    save_selected_samples,
+    select_fixed_random_indices,
 )
 
 
@@ -386,6 +393,11 @@ def parse_args():
     parser.add_argument("--weight-decay", type=float, default=SEGFORMER_B0_WEIGHT_DECAY)
     parser.add_argument("--scheduler", choices=["none", "plateau"], default=SEGFORMER_B0_SCHEDULER)
     parser.add_argument("--loss", choices=SUPPORTED_LOSSES, default=SEGFORMER_B0_LOSS)
+    parser.add_argument("--prediction-interval", type=int, default=5)
+    parser.add_argument("--prediction-epochs", nargs="+", type=int, default=[1, 5, 10, 15, 20, 25, 30])
+    parser.add_argument("--prediction-sample-count", type=int, default=5)
+    parser.add_argument("--prediction-seed", type=int, default=42)
+    parser.add_argument("--disable-epoch-predictions", action="store_true")
     return parser.parse_args()
 
 
@@ -459,6 +471,26 @@ def main():
     best_mean_iou = -1.0
     best_epoch = 0
     best_iou_per_class = np.full(RUGD_NUM_CLASSES, np.nan, dtype=np.float64)
+    epoch_predictions_dir = (
+        (run_dir if run_dir is not None else SEGFORMER_B0_OUTPUT_DIR)
+        / "epoch_predictions"
+    )
+    selected_val_indices = []
+    id_to_color = None
+    prediction_epochs = set(args.prediction_epochs)
+
+    if not args.disable_epoch_predictions:
+        selected_val_indices = select_fixed_random_indices(
+            dataset_size=len(val_dataset),
+            sample_count=args.prediction_sample_count,
+            seed=args.prediction_seed,
+        )
+        save_selected_samples(
+            val_dataset,
+            selected_val_indices,
+            epoch_predictions_dir / "selected_val_samples.csv",
+        )
+        id_to_color = read_id_to_color(RUGD_SAMPLE_COLORMAP_PATH)
 
     print("Training SegFormer-B0")
     print("=" * 60)
@@ -481,6 +513,11 @@ def main():
     print(f"Loss: {args.loss}")
     if args.loss == "weighted_ce":
         print(f"Class weights: {RUGD_CLASS_WEIGHTS_NPY_PATH}")
+    if selected_val_indices:
+        print(f"Epoch prediction interval: {args.prediction_interval}")
+        print(f"Epoch prediction epochs: {sorted(prediction_epochs)}")
+        print(f"Epoch prediction samples: {selected_val_indices}")
+        print(f"Epoch predictions dir: {epoch_predictions_dir}")
     print(f"Batch logging interval: {SEGFORMER_B0_LOG_EVERY_N_BATCHES}")
     if run_dir is not None:
         print(f"Run dir: {run_dir}")
@@ -501,6 +538,11 @@ def main():
             "weight_decay": args.weight_decay,
             "scheduler": args.scheduler,
             "loss": args.loss,
+            "epoch_prediction_interval": args.prediction_interval,
+            "epoch_prediction_epochs": sorted(prediction_epochs),
+            "epoch_prediction_sample_count": args.prediction_sample_count,
+            "epoch_prediction_seed": args.prediction_seed,
+            "epoch_prediction_val_indices": selected_val_indices,
             "train_split": SEGFORMER_B0_TRAIN_SPLIT_PATH,
             "val_split": SEGFORMER_B0_VAL_SPLIT_PATH,
         },
@@ -586,6 +628,30 @@ def main():
         plot_training_curves(history)
         plot_step_loss_curve(step_history)
 
+        if (
+            selected_val_indices
+            and (
+                epoch in prediction_epochs
+                or (
+                    args.prediction_interval > 0
+                    and epoch % args.prediction_interval == 0
+                    and not prediction_epochs
+                )
+            )
+        ):
+            epoch_prediction_path = epoch_predictions_dir / f"epoch_{epoch:03d}.png"
+            save_epoch_prediction_grid(
+                model=model,
+                dataset=val_dataset,
+                indices=selected_val_indices,
+                device=device,
+                output_path=epoch_prediction_path,
+                id_to_color=id_to_color,
+                image_mean=IMAGE_MEAN,
+                image_std=IMAGE_STD,
+                title=f"SegFormer-B0 - epoch {epoch}",
+            )
+
         print(f"Train loss: {train_loss:.4f}")
         print(f"Val loss:   {val_loss:.4f}")
         print(f"Val pixel accuracy: {val_pixel_accuracy:.4f}")
@@ -594,6 +660,18 @@ def main():
         print(f"Current learning rate: {get_current_learning_rate(optimizer):.8f}")
         if is_best:
             print(f"Best checkpoint updated: {SEGFORMER_B0_BEST_CHECKPOINT_PATH}")
+        if (
+            selected_val_indices
+            and (
+                epoch in prediction_epochs
+                or (
+                    args.prediction_interval > 0
+                    and epoch % args.prediction_interval == 0
+                    and not prediction_epochs
+                )
+            )
+        ):
+            print(f"Epoch predictions saved to: {epoch_prediction_path}")
         print()
 
     print("Training finished successfully.")
@@ -605,6 +683,8 @@ def main():
     print(f"Best metrics saved to: {SEGFORMER_B0_BEST_METRICS_PATH}")
     print(f"Training curves saved to: {SEGFORMER_B0_TRAINING_CURVES_PATH}")
     print(f"Step loss curve saved to: {SEGFORMER_B0_STEP_LOSS_CURVE_PATH}")
+    if selected_val_indices:
+        print(f"Epoch predictions saved to: {epoch_predictions_dir}")
 
     copy_existing_artifacts(
         [

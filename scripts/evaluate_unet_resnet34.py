@@ -1,6 +1,7 @@
 from pathlib import Path
 import argparse
 import sys
+import time
 
 import numpy as np
 import torch
@@ -27,6 +28,11 @@ from config import (
 from datasets.rugd_dataset import RUGDDataset
 from experiment_utils import get_run_artifact_path
 from models.unet_resnet34 import UNetResNet34
+
+
+def synchronize_device(device):
+    if device.type == "cuda":
+        torch.cuda.synchronize(device)
 
 
 def update_confusion_matrix(confusion_matrix, predictions, targets, num_classes):
@@ -76,7 +82,15 @@ def get_class_status(gt_pixels, pred_pixels, true_positive):
     return "present"
 
 
-def write_metrics_file(path, pixel_accuracy, mean_iou, confusion_matrix, iou_per_class):
+def write_metrics_file(
+    path,
+    pixel_accuracy,
+    mean_iou,
+    confusion_matrix,
+    iou_per_class,
+    average_processing_time,
+    per_image_processing_times,
+):
     true_positive = np.diag(confusion_matrix)
     ground_truth_pixels = confusion_matrix.sum(axis=1)
     predicted_pixels = confusion_matrix.sum(axis=0)
@@ -86,6 +100,14 @@ def write_metrics_file(path, pixel_accuracy, mean_iou, confusion_matrix, iou_per
         file.write("metric,value\n")
         file.write(f"pixel_accuracy,{pixel_accuracy:.6f}\n")
         file.write(f"mean_iou,{mean_iou:.6f}\n")
+        file.write(f"average_processing_time_seconds,{average_processing_time:.6f}\n")
+        file.write(f"average_processing_time_ms,{average_processing_time * 1000:.3f}\n")
+        file.write("\n")
+        file.write("filename,processing_time_seconds,processing_time_ms\n")
+        for filename, processing_time in per_image_processing_times:
+            file.write(
+                f"{filename},{processing_time:.6f},{processing_time * 1000:.3f}\n"
+            )
         file.write("\n")
         file.write(
             "class_id,gt_pixels,pred_pixels,tp_pixels,union_pixels,iou,status\n"
@@ -165,6 +187,7 @@ def main():
     model.eval()
 
     confusion_matrix = np.zeros((RUGD_NUM_CLASSES, RUGD_NUM_CLASSES), dtype=np.int64)
+    per_image_processing_times = []
 
     print("Evaluation U-Net ResNet34")
     print("=" * 60)
@@ -180,9 +203,20 @@ def main():
         for batch_index, batch in enumerate(dataloader, start=1):
             images = batch["image"].to(device)
             masks = batch["mask"].cpu().numpy()
+            filenames = batch["filename"]
 
+            synchronize_device(device)
+            start_time = time.perf_counter()
             logits = model(images)
-            predictions = torch.argmax(logits, dim=1).cpu().numpy()
+            predictions = torch.argmax(logits, dim=1)
+            synchronize_device(device)
+            batch_processing_time = time.perf_counter() - start_time
+            image_processing_time = batch_processing_time / images.size(0)
+            per_image_processing_times.extend(
+                (filename, image_processing_time) for filename in filenames
+            )
+
+            predictions = predictions.cpu().numpy()
 
             update_confusion_matrix(
                 confusion_matrix=confusion_matrix,
@@ -194,11 +228,19 @@ def main():
             if batch_index % 500 == 0:
                 print(f"  evaluated batch {batch_index:04d}/{len(dataloader):04d}")
 
+    average_processing_time = float(
+        np.mean([time_value for _, time_value in per_image_processing_times])
+    )
     pixel_accuracy, mean_iou, iou_per_class = calculate_metrics(confusion_matrix)
 
     print()
     print(f"Pixel Accuracy: {pixel_accuracy:.4f}")
     print(f"Mean IoU:        {mean_iou:.4f}")
+    print(
+        "Average processing time per image: "
+        f"{average_processing_time:.6f} s "
+        f"({average_processing_time * 1000:.3f} ms)"
+    )
     print()
     print("IoU per class:")
     for class_id, class_iou in enumerate(iou_per_class):
@@ -213,6 +255,8 @@ def main():
         mean_iou=mean_iou,
         confusion_matrix=confusion_matrix,
         iou_per_class=iou_per_class,
+        average_processing_time=average_processing_time,
+        per_image_processing_times=per_image_processing_times,
     )
 
     print()

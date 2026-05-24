@@ -1,5 +1,6 @@
 from pathlib import Path
 import sys
+import time
 
 import numpy as np
 import torch
@@ -24,6 +25,11 @@ from config import (
 )
 from datasets.rugd_dataset import RUGDDataset
 from models.unet_resnet34 import UNetResNet34
+
+
+def synchronize_device(device):
+    if device.type == "cuda":
+        torch.cuda.synchronize(device)
 
 
 def update_confusion_matrix(confusion_matrix, predictions, targets, num_classes):
@@ -93,6 +99,7 @@ def main():
 
     confusion_matrix = np.zeros((RUGD_NUM_CLASSES, RUGD_NUM_CLASSES), dtype=np.int64)
     per_image_metrics = []
+    per_image_processing_times = []
 
     with torch.no_grad():
         for batch in dataloader:
@@ -100,8 +107,18 @@ def main():
             masks = batch["mask"].cpu().numpy()
             filenames = batch["filename"]
 
+            synchronize_device(device)
+            start_time = time.perf_counter()
             logits = model(images)
-            predictions = torch.argmax(logits, dim=1).cpu().numpy()
+            predictions = torch.argmax(logits, dim=1)
+            synchronize_device(device)
+            batch_processing_time = time.perf_counter() - start_time
+            image_processing_time = batch_processing_time / images.size(0)
+            per_image_processing_times.extend(
+                (filename, image_processing_time) for filename in filenames
+            )
+
+            predictions = predictions.cpu().numpy()
 
             for filename, prediction, mask in zip(filenames, predictions, masks):
                 pixel_accuracy = (prediction == mask).mean()
@@ -114,6 +131,9 @@ def main():
                 num_classes=RUGD_NUM_CLASSES,
             )
 
+    average_processing_time = float(
+        np.mean([time_value for _, time_value in per_image_processing_times])
+    )
     pixel_accuracy, mean_iou, iou_per_class = calculate_metrics(confusion_matrix)
 
     print("Evaluation U-Net ResNet34 on RUGD sample")
@@ -123,6 +143,15 @@ def main():
     print(f"Checkpoint: {UNET_RESNET34_SAMPLE_CHECKPOINT_PATH}")
     print(f"Pixel Accuracy: {pixel_accuracy:.4f}")
     print(f"Mean IoU:        {mean_iou:.4f}")
+    print(
+        "Average processing time per image: "
+        f"{average_processing_time:.6f} s "
+        f"({average_processing_time * 1000:.3f} ms)"
+    )
+    print()
+    print("Processing time per image:")
+    for filename, processing_time in per_image_processing_times:
+        print(f"  {filename}: {processing_time:.6f} s ({processing_time * 1000:.3f} ms)")
     if UNET_RESNET34_SAMPLE_SAVE_PER_IMAGE_METRICS:
         print()
         print("Pixel Accuracy per image:")
@@ -140,6 +169,13 @@ def main():
         file.write("metric,value\n")
         file.write(f"pixel_accuracy,{pixel_accuracy:.6f}\n")
         file.write(f"mean_iou,{mean_iou:.6f}\n")
+        file.write(f"average_processing_time_seconds,{average_processing_time:.6f}\n")
+        file.write(f"average_processing_time_ms,{average_processing_time * 1000:.3f}\n")
+        file.write("\nfilename,processing_time_seconds,processing_time_ms\n")
+        for filename, processing_time in per_image_processing_times:
+            file.write(
+                f"{filename},{processing_time:.6f},{processing_time * 1000:.3f}\n"
+            )
         if UNET_RESNET34_SAMPLE_SAVE_PER_IMAGE_METRICS:
             file.write("\nfilename,pixel_accuracy\n")
             for filename, image_pixel_accuracy in per_image_metrics:
