@@ -41,10 +41,6 @@ PIPELINE_STEPS = {
     "train": "train_unet_resnet34.py",
     "evaluate": "evaluate_unet_resnet34.py",
     "visualize": "visualize_unet_resnet34_predictions.py",
-    "prepare_sample": "prepare_rugd_sample.py",
-    "train_sample": "train_unet_resnet34_sample.py",
-    "evaluate_sample": "evaluate_unet_resnet34_sample.py",
-    "visualize_sample": "visualize_unet_resnet34_sample_prediction.py",
 }
 
 
@@ -59,14 +55,6 @@ FULL_PIPELINE = [
     "prepare_full",
     *MAIN_PIPELINE,
 ]
-
-SAMPLE_PIPELINE = [
-    "prepare_sample",
-    "train_sample",
-    "evaluate_sample",
-    "visualize_sample",
-]
-
 
 RUN_AWARE_STEPS = {"train", "evaluate", "visualize"}
 
@@ -106,9 +94,6 @@ def collect_steps(args):
     if args.main:
         steps.extend(MAIN_PIPELINE)
 
-    if args.sample:
-        steps.extend(SAMPLE_PIPELINE)
-
     if args.prepare_full:
         steps.append("prepare_full")
 
@@ -123,18 +108,6 @@ def collect_steps(args):
 
     if args.visualize:
         steps.append("visualize")
-
-    if args.prepare_sample:
-        steps.append("prepare_sample")
-
-    if args.train_sample:
-        steps.append("train_sample")
-
-    if args.evaluate_sample:
-        steps.append("evaluate_sample")
-
-    if args.visualize_sample:
-        steps.append("visualize_sample")
 
     ordered_unique_steps = []
     seen = set()
@@ -266,12 +239,6 @@ def parse_args():
         action="store_true",
         help="Run split creation, training, evaluation, and visualization.",
     )
-    parser.add_argument(
-        "--sample",
-        action="store_true",
-        help="Run the old sample pipeline.",
-    )
-
     parser.add_argument("--prepare-full", action="store_true")
     parser.add_argument("--create-splits", action="store_true")
     parser.add_argument("--train", action="store_true")
@@ -290,11 +257,6 @@ def parse_args():
     parser.add_argument("--prediction-sample-count", type=int, default=5)
     parser.add_argument("--prediction-seed", type=int, default=42)
     parser.add_argument("--disable-epoch-predictions", action="store_true")
-
-    parser.add_argument("--prepare-sample", action="store_true")
-    parser.add_argument("--train-sample", action="store_true")
-    parser.add_argument("--evaluate-sample", action="store_true")
-    parser.add_argument("--visualize-sample", action="store_true")
 
     return parser.parse_args()
 
