@@ -38,10 +38,6 @@ from experiment_utils import append_experiment_summary, prepare_run_dir, read_me
 PIPELINE_STEPS = {
     "prepare_full": "prepare_rugd_full.py",
     "create_splits": "create_rugd_splits.py",
-    "check_dataloader": "check_rugd_dataloader.py",
-    "check_forward": "check_unet_resnet34_forward.py",
-    "check_loss": "check_unet_resnet34_loss.py",
-    "check_train_step": "check_unet_resnet34_train_step.py",
     "train": "train_unet_resnet34.py",
     "evaluate": "evaluate_unet_resnet34.py",
     "visualize": "visualize_unet_resnet34_predictions.py",
@@ -62,13 +58,6 @@ MAIN_PIPELINE = [
 FULL_PIPELINE = [
     "prepare_full",
     *MAIN_PIPELINE,
-]
-
-CHECK_PIPELINE = [
-    "check_dataloader",
-    "check_forward",
-    "check_loss",
-    "check_train_step",
 ]
 
 SAMPLE_PIPELINE = [
@@ -117,9 +106,6 @@ def collect_steps(args):
     if args.main:
         steps.extend(MAIN_PIPELINE)
 
-    if args.checks:
-        steps.extend(CHECK_PIPELINE)
-
     if args.sample:
         steps.extend(SAMPLE_PIPELINE)
 
@@ -137,18 +123,6 @@ def collect_steps(args):
 
     if args.visualize:
         steps.append("visualize")
-
-    if args.check_dataloader:
-        steps.append("check_dataloader")
-
-    if args.check_forward:
-        steps.append("check_forward")
-
-    if args.check_loss:
-        steps.append("check_loss")
-
-    if args.check_train_step:
-        steps.append("check_train_step")
 
     if args.prepare_sample:
         steps.append("prepare_sample")
@@ -293,11 +267,6 @@ def parse_args():
         help="Run split creation, training, evaluation, and visualization.",
     )
     parser.add_argument(
-        "--checks",
-        action="store_true",
-        help="Run dataloader, forward, loss, and one-step training checks.",
-    )
-    parser.add_argument(
         "--sample",
         action="store_true",
         help="Run the old sample pipeline.",
@@ -321,11 +290,6 @@ def parse_args():
     parser.add_argument("--prediction-sample-count", type=int, default=5)
     parser.add_argument("--prediction-seed", type=int, default=42)
     parser.add_argument("--disable-epoch-predictions", action="store_true")
-
-    parser.add_argument("--check-dataloader", action="store_true")
-    parser.add_argument("--check-forward", action="store_true")
-    parser.add_argument("--check-loss", action="store_true")
-    parser.add_argument("--check-train-step", action="store_true")
 
     parser.add_argument("--prepare-sample", action="store_true")
     parser.add_argument("--train-sample", action="store_true")
