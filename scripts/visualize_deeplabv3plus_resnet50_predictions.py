@@ -30,47 +30,7 @@ from config import (
 from datasets.rugd_dataset import RUGDDataset
 from experiment_utils import get_run_artifact_path
 from models.deeplabv3plus_resnet50 import create_deeplabv3plus_resnet50
-
-
-def read_id_to_color(path):
-    id_to_color = {}
-
-    with path.open("r", encoding="utf-8") as file:
-        for line in file:
-            line = line.strip()
-
-            if not line or line.startswith("#"):
-                continue
-
-            parts = line.split()
-            class_id = int(parts[0])
-            rgb = tuple(map(int, parts[-3:]))
-            id_to_color[class_id] = rgb
-
-    return id_to_color
-
-
-def denormalize_image(image_tensor):
-    image = image_tensor.detach().cpu().numpy()
-
-    mean = np.array(IMAGE_MEAN, dtype=np.float32).reshape(3, 1, 1)
-    std = np.array(IMAGE_STD, dtype=np.float32).reshape(3, 1, 1)
-
-    image = image * std + mean
-    image = np.clip(image, 0.0, 1.0)
-    image = np.transpose(image, (1, 2, 0))
-
-    return image
-
-
-def colorize_mask(mask, id_to_color):
-    height, width = mask.shape
-    color_mask = np.zeros((height, width, 3), dtype=np.uint8)
-
-    for class_id, color in id_to_color.items():
-        color_mask[mask == class_id] = color
-
-    return color_mask
+from visualization_utils import colorize_mask, denormalize_image, read_id_to_color
 
 
 def parse_args():
@@ -158,7 +118,7 @@ def main():
             logits = model(image)
             prediction = torch.argmax(logits, dim=1).squeeze(0).cpu().numpy()
 
-            image_for_plot = denormalize_image(sample["image"])
+            image_for_plot = denormalize_image(sample["image"], IMAGE_MEAN, IMAGE_STD)
             mask_color = colorize_mask(mask, id_to_color)
             prediction_color = colorize_mask(prediction, id_to_color)
 
