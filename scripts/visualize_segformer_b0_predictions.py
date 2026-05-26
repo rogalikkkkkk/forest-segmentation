@@ -42,8 +42,6 @@ def parse_args():
 def main():
     args = parse_args()
     run_dir = args.run_dir
-    if run_dir is not None:
-        run_dir.mkdir(parents=True, exist_ok=True)
 
     checkpoint_path = get_run_artifact_path(SEGFORMER_B0_BEST_CHECKPOINT_PATH, run_dir)
     if run_dir is not None and not checkpoint_path.exists():
@@ -134,6 +132,7 @@ def main():
             pixel_accuracy = (prediction == mask).mean()
             rows_info.append((sample_index, filename, pixel_accuracy))
 
+    predictions_grid_path.parent.mkdir(parents=True, exist_ok=True)
     plt.tight_layout()
     plt.savefig(predictions_grid_path, dpi=150)
     plt.close()

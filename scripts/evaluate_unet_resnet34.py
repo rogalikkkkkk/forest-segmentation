@@ -98,8 +98,6 @@ def parse_args():
 def main():
     args = parse_args()
     run_dir = args.run_dir
-    if run_dir is not None:
-        run_dir.mkdir(parents=True, exist_ok=True)
 
     checkpoint_path = get_run_artifact_path(UNET_RESNET34_BEST_CHECKPOINT_PATH, run_dir)
     if run_dir is not None and not checkpoint_path.exists():
@@ -207,6 +205,7 @@ def main():
         else:
             print(f"  class {class_id:02d}: {class_iou:.4f}")
 
+    metrics_path.parent.mkdir(parents=True, exist_ok=True)
     write_metrics_file(
         path=metrics_path,
         pixel_accuracy=pixel_accuracy,

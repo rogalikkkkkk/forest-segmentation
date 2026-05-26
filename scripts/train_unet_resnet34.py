@@ -346,6 +346,7 @@ def parse_args():
 
 def main():
     args = parse_args()
+    UNET_RESNET34_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     run_dir = (
         prepare_run_dir(UNET_RESNET34_OUTPUT_DIR, run_dir=args.run_dir)
         if args.run_dir is not None
