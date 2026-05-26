@@ -17,14 +17,14 @@ from config import (
     IMAGE_MEAN,
     IMAGE_STD,
     IMAGE_WIDTH,
-    RUGD_NUM_CLASSES,
     RUGD_COLORMAP_PATH,
+    RUGD_IMAGES_DIR,
+    RUGD_MASKS_ID_DIR,
+    RUGD_NUM_CLASSES,
+    RUGD_TEST_SPLIT_PATH,
     UNET_RESNET34_BEST_CHECKPOINT_PATH,
     UNET_RESNET34_ENCODER_WEIGHTS,
     UNET_RESNET34_PREDICTIONS_GRID_PATH,
-    UNET_RESNET34_TEST_SPLIT_PATH,
-    UNET_RESNET34_TRAIN_IMAGES_DIR,
-    UNET_RESNET34_TRAIN_MASKS_ID_DIR,
     UNET_RESNET34_VISUALIZATION_INDICES,
 )
 from datasets.rugd_dataset import RUGDDataset
@@ -102,13 +102,13 @@ def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     dataset = RUGDDataset(
-        images_dir=UNET_RESNET34_TRAIN_IMAGES_DIR,
-        masks_dir=UNET_RESNET34_TRAIN_MASKS_ID_DIR,
+        images_dir=RUGD_IMAGES_DIR,
+        masks_dir=RUGD_MASKS_ID_DIR,
         image_height=IMAGE_HEIGHT,
         image_width=IMAGE_WIDTH,
         image_mean=IMAGE_MEAN,
         image_std=IMAGE_STD,
-        split_file=UNET_RESNET34_TEST_SPLIT_PATH,
+        split_file=RUGD_TEST_SPLIT_PATH,
     )
 
     model = UNetResNet34(
@@ -182,7 +182,7 @@ def main():
     print("=" * 60)
     print(f"Device: {device}")
     print(f"Dataset size: {len(dataset)}")
-    print(f"Test split: {UNET_RESNET34_TEST_SPLIT_PATH}")
+    print(f"Test split: {RUGD_TEST_SPLIT_PATH}")
     print(f"Best checkpoint: {checkpoint_path}")
     print(f"Saved to: {predictions_grid_path}")
     print()

@@ -17,14 +17,14 @@ from config import (
     IMAGE_MEAN,
     IMAGE_STD,
     IMAGE_WIDTH,
-    RUGD_NUM_CLASSES,
     RUGD_COLORMAP_PATH,
+    RUGD_IMAGES_DIR,
+    RUGD_MASKS_ID_DIR,
+    RUGD_NUM_CLASSES,
+    RUGD_TEST_SPLIT_PATH,
     DEEPLABV3PLUS_RESNET50_BEST_CHECKPOINT_PATH,
     DEEPLABV3PLUS_RESNET50_ENCODER_WEIGHTS,
     DEEPLABV3PLUS_RESNET50_PREDICTIONS_GRID_PATH,
-    DEEPLABV3PLUS_RESNET50_TEST_SPLIT_PATH,
-    DEEPLABV3PLUS_RESNET50_TRAIN_IMAGES_DIR,
-    DEEPLABV3PLUS_RESNET50_TRAIN_MASKS_ID_DIR,
     DEEPLABV3PLUS_RESNET50_VISUALIZATION_INDICES,
 )
 from datasets.rugd_dataset import RUGDDataset
@@ -105,13 +105,13 @@ def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     dataset = RUGDDataset(
-        images_dir=DEEPLABV3PLUS_RESNET50_TRAIN_IMAGES_DIR,
-        masks_dir=DEEPLABV3PLUS_RESNET50_TRAIN_MASKS_ID_DIR,
+        images_dir=RUGD_IMAGES_DIR,
+        masks_dir=RUGD_MASKS_ID_DIR,
         image_height=IMAGE_HEIGHT,
         image_width=IMAGE_WIDTH,
         image_mean=IMAGE_MEAN,
         image_std=IMAGE_STD,
-        split_file=DEEPLABV3PLUS_RESNET50_TEST_SPLIT_PATH,
+        split_file=RUGD_TEST_SPLIT_PATH,
     )
 
     model = create_deeplabv3plus_resnet50(
@@ -185,7 +185,7 @@ def main():
     print("=" * 60)
     print(f"Device: {device}")
     print(f"Dataset size: {len(dataset)}")
-    print(f"Test split: {DEEPLABV3PLUS_RESNET50_TEST_SPLIT_PATH}")
+    print(f"Test split: {RUGD_TEST_SPLIT_PATH}")
     print(f"Best checkpoint: {checkpoint_path}")
     print(f"Saved to: {predictions_grid_path}")
     print()

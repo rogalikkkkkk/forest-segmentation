@@ -21,8 +21,12 @@ from config import (
     IMAGE_STD,
     IMAGE_WIDTH,
     RUGD_CLASS_WEIGHTS_NPY_PATH,
-    RUGD_NUM_CLASSES,
     RUGD_COLORMAP_PATH,
+    RUGD_IMAGES_DIR,
+    RUGD_MASKS_ID_DIR,
+    RUGD_NUM_CLASSES,
+    RUGD_TRAIN_SPLIT_PATH,
+    RUGD_VAL_SPLIT_PATH,
     UNET_RESNET34_BEST_CHECKPOINT_PATH,
     UNET_RESNET34_BEST_METRICS_PATH,
     UNET_RESNET34_CHECKPOINT_PATH,
@@ -38,10 +42,6 @@ from config import (
     UNET_RESNET34_STEP_HISTORY_PATH,
     UNET_RESNET34_STEP_LOSS_CURVE_PATH,
     UNET_RESNET34_TRAINING_CURVES_PATH,
-    UNET_RESNET34_TRAIN_IMAGES_DIR,
-    UNET_RESNET34_TRAIN_MASKS_ID_DIR,
-    UNET_RESNET34_TRAIN_SPLIT_PATH,
-    UNET_RESNET34_VAL_SPLIT_PATH,
     UNET_RESNET34_WEIGHT_DECAY,
 )
 from datasets.rugd_dataset import RUGDDataset
@@ -248,10 +248,10 @@ def create_checkpoint(
         "best_mean_iou": best_mean_iou,
         "history": history,
         "iou_per_class": iou_per_class.tolist(),
-        "train_images_dir": str(UNET_RESNET34_TRAIN_IMAGES_DIR),
-        "train_masks_id_dir": str(UNET_RESNET34_TRAIN_MASKS_ID_DIR),
-        "train_split_path": str(UNET_RESNET34_TRAIN_SPLIT_PATH),
-        "val_split_path": str(UNET_RESNET34_VAL_SPLIT_PATH),
+        "train_images_dir": str(RUGD_IMAGES_DIR),
+        "train_masks_id_dir": str(RUGD_MASKS_ID_DIR),
+        "train_split_path": str(RUGD_TRAIN_SPLIT_PATH),
+        "val_split_path": str(RUGD_VAL_SPLIT_PATH),
     }
 
 
@@ -409,23 +409,23 @@ def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     train_dataset = RUGDDataset(
-        images_dir=UNET_RESNET34_TRAIN_IMAGES_DIR,
-        masks_dir=UNET_RESNET34_TRAIN_MASKS_ID_DIR,
+        images_dir=RUGD_IMAGES_DIR,
+        masks_dir=RUGD_MASKS_ID_DIR,
         image_height=IMAGE_HEIGHT,
         image_width=IMAGE_WIDTH,
         image_mean=IMAGE_MEAN,
         image_std=IMAGE_STD,
-        split_file=UNET_RESNET34_TRAIN_SPLIT_PATH,
+        split_file=RUGD_TRAIN_SPLIT_PATH,
     )
 
     val_dataset = RUGDDataset(
-        images_dir=UNET_RESNET34_TRAIN_IMAGES_DIR,
-        masks_dir=UNET_RESNET34_TRAIN_MASKS_ID_DIR,
+        images_dir=RUGD_IMAGES_DIR,
+        masks_dir=RUGD_MASKS_ID_DIR,
         image_height=IMAGE_HEIGHT,
         image_width=IMAGE_WIDTH,
         image_mean=IMAGE_MEAN,
         image_std=IMAGE_STD,
-        split_file=UNET_RESNET34_VAL_SPLIT_PATH,
+        split_file=RUGD_VAL_SPLIT_PATH,
     )
 
     train_dataloader = DataLoader(
@@ -490,10 +490,10 @@ def main():
     print("Training U-Net ResNet34")
     print("=" * 60)
     print(f"Device: {device}")
-    print(f"Images dir: {UNET_RESNET34_TRAIN_IMAGES_DIR}")
-    print(f"Masks dir: {UNET_RESNET34_TRAIN_MASKS_ID_DIR}")
-    print(f"Train split: {UNET_RESNET34_TRAIN_SPLIT_PATH}")
-    print(f"Val split: {UNET_RESNET34_VAL_SPLIT_PATH}")
+    print(f"Images dir: {RUGD_IMAGES_DIR}")
+    print(f"Masks dir: {RUGD_MASKS_ID_DIR}")
+    print(f"Train split: {RUGD_TRAIN_SPLIT_PATH}")
+    print(f"Val split: {RUGD_VAL_SPLIT_PATH}")
     print(f"Train size: {len(train_dataset)}")
     print(f"Val size: {len(val_dataset)}")
     print(f"Image size: {IMAGE_HEIGHT} x {IMAGE_WIDTH}")
@@ -538,8 +538,8 @@ def main():
             "epoch_prediction_sample_count": args.prediction_sample_count,
             "epoch_prediction_seed": args.prediction_seed,
             "epoch_prediction_val_indices": selected_val_indices,
-            "train_split": UNET_RESNET34_TRAIN_SPLIT_PATH,
-            "val_split": UNET_RESNET34_VAL_SPLIT_PATH,
+            "train_split": RUGD_TRAIN_SPLIT_PATH,
+            "val_split": RUGD_VAL_SPLIT_PATH,
         },
     )
 
