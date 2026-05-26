@@ -15,7 +15,6 @@ from config import (
     SEGFORMER_B0_BEST_METRICS_PATH,
     SEGFORMER_B0_CHECKPOINT_PATH,
     SEGFORMER_B0_HISTORY_PATH,
-    SEGFORMER_B0_LOSS_HISTORY_PATH,
     SEGFORMER_B0_METRICS_PATH,
     SEGFORMER_B0_OUTPUT_DIR,
     SEGFORMER_B0_LEARNING_RATE,
@@ -159,7 +158,6 @@ def print_results_summary(run_dir=None):
     print(f"Best checkpoint:   {SEGFORMER_B0_BEST_CHECKPOINT_PATH}")
     print(f"History:           {SEGFORMER_B0_HISTORY_PATH}")
     print(f"Step history:      {SEGFORMER_B0_STEP_HISTORY_PATH}")
-    print(f"Loss history:      {SEGFORMER_B0_LOSS_HISTORY_PATH}")
     print(f"Metrics:           {SEGFORMER_B0_METRICS_PATH}")
     print(f"Best metrics:      {SEGFORMER_B0_BEST_METRICS_PATH}")
     print(f"Training curves:   {SEGFORMER_B0_TRAINING_CURVES_PATH}")

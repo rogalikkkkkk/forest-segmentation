@@ -18,7 +18,7 @@ from config import (
     IMAGE_STD,
     IMAGE_WIDTH,
     RUGD_NUM_CLASSES,
-    RUGD_SAMPLE_COLORMAP_PATH,
+    RUGD_COLORMAP_PATH,
     SEGFORMER_B0_BEST_CHECKPOINT_PATH,
     SEGFORMER_B0_ENCODER_WEIGHTS,
     SEGFORMER_B0_PREDICTIONS_GRID_PATH,
@@ -124,7 +124,7 @@ def main():
     model.load_state_dict(checkpoint["model_state_dict"])
     model.eval()
 
-    id_to_color = read_id_to_color(RUGD_SAMPLE_COLORMAP_PATH)
+    id_to_color = read_id_to_color(RUGD_COLORMAP_PATH)
 
     valid_indices = [
         index for index in SEGFORMER_B0_VISUALIZATION_INDICES if index < len(dataset)

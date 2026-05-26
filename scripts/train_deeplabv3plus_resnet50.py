@@ -22,7 +22,7 @@ from config import (
     IMAGE_WIDTH,
     RUGD_CLASS_WEIGHTS_NPY_PATH,
     RUGD_NUM_CLASSES,
-    RUGD_SAMPLE_COLORMAP_PATH,
+    RUGD_COLORMAP_PATH,
     DEEPLABV3PLUS_RESNET50_BEST_CHECKPOINT_PATH,
     DEEPLABV3PLUS_RESNET50_BEST_METRICS_PATH,
     DEEPLABV3PLUS_RESNET50_CHECKPOINT_PATH,
@@ -31,7 +31,6 @@ from config import (
     DEEPLABV3PLUS_RESNET50_LEARNING_RATE,
     DEEPLABV3PLUS_RESNET50_LOG_EVERY_N_BATCHES,
     DEEPLABV3PLUS_RESNET50_LOSS,
-    DEEPLABV3PLUS_RESNET50_LOSS_HISTORY_PATH,
     DEEPLABV3PLUS_RESNET50_NUM_EPOCHS,
     DEEPLABV3PLUS_RESNET50_OUTPUT_DIR,
     DEEPLABV3PLUS_RESNET50_OPTIMIZER,
@@ -271,10 +270,6 @@ def save_history(history):
         writer.writeheader()
         writer.writerows(history)
 
-    with DEEPLABV3PLUS_RESNET50_LOSS_HISTORY_PATH.open("w", encoding="utf-8") as file:
-        for row in history:
-            file.write(f"{row['epoch']},{row['train_loss']:.6f}\n")
-
 
 def save_step_history(step_history):
     fieldnames = ["global_step", "epoch", "batch", "train_loss"]
@@ -490,7 +485,7 @@ def main():
             selected_val_indices,
             epoch_predictions_dir / "selected_val_samples.csv",
         )
-        id_to_color = read_id_to_color(RUGD_SAMPLE_COLORMAP_PATH)
+        id_to_color = read_id_to_color(RUGD_COLORMAP_PATH)
 
     print("Training DeepLabV3+ ResNet50")
     print("=" * 60)
@@ -679,7 +674,6 @@ def main():
     print(f"Best checkpoint saved to: {DEEPLABV3PLUS_RESNET50_BEST_CHECKPOINT_PATH}")
     print(f"History saved to: {DEEPLABV3PLUS_RESNET50_HISTORY_PATH}")
     print(f"Step history saved to: {DEEPLABV3PLUS_RESNET50_STEP_HISTORY_PATH}")
-    print(f"Loss history saved to: {DEEPLABV3PLUS_RESNET50_LOSS_HISTORY_PATH}")
     print(f"Best metrics saved to: {DEEPLABV3PLUS_RESNET50_BEST_METRICS_PATH}")
     print(f"Training curves saved to: {DEEPLABV3PLUS_RESNET50_TRAINING_CURVES_PATH}")
     print(f"Step loss curve saved to: {DEEPLABV3PLUS_RESNET50_STEP_LOSS_CURVE_PATH}")
@@ -692,7 +686,6 @@ def main():
             DEEPLABV3PLUS_RESNET50_BEST_CHECKPOINT_PATH,
             DEEPLABV3PLUS_RESNET50_HISTORY_PATH,
             DEEPLABV3PLUS_RESNET50_STEP_HISTORY_PATH,
-            DEEPLABV3PLUS_RESNET50_LOSS_HISTORY_PATH,
             DEEPLABV3PLUS_RESNET50_BEST_METRICS_PATH,
             DEEPLABV3PLUS_RESNET50_TRAINING_CURVES_PATH,
             DEEPLABV3PLUS_RESNET50_STEP_LOSS_CURVE_PATH,

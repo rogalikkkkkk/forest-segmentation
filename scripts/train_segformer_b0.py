@@ -22,7 +22,7 @@ from config import (
     IMAGE_WIDTH,
     RUGD_CLASS_WEIGHTS_NPY_PATH,
     RUGD_NUM_CLASSES,
-    RUGD_SAMPLE_COLORMAP_PATH,
+    RUGD_COLORMAP_PATH,
     SEGFORMER_B0_BEST_CHECKPOINT_PATH,
     SEGFORMER_B0_BEST_METRICS_PATH,
     SEGFORMER_B0_CHECKPOINT_PATH,
@@ -31,7 +31,6 @@ from config import (
     SEGFORMER_B0_LEARNING_RATE,
     SEGFORMER_B0_LOG_EVERY_N_BATCHES,
     SEGFORMER_B0_LOSS,
-    SEGFORMER_B0_LOSS_HISTORY_PATH,
     SEGFORMER_B0_NUM_EPOCHS,
     SEGFORMER_B0_OUTPUT_DIR,
     SEGFORMER_B0_OPTIMIZER,
@@ -271,10 +270,6 @@ def save_history(history):
         writer.writeheader()
         writer.writerows(history)
 
-    with SEGFORMER_B0_LOSS_HISTORY_PATH.open("w", encoding="utf-8") as file:
-        for row in history:
-            file.write(f"{row['epoch']},{row['train_loss']:.6f}\n")
-
 
 def save_step_history(step_history):
     fieldnames = ["global_step", "epoch", "batch", "train_loss"]
@@ -490,7 +485,7 @@ def main():
             selected_val_indices,
             epoch_predictions_dir / "selected_val_samples.csv",
         )
-        id_to_color = read_id_to_color(RUGD_SAMPLE_COLORMAP_PATH)
+        id_to_color = read_id_to_color(RUGD_COLORMAP_PATH)
 
     print("Training SegFormer-B0")
     print("=" * 60)
@@ -679,7 +674,6 @@ def main():
     print(f"Best checkpoint saved to: {SEGFORMER_B0_BEST_CHECKPOINT_PATH}")
     print(f"History saved to: {SEGFORMER_B0_HISTORY_PATH}")
     print(f"Step history saved to: {SEGFORMER_B0_STEP_HISTORY_PATH}")
-    print(f"Loss history saved to: {SEGFORMER_B0_LOSS_HISTORY_PATH}")
     print(f"Best metrics saved to: {SEGFORMER_B0_BEST_METRICS_PATH}")
     print(f"Training curves saved to: {SEGFORMER_B0_TRAINING_CURVES_PATH}")
     print(f"Step loss curve saved to: {SEGFORMER_B0_STEP_LOSS_CURVE_PATH}")
@@ -692,7 +686,6 @@ def main():
             SEGFORMER_B0_BEST_CHECKPOINT_PATH,
             SEGFORMER_B0_HISTORY_PATH,
             SEGFORMER_B0_STEP_HISTORY_PATH,
-            SEGFORMER_B0_LOSS_HISTORY_PATH,
             SEGFORMER_B0_BEST_METRICS_PATH,
             SEGFORMER_B0_TRAINING_CURVES_PATH,
             SEGFORMER_B0_STEP_LOSS_CURVE_PATH,

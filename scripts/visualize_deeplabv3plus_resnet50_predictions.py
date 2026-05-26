@@ -18,7 +18,7 @@ from config import (
     IMAGE_STD,
     IMAGE_WIDTH,
     RUGD_NUM_CLASSES,
-    RUGD_SAMPLE_COLORMAP_PATH,
+    RUGD_COLORMAP_PATH,
     DEEPLABV3PLUS_RESNET50_BEST_CHECKPOINT_PATH,
     DEEPLABV3PLUS_RESNET50_ENCODER_WEIGHTS,
     DEEPLABV3PLUS_RESNET50_PREDICTIONS_GRID_PATH,
@@ -127,7 +127,7 @@ def main():
     model.load_state_dict(checkpoint["model_state_dict"])
     model.eval()
 
-    id_to_color = read_id_to_color(RUGD_SAMPLE_COLORMAP_PATH)
+    id_to_color = read_id_to_color(RUGD_COLORMAP_PATH)
 
     valid_indices = [
         index for index in DEEPLABV3PLUS_RESNET50_VISUALIZATION_INDICES if index < len(dataset)

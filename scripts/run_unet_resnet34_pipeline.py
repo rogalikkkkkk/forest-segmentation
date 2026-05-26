@@ -18,7 +18,6 @@ from config import (
     RUGD_VAL_SPLIT_PATH,
     UNET_RESNET34_CHECKPOINT_PATH,
     UNET_RESNET34_HISTORY_PATH,
-    UNET_RESNET34_LOSS_HISTORY_PATH,
     UNET_RESNET34_METRICS_PATH,
     UNET_RESNET34_OUTPUT_DIR,
     UNET_RESNET34_LEARNING_RATE,
@@ -159,7 +158,6 @@ def print_results_summary(run_dir=None):
     print(f"Best checkpoint:   {UNET_RESNET34_BEST_CHECKPOINT_PATH}")
     print(f"History:           {UNET_RESNET34_HISTORY_PATH}")
     print(f"Step history:      {UNET_RESNET34_STEP_HISTORY_PATH}")
-    print(f"Loss history:      {UNET_RESNET34_LOSS_HISTORY_PATH}")
     print(f"Metrics:           {UNET_RESNET34_METRICS_PATH}")
     print(f"Best metrics:      {UNET_RESNET34_BEST_METRICS_PATH}")
     print(f"Training curves:   {UNET_RESNET34_TRAINING_CURVES_PATH}")
