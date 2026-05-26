@@ -45,7 +45,7 @@ from config import (
     SEGFORMER_B0_WEIGHT_DECAY,
 )
 from datasets.rugd_dataset import RUGDDataset
-from experiment_utils import copy_existing_artifacts, prepare_run_dir, save_config_snapshot
+from experiment_utils import prepare_run_dir, save_config_snapshot
 from losses import SUPPORTED_LOSSES, create_loss
 from models.segformer_b0 import create_segformer_b0
 from segmentation_metrics import (
@@ -203,7 +203,7 @@ def create_checkpoint(
     }
 
 
-def save_history(history):
+def save_history(history, output_path):
     fieldnames = [
         "epoch",
         "train_loss",
@@ -213,16 +213,16 @@ def save_history(history):
         "is_best",
     ]
 
-    with SEGFORMER_B0_HISTORY_PATH.open("w", encoding="utf-8", newline="") as file:
+    with output_path.open("w", encoding="utf-8", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(history)
 
 
-def save_step_history(step_history):
+def save_step_history(step_history, output_path):
     fieldnames = ["global_step", "epoch", "batch", "train_loss"]
 
-    with SEGFORMER_B0_STEP_HISTORY_PATH.open(
+    with output_path.open(
         "w",
         encoding="utf-8",
         newline="",
@@ -239,6 +239,7 @@ def save_best_metrics_with_class_statistics(
     val_loss,
     iou_per_class,
     confusion_matrix,
+    output_path,
 ):
     (
         ground_truth_pixels,
@@ -247,7 +248,7 @@ def save_best_metrics_with_class_statistics(
         union_pixels,
     ) = get_class_statistics(confusion_matrix)
 
-    with SEGFORMER_B0_BEST_METRICS_PATH.open("w", encoding="utf-8") as file:
+    with output_path.open("w", encoding="utf-8") as file:
         file.write("metric,value\n")
         file.write(f"best_epoch,{epoch}\n")
         file.write(f"val_loss,{val_loss:.6f}\n")
@@ -276,7 +277,7 @@ def save_best_metrics_with_class_statistics(
             )
 
 
-def plot_training_curves(history):
+def plot_training_curves(history, output_path):
     epochs = [row["epoch"] for row in history]
     train_loss = [row["train_loss"] for row in history]
     val_loss = [row["val_loss"] for row in history]
@@ -303,11 +304,11 @@ def plot_training_curves(history):
     axes[1].legend()
 
     plt.tight_layout()
-    plt.savefig(SEGFORMER_B0_TRAINING_CURVES_PATH, dpi=150)
+    plt.savefig(output_path, dpi=150)
     plt.close()
 
 
-def plot_step_loss_curve(step_history):
+def plot_step_loss_curve(step_history, output_path):
     if not step_history:
         return
 
@@ -323,7 +324,7 @@ def plot_step_loss_curve(step_history):
     ax.legend()
 
     plt.tight_layout()
-    plt.savefig(SEGFORMER_B0_STEP_LOSS_CURVE_PATH, dpi=150)
+    plt.savefig(output_path, dpi=150)
     plt.close()
 
 
@@ -346,12 +347,20 @@ def parse_args():
 
 def main():
     args = parse_args()
-    SEGFORMER_B0_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     run_dir = (
         prepare_run_dir(SEGFORMER_B0_OUTPUT_DIR, run_dir=args.run_dir)
         if args.run_dir is not None
         else None
     )
+    artifacts_dir = run_dir if run_dir is not None else SEGFORMER_B0_OUTPUT_DIR
+    artifacts_dir.mkdir(parents=True, exist_ok=True)
+    checkpoint_path = artifacts_dir / SEGFORMER_B0_CHECKPOINT_PATH.name
+    best_checkpoint_path = artifacts_dir / SEGFORMER_B0_BEST_CHECKPOINT_PATH.name
+    history_path = artifacts_dir / SEGFORMER_B0_HISTORY_PATH.name
+    step_history_path = artifacts_dir / SEGFORMER_B0_STEP_HISTORY_PATH.name
+    best_metrics_path = artifacts_dir / SEGFORMER_B0_BEST_METRICS_PATH.name
+    training_curves_path = artifacts_dir / SEGFORMER_B0_TRAINING_CURVES_PATH.name
+    step_loss_curve_path = artifacts_dir / SEGFORMER_B0_STEP_LOSS_CURVE_PATH.name
 
     torch.manual_seed(42)
 
@@ -415,10 +424,7 @@ def main():
     best_mean_iou = -1.0
     best_epoch = 0
     best_iou_per_class = np.full(RUGD_NUM_CLASSES, np.nan, dtype=np.float64)
-    epoch_predictions_dir = (
-        (run_dir if run_dir is not None else SEGFORMER_B0_OUTPUT_DIR)
-        / "epoch_predictions"
-    )
+    epoch_predictions_dir = artifacts_dir / "epoch_predictions"
     selected_val_indices = []
     id_to_color = None
     prediction_epochs = set(args.prediction_epochs)
@@ -554,10 +560,10 @@ def main():
             loss_name=args.loss,
         )
 
-        torch.save(checkpoint, SEGFORMER_B0_CHECKPOINT_PATH)
+        torch.save(checkpoint, checkpoint_path)
 
         if is_best:
-            torch.save(checkpoint, SEGFORMER_B0_BEST_CHECKPOINT_PATH)
+            torch.save(checkpoint, best_checkpoint_path)
             save_best_metrics_with_class_statistics(
                 epoch=best_epoch,
                 mean_iou=best_mean_iou,
@@ -565,12 +571,13 @@ def main():
                 val_loss=val_loss,
                 iou_per_class=best_iou_per_class,
                 confusion_matrix=val_confusion_matrix,
+                output_path=best_metrics_path,
             )
 
-        save_history(history)
-        save_step_history(step_history)
-        plot_training_curves(history)
-        plot_step_loss_curve(step_history)
+        save_history(history, history_path)
+        save_step_history(step_history, step_history_path)
+        plot_training_curves(history, training_curves_path)
+        plot_step_loss_curve(step_history, step_loss_curve_path)
 
         if (
             selected_val_indices
@@ -603,7 +610,7 @@ def main():
         print(f"Best val mIoU: {best_mean_iou:.4f} at epoch {best_epoch}")
         print(f"Current learning rate: {get_current_learning_rate(optimizer):.8f}")
         if is_best:
-            print(f"Best checkpoint updated: {SEGFORMER_B0_BEST_CHECKPOINT_PATH}")
+            print(f"Best checkpoint updated: {best_checkpoint_path}")
         if (
             selected_val_indices
             and (
@@ -619,30 +626,15 @@ def main():
         print()
 
     print("Training finished successfully.")
-    print(f"Last checkpoint saved to: {SEGFORMER_B0_CHECKPOINT_PATH}")
-    print(f"Best checkpoint saved to: {SEGFORMER_B0_BEST_CHECKPOINT_PATH}")
-    print(f"History saved to: {SEGFORMER_B0_HISTORY_PATH}")
-    print(f"Step history saved to: {SEGFORMER_B0_STEP_HISTORY_PATH}")
-    print(f"Best metrics saved to: {SEGFORMER_B0_BEST_METRICS_PATH}")
-    print(f"Training curves saved to: {SEGFORMER_B0_TRAINING_CURVES_PATH}")
-    print(f"Step loss curve saved to: {SEGFORMER_B0_STEP_LOSS_CURVE_PATH}")
+    print(f"Last checkpoint saved to: {checkpoint_path}")
+    print(f"Best checkpoint saved to: {best_checkpoint_path}")
+    print(f"History saved to: {history_path}")
+    print(f"Step history saved to: {step_history_path}")
+    print(f"Best metrics saved to: {best_metrics_path}")
+    print(f"Training curves saved to: {training_curves_path}")
+    print(f"Step loss curve saved to: {step_loss_curve_path}")
     if selected_val_indices:
         print(f"Epoch predictions saved to: {epoch_predictions_dir}")
-
-    copy_existing_artifacts(
-        [
-            SEGFORMER_B0_CHECKPOINT_PATH,
-            SEGFORMER_B0_BEST_CHECKPOINT_PATH,
-            SEGFORMER_B0_HISTORY_PATH,
-            SEGFORMER_B0_STEP_HISTORY_PATH,
-            SEGFORMER_B0_BEST_METRICS_PATH,
-            SEGFORMER_B0_TRAINING_CURVES_PATH,
-            SEGFORMER_B0_STEP_LOSS_CURVE_PATH,
-        ],
-        run_dir,
-    )
-    if run_dir is not None:
-        print(f"Run artifacts saved to: {run_dir}")
 
 
 if __name__ == "__main__":

@@ -31,7 +31,12 @@ from config import (
     RUGD_TRAIN_SPLIT_PATH,
     RUGD_VAL_SPLIT_PATH,
 )
-from experiment_utils import append_experiment_summary, prepare_run_dir, read_metric_value
+from experiment_utils import (
+    append_experiment_summary,
+    get_run_artifact_path,
+    prepare_run_dir,
+    read_metric_value,
+)
 
 
 PIPELINE_STEPS = {
@@ -147,6 +152,28 @@ def append_run_summary(run_dir, args):
 
 
 def print_results_summary(run_dir=None):
+    checkpoint_path = get_run_artifact_path(SEGFORMER_B0_CHECKPOINT_PATH, run_dir)
+    best_checkpoint_path = get_run_artifact_path(
+        SEGFORMER_B0_BEST_CHECKPOINT_PATH,
+        run_dir,
+    )
+    history_path = get_run_artifact_path(SEGFORMER_B0_HISTORY_PATH, run_dir)
+    step_history_path = get_run_artifact_path(SEGFORMER_B0_STEP_HISTORY_PATH, run_dir)
+    metrics_path = get_run_artifact_path(SEGFORMER_B0_METRICS_PATH, run_dir)
+    best_metrics_path = get_run_artifact_path(SEGFORMER_B0_BEST_METRICS_PATH, run_dir)
+    training_curves_path = get_run_artifact_path(
+        SEGFORMER_B0_TRAINING_CURVES_PATH,
+        run_dir,
+    )
+    step_loss_curve_path = get_run_artifact_path(
+        SEGFORMER_B0_STEP_LOSS_CURVE_PATH,
+        run_dir,
+    )
+    predictions_grid_path = get_run_artifact_path(
+        SEGFORMER_B0_PREDICTIONS_GRID_PATH,
+        run_dir,
+    )
+
     print()
     print("=" * 80)
     print("SegFormer-B0 pipeline result paths")
@@ -154,15 +181,15 @@ def print_results_summary(run_dir=None):
     print(f"Train split:       {RUGD_TRAIN_SPLIT_PATH}")
     print(f"Val split:         {RUGD_VAL_SPLIT_PATH}")
     print(f"Test split:        {RUGD_TEST_SPLIT_PATH}")
-    print(f"Last checkpoint:   {SEGFORMER_B0_CHECKPOINT_PATH}")
-    print(f"Best checkpoint:   {SEGFORMER_B0_BEST_CHECKPOINT_PATH}")
-    print(f"History:           {SEGFORMER_B0_HISTORY_PATH}")
-    print(f"Step history:      {SEGFORMER_B0_STEP_HISTORY_PATH}")
-    print(f"Metrics:           {SEGFORMER_B0_METRICS_PATH}")
-    print(f"Best metrics:      {SEGFORMER_B0_BEST_METRICS_PATH}")
-    print(f"Training curves:   {SEGFORMER_B0_TRAINING_CURVES_PATH}")
-    print(f"Step loss curve:   {SEGFORMER_B0_STEP_LOSS_CURVE_PATH}")
-    print(f"Predictions grid:  {SEGFORMER_B0_PREDICTIONS_GRID_PATH}")
+    print(f"Last checkpoint:   {checkpoint_path}")
+    print(f"Best checkpoint:   {best_checkpoint_path}")
+    print(f"History:           {history_path}")
+    print(f"Step history:      {step_history_path}")
+    print(f"Metrics:           {metrics_path}")
+    print(f"Best metrics:      {best_metrics_path}")
+    print(f"Training curves:   {training_curves_path}")
+    print(f"Step loss curve:   {step_loss_curve_path}")
+    print(f"Predictions grid:  {predictions_grid_path}")
     if run_dir is not None:
         print(f"Run dir:           {run_dir}")
         print(f"Summary CSV:       {EXPERIMENTS_SUMMARY_PATH}")

@@ -3,7 +3,6 @@ from __future__ import annotations
 from datetime import datetime
 from pathlib import Path
 import csv
-import shutil
 
 
 def create_run_id():
@@ -25,18 +24,6 @@ def get_run_artifact_path(default_path, run_dir):
         return Path(default_path)
 
     return Path(run_dir) / Path(default_path).name
-
-
-def copy_existing_artifacts(paths, run_dir):
-    if run_dir is None:
-        return
-
-    Path(run_dir).mkdir(parents=True, exist_ok=True)
-
-    for path in paths:
-        source_path = Path(path)
-        if source_path.exists():
-            shutil.copy2(source_path, Path(run_dir) / source_path.name)
 
 
 def save_config_snapshot(run_dir, values):
