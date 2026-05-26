@@ -47,14 +47,17 @@ def main():
         DEEPLABV3PLUS_RESNET50_BEST_CHECKPOINT_PATH,
         run_dir,
     )
-    if run_dir is not None and not checkpoint_path.exists():
-        checkpoint_path = DEEPLABV3PLUS_RESNET50_BEST_CHECKPOINT_PATH
     predictions_grid_path = get_run_artifact_path(
         DEEPLABV3PLUS_RESNET50_PREDICTIONS_GRID_PATH,
         run_dir,
     )
 
     if not checkpoint_path.exists():
+        if run_dir is not None:
+            raise FileNotFoundError(
+                f"Best checkpoint not found in run directory: {checkpoint_path}. "
+                "Run scripts/train_deeplabv3plus_resnet50.py with the same --run-dir first."
+            )
         raise FileNotFoundError(
             f"Best checkpoint not found: {checkpoint_path}. "
             "Run scripts/train_deeplabv3plus_resnet50.py first."

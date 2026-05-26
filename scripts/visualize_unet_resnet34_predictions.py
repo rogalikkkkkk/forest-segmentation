@@ -44,14 +44,17 @@ def main():
     run_dir = args.run_dir
 
     checkpoint_path = get_run_artifact_path(UNET_RESNET34_BEST_CHECKPOINT_PATH, run_dir)
-    if run_dir is not None and not checkpoint_path.exists():
-        checkpoint_path = UNET_RESNET34_BEST_CHECKPOINT_PATH
     predictions_grid_path = get_run_artifact_path(
         UNET_RESNET34_PREDICTIONS_GRID_PATH,
         run_dir,
     )
 
     if not checkpoint_path.exists():
+        if run_dir is not None:
+            raise FileNotFoundError(
+                f"Best checkpoint not found in run directory: {checkpoint_path}. "
+                "Run scripts/train_unet_resnet34.py with the same --run-dir first."
+            )
         raise FileNotFoundError(
             f"Best checkpoint not found: {checkpoint_path}. "
             "Run scripts/train_unet_resnet34.py first."

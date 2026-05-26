@@ -96,11 +96,14 @@ def evaluate_model(
     run_dir=None,
 ):
     checkpoint_path = get_run_artifact_path(default_best_checkpoint_path, run_dir)
-    if run_dir is not None and not checkpoint_path.exists():
-        checkpoint_path = default_best_checkpoint_path
     metrics_path = get_run_artifact_path(default_metrics_path, run_dir)
 
     if not checkpoint_path.exists():
+        if run_dir is not None:
+            raise FileNotFoundError(
+                f"Best checkpoint not found in run directory: {checkpoint_path}. "
+                f"Run scripts/{train_script_name} with the same --run-dir first."
+            )
         raise FileNotFoundError(
             f"Best checkpoint not found: {checkpoint_path}. "
             f"Run scripts/{train_script_name} first."
