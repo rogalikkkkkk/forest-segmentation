@@ -12,13 +12,7 @@ SRC_DIR = PROJECT_ROOT / "src"
 sys.path.append(str(SRC_DIR))
 
 from experiment_utils import read_metric_value
-
-
-MODEL_PIPELINES = {
-    "unet_resnet34": "run_unet_resnet34_pipeline.py",
-    "deeplabv3plus_resnet50": "run_deeplabv3plus_resnet50_pipeline.py",
-    "segformer_b0": "run_segformer_b0_pipeline.py",
-}
+from model_specs import MODEL_SPECS_BY_NAME, ModelSpec
 
 
 def run_command(command):
@@ -31,8 +25,8 @@ def run_command(command):
     subprocess.run(command, cwd=PROJECT_ROOT, check=True)
 
 
-def run_model(model_name, run_id, epochs, skip_visualize):
-    pipeline_path = SCRIPTS_DIR / MODEL_PIPELINES[model_name]
+def run_model(model_spec: ModelSpec, run_id, epochs, skip_visualize):
+    pipeline_path = SCRIPTS_DIR / model_spec.pipeline_script_name
     command = [
         sys.executable,
         str(pipeline_path),
@@ -52,17 +46,17 @@ def run_model(model_name, run_id, epochs, skip_visualize):
     run_command(command)
 
 
-def get_run_dir(model_name, run_id):
-    return PROJECT_ROOT / "outputs" / model_name / "runs" / run_id
+def get_run_dir(model_spec: ModelSpec, run_id):
+    return model_spec.output_dir / "runs" / run_id
 
 
-def collect_result(model_name, run_id):
-    run_dir = get_run_dir(model_name, run_id)
+def collect_result(model_spec: ModelSpec, run_id):
+    run_dir = get_run_dir(model_spec, run_id)
     best_metrics_path = run_dir / "best_metrics.txt"
     metrics_path = run_dir / "metrics.txt"
 
     return {
-        "model": model_name,
+        "model": model_spec.name,
         "run_id": run_id,
         "run_dir": str(run_dir),
         "loss": "weighted_ce",
@@ -110,8 +104,8 @@ def parse_args():
     parser.add_argument(
         "--models",
         nargs="+",
-        choices=list(MODEL_PIPELINES.keys()),
-        default=list(MODEL_PIPELINES.keys()),
+        choices=list(MODEL_SPECS_BY_NAME.keys()),
+        default=list(MODEL_SPECS_BY_NAME.keys()),
     )
     parser.add_argument("--skip-visualize", action="store_true")
     parser.add_argument("--skip-compute-weights", action="store_true")
@@ -135,14 +129,15 @@ def main():
 
     results = []
     for model_name in args.models:
+        model_spec = MODEL_SPECS_BY_NAME[model_name]
         run_id = f"{experiment_id}_{model_name}"
         run_model(
-            model_name=model_name,
+            model_spec=model_spec,
             run_id=run_id,
             epochs=args.epochs,
             skip_visualize=args.skip_visualize,
         )
-        result = collect_result(model_name, run_id)
+        result = collect_result(model_spec, run_id)
         results.append(result)
         results_path = save_results(results, output_dir)
 

@@ -57,6 +57,7 @@ from config import (
 class ModelSpec:
     name: str
     display_name: str
+    pipeline_script_name: str
     train_script_name: str
     evaluate_script_name: str
     visualize_script_name: str
@@ -81,6 +82,7 @@ class ModelSpec:
 UNET_RESNET34_SPEC = ModelSpec(
     name="unet_resnet34",
     display_name="U-Net ResNet34",
+    pipeline_script_name="run_unet_resnet34_pipeline.py",
     train_script_name="train_unet_resnet34.py",
     evaluate_script_name="evaluate_unet_resnet34.py",
     visualize_script_name="visualize_unet_resnet34_predictions.py",
@@ -106,6 +108,7 @@ UNET_RESNET34_SPEC = ModelSpec(
 SEGFORMER_B0_SPEC = ModelSpec(
     name="segformer_b0",
     display_name="SegFormer-B0",
+    pipeline_script_name="run_segformer_b0_pipeline.py",
     train_script_name="train_segformer_b0.py",
     evaluate_script_name="evaluate_segformer_b0.py",
     visualize_script_name="visualize_segformer_b0_predictions.py",
@@ -131,6 +134,7 @@ SEGFORMER_B0_SPEC = ModelSpec(
 DEEPLABV3PLUS_RESNET50_SPEC = ModelSpec(
     name="deeplabv3plus_resnet50",
     display_name="DeepLabV3+ ResNet50",
+    pipeline_script_name="run_deeplabv3plus_resnet50_pipeline.py",
     train_script_name="train_deeplabv3plus_resnet50.py",
     evaluate_script_name="evaluate_deeplabv3plus_resnet50.py",
     visualize_script_name="visualize_deeplabv3plus_resnet50_predictions.py",
@@ -151,3 +155,17 @@ DEEPLABV3PLUS_RESNET50_SPEC = ModelSpec(
     scheduler=DEEPLABV3PLUS_RESNET50_SCHEDULER,
     loss=DEEPLABV3PLUS_RESNET50_LOSS,
 )
+
+
+MODEL_SPECS_BY_NAME = {
+    UNET_RESNET34_SPEC.name: UNET_RESNET34_SPEC,
+    DEEPLABV3PLUS_RESNET50_SPEC.name: DEEPLABV3PLUS_RESNET50_SPEC,
+    SEGFORMER_B0_SPEC.name: SEGFORMER_B0_SPEC,
+}
+
+
+MODEL_SPECS_BY_ALIAS = {
+    "unet": UNET_RESNET34_SPEC,
+    "deeplab": DEEPLABV3PLUS_RESNET50_SPEC,
+    "segformer": SEGFORMER_B0_SPEC,
+}
