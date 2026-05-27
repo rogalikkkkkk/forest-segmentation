@@ -178,6 +178,26 @@ def print_results_summary(model_spec: ModelSpec, run_dir=None):
         print(f"Summary CSV:       {EXPERIMENTS_SUMMARY_PATH}")
 
 
+def resolve_run_dir(model_spec: ModelSpec, steps, args):
+    if "train" in steps:
+        return prepare_run_dir(
+            model_spec.output_dir,
+            run_id=args.run_id,
+            run_dir=args.run_dir,
+        )
+
+    if not any(step in RUN_AWARE_STEPS for step in steps):
+        return None
+
+    if args.run_dir is not None:
+        return Path(args.run_dir)
+
+    if args.run_id is not None:
+        return model_spec.output_dir / "runs" / args.run_id
+
+    return None
+
+
 def run_pipeline(model_spec: ModelSpec, args):
     steps = collect_steps(args)
 
@@ -185,13 +205,7 @@ def run_pipeline(model_spec: ModelSpec, args):
         print("No steps selected. Use --main, --full, --train, --evaluate, or --help.")
         return 0
 
-    run_dir = None
-    if any(step in RUN_AWARE_STEPS for step in steps):
-        run_dir = prepare_run_dir(
-            model_spec.output_dir,
-            run_id=args.run_id,
-            run_dir=args.run_dir,
-        )
+    run_dir = resolve_run_dir(model_spec, steps, args)
 
     train_args = [
         "--epochs",
