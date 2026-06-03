@@ -12,25 +12,7 @@ SRC_DIR = PROJECT_ROOT / "src"
 sys.path.append(str(SRC_DIR))
 
 from experiment_utils import read_metric_value
-
-
-MODELS = {
-    "unet": {
-        "name": "unet_resnet34",
-        "pipeline": "run_unet_resnet34_pipeline.py",
-        "output_dir": PROJECT_ROOT / "outputs" / "unet_resnet34",
-    },
-    "deeplab": {
-        "name": "deeplabv3plus_resnet50",
-        "pipeline": "run_deeplabv3plus_resnet50_pipeline.py",
-        "output_dir": PROJECT_ROOT / "outputs" / "deeplabv3plus_resnet50",
-    },
-    "segformer": {
-        "name": "segformer_b0",
-        "pipeline": "run_segformer_b0_pipeline.py",
-        "output_dir": PROJECT_ROOT / "outputs" / "segformer_b0",
-    },
-}
+from model_specs import MODEL_SPECS_BY_ALIAS, ModelSpec
 
 
 BASE_PARAMS = {
@@ -76,9 +58,9 @@ def build_experiment_plan(parameter):
 
 def select_models(model_arg):
     if model_arg == "all":
-        return list(MODELS.items())
+        return list(MODEL_SPECS_BY_ALIAS.items())
 
-    return [(model_arg, MODELS[model_arg])]
+    return [(model_arg, MODEL_SPECS_BY_ALIAS[model_arg])]
 
 
 def merge_params(variant):
@@ -102,10 +84,10 @@ def build_run_id(prefix, model_name, parameter_name, variant_label, epochs, para
     )
 
 
-def build_command(model_info, run_id, epochs, params, skip_visualize):
+def build_command(model_spec: ModelSpec, run_id, epochs, params, skip_visualize):
     command = [
         sys.executable,
-        str(SCRIPTS_DIR / model_info["pipeline"]),
+        str(SCRIPTS_DIR / model_spec.pipeline_script_name),
         "--train",
         "--evaluate",
         "--run-id",
@@ -182,7 +164,7 @@ def parse_args():
     )
     parser.add_argument(
         "--models",
-        choices=["all", "unet", "deeplab", "segformer"],
+        choices=["all", *MODEL_SPECS_BY_ALIAS.keys()],
         default="all",
     )
     parser.add_argument("--epochs", type=int, default=10)
@@ -236,18 +218,18 @@ def main():
         for parameter_name, variant in plan:
             params = merge_params(variant)
 
-            for model_key, model_info in selected_models:
+            for _, model_spec in selected_models:
                 run_id = build_run_id(
                     prefix=prefix,
-                    model_name=model_info["name"],
+                    model_name=model_spec.name,
                     parameter_name=parameter_name,
                     variant_label=variant["label"],
                     epochs=args.epochs,
                     params=params,
                 )
-                run_dir = model_info["output_dir"] / "runs" / run_id
+                run_dir = model_spec.output_dir / "runs" / run_id
                 command = build_command(
-                    model_info=model_info,
+                    model_spec=model_spec,
                     run_id=run_id,
                     epochs=args.epochs,
                     params=params,
@@ -258,7 +240,7 @@ def main():
                     "status": "planned",
                     "parameter": parameter_name,
                     "variant": variant["label"],
-                    "model": model_info["name"],
+                    "model": model_spec.name,
                     "epochs": args.epochs,
                     "learning_rate": params["lr"],
                     "optimizer": params["optimizer"],

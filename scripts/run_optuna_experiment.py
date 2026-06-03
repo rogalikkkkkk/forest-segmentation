@@ -15,32 +15,14 @@ SRC_DIR = PROJECT_ROOT / "src"
 sys.path.append(str(SRC_DIR))
 
 from experiment_utils import read_metric_value
-
-
-MODELS = {
-    "unet": {
-        "name": "unet_resnet34",
-        "pipeline": "run_unet_resnet34_pipeline.py",
-        "output_dir": PROJECT_ROOT / "outputs" / "unet_resnet34",
-    },
-    "deeplab": {
-        "name": "deeplabv3plus_resnet50",
-        "pipeline": "run_deeplabv3plus_resnet50_pipeline.py",
-        "output_dir": PROJECT_ROOT / "outputs" / "deeplabv3plus_resnet50",
-    },
-    "segformer": {
-        "name": "segformer_b0",
-        "pipeline": "run_segformer_b0_pipeline.py",
-        "output_dir": PROJECT_ROOT / "outputs" / "segformer_b0",
-    },
-}
+from model_specs import MODEL_SPECS_BY_ALIAS, ModelSpec
 
 
 def select_models(model_arg):
     if model_arg == "all":
-        return list(MODELS.items())
+        return list(MODEL_SPECS_BY_ALIAS.items())
 
-    return [(model_arg, MODELS[model_arg])]
+    return [(model_arg, MODEL_SPECS_BY_ALIAS[model_arg])]
 
 
 def format_float_for_run_id(value):
@@ -77,10 +59,10 @@ def build_trial_run_id(prefix, model_name, trial_number, params, epochs):
     )
 
 
-def build_pipeline_command(model_info, run_id, epochs, params, evaluate, visualize):
+def build_pipeline_command(model_spec: ModelSpec, run_id, epochs, params, evaluate, visualize):
     command = [
         sys.executable,
-        str(SCRIPTS_DIR / model_info["pipeline"]),
+        str(SCRIPTS_DIR / model_spec.pipeline_script_name),
         "--train",
         "--run-id",
         run_id,
@@ -182,14 +164,14 @@ def save_study_results(path, study):
         writer.writerows(rows)
 
 
-def run_final_training(args, model_info, model_dir, study):
+def run_final_training(args, model_spec: ModelSpec, model_dir, study):
     best_params = dict(study.best_params)
     if best_params["optimizer"] == "adam":
         best_params["weight_decay"] = 0.0
 
-    run_id = f"{args.prefix}_{model_info['name']}_optuna_best_final_ep{args.final_epochs}"
+    run_id = f"{args.prefix}_{model_spec.name}_optuna_best_final_ep{args.final_epochs}"
     command = build_pipeline_command(
-        model_info=model_info,
+        model_spec=model_spec,
         run_id=run_id,
         epochs=args.final_epochs,
         params=best_params,
@@ -198,7 +180,7 @@ def run_final_training(args, model_info, model_dir, study):
     )
 
     final_log_path = model_dir / "final_run_log.txt"
-    print(f"Running final training for {model_info['name']}: {run_id}")
+    print(f"Running final training for {model_spec.name}: {run_id}")
     print(f"Final log: {final_log_path}")
 
     with final_log_path.open("w", encoding="utf-8") as log_file:
@@ -211,11 +193,11 @@ def run_final_training(args, model_info, model_dir, study):
         )
 
 
-def optimize_model(args, model_key, model_info, experiment_dir, storage_url):
-    model_dir = experiment_dir / model_info["name"]
+def optimize_model(args, model_spec: ModelSpec, experiment_dir, storage_url):
+    model_dir = experiment_dir / model_spec.name
     model_dir.mkdir(parents=True, exist_ok=True)
 
-    study_name = f"{args.prefix}_{model_info['name']}"
+    study_name = f"{args.prefix}_{model_spec.name}"
     study = optuna.create_study(
         study_name=study_name,
         direction="maximize",
@@ -232,14 +214,14 @@ def optimize_model(args, model_key, model_info, experiment_dir, storage_url):
         params = suggest_params(trial)
         run_id = build_trial_run_id(
             prefix=args.prefix,
-            model_name=model_info["name"],
+            model_name=model_spec.name,
             trial_number=trial.number,
             params=params,
             epochs=args.epochs,
         )
-        run_dir = model_info["output_dir"] / "runs" / run_id
+        run_dir = model_spec.output_dir / "runs" / run_id
         command = build_pipeline_command(
-            model_info=model_info,
+            model_spec=model_spec,
             run_id=run_id,
             epochs=args.epochs,
             params=params,
@@ -282,18 +264,18 @@ def optimize_model(args, model_key, model_info, experiment_dir, storage_url):
     )
 
     save_study_results(results_path, study)
-    save_best_params(best_params_path, model_info["name"], study, args.epochs)
+    save_best_params(best_params_path, model_spec.name, study, args.epochs)
 
     print()
     print("=" * 80)
-    print(f"Optuna finished for {model_info['name']}")
+    print(f"Optuna finished for {model_spec.name}")
     print(f"Best value: {study.best_value:.6f}")
     print(f"Best params: {study.best_params}")
     print(f"Study results: {results_path}")
     print(f"Best params JSON: {best_params_path}")
 
     if args.run_final:
-        run_final_training(args, model_info, model_dir, study)
+        run_final_training(args, model_spec, model_dir, study)
 
 
 def parse_args():
@@ -302,7 +284,7 @@ def parse_args():
     )
     parser.add_argument(
         "--model",
-        choices=["all", "unet", "deeplab", "segformer"],
+        choices=["all", *MODEL_SPECS_BY_ALIAS.keys()],
         default="all",
     )
     parser.add_argument("--trials", type=int, default=20)
@@ -349,11 +331,10 @@ def main():
     print(f"Run final training: {args.run_final}")
     print()
 
-    for model_key, model_info in select_models(args.model):
+    for _, model_spec in select_models(args.model):
         optimize_model(
             args=args,
-            model_key=model_key,
-            model_info=model_info,
+            model_spec=model_spec,
             experiment_dir=experiment_dir,
             storage_url=storage_url,
         )
