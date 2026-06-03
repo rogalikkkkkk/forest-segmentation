@@ -5,31 +5,19 @@ import sys
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.append(str(PROJECT_ROOT / "src"))
 
-from config import (
-    RUGD_NUM_CLASSES,
-    SEGFORMER_B0_BEST_CHECKPOINT_PATH,
-    SEGFORMER_B0_ENCODER_WEIGHTS,
-    SEGFORMER_B0_METRICS_PATH,
-)
 from evaluation_runner import evaluate_model, parse_evaluation_args
-from models.segformer_b0 import create_segformer_b0
-
-
-def create_model():
-    return create_segformer_b0(
-        num_classes=RUGD_NUM_CLASSES,
-        encoder_weights=SEGFORMER_B0_ENCODER_WEIGHTS,
-    )
+from model_factory import create_model
+from model_specs import SEGFORMER_B0_SPEC
 
 
 def main():
     args = parse_evaluation_args("Evaluate SegFormer-B0 on RUGD test split.")
     evaluate_model(
-        display_name="SegFormer-B0",
-        create_model=create_model,
-        default_best_checkpoint_path=SEGFORMER_B0_BEST_CHECKPOINT_PATH,
-        default_metrics_path=SEGFORMER_B0_METRICS_PATH,
-        train_script_name="train_segformer_b0.py",
+        display_name=SEGFORMER_B0_SPEC.display_name,
+        create_model=lambda: create_model(SEGFORMER_B0_SPEC),
+        default_best_checkpoint_path=SEGFORMER_B0_SPEC.best_checkpoint_path,
+        default_metrics_path=SEGFORMER_B0_SPEC.metrics_path,
+        train_script_name=SEGFORMER_B0_SPEC.train_script_name,
         run_dir=args.run_dir,
     )
 
